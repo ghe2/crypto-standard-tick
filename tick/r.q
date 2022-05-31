@@ -31,5 +31,5 @@ selectFuncAPI:{[tbl;sd;ed;ids;exc]
   $[`date in cols tbl;
   [wClause:enlist(within;`date;(enlist;`sd.date;`ed.date)),wClause;
       ?[tbl;wClause;0b;()]];
-  [res:$[.z.D within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl];
-    `date xcols update date:.z.D from res]] };
+  [res:$[.z.d within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl];
+    `date xcols update date:.z.d from res]] };

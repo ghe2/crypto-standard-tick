@@ -18,5 +18,5 @@ selectFuncAPI:{[tbl;sd;ed;ids;exc]
   $[`date in cols tbl;    // If we are in the HDB
   [wClause:enlist(within;`date;(enlist;`sd.date;`ed.date)),wClause; // Add date check to the where clause to select the date partition
       ?[tbl;wClause;0b;()]];  // Select from the table applying the conditions of the where clause
-  [res:$[.z.D within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl]; // Otherwise, we are in the RDB, if the date is not todays date in the RDB return an empty table, otherwise apply filters
-    `date xcols update date:.z.D from res]] };  // Create a date column if in the RDB so the schemas match
+  [res:$[.z.d within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl]; // Otherwise, we are in the RDB, if the date is not todays date in the RDB return an empty table, otherwise apply filters
+    `date xcols update date:.z.d from res]] };  // Create a date column if in the RDB so the schemas match
