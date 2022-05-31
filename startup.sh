@@ -28,10 +28,6 @@ HDB_STARTUP_DIR=${ON_DISK_HDB}/sym
 TICK_DIRECTORY=${BASE_DIRECTORY}/tick
 LOG_DIRECTORY=${BASE_DIRECTORY}/logs
 
-#temp
-cd $BASE_DIRECTORY/OnDiskDB
-rm sym2022.05.27
-
 echo "Starting Dashboards"
 cd $BASE_DIRECTORY
 cd dash
