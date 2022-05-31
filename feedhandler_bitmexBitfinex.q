@@ -2,7 +2,7 @@
 /conda install -c jmcmurray ws-client ws-server
 /.utl.require"ws-client";
 
-.debug.logggingOn:0b;
+.debug.loggingOn:0b;
 
 h:@[hopen;(`$":localhost:5000";10000);0i];
 pub:{$[h=0;
@@ -25,14 +25,14 @@ BuySellDict:("Buy";"Sell")!(`bid;`ask);
 //create the ws subscription table
 hostsToConnect:([]hostQuery:();request:();exchange:`$();feed:`$();callbackFunc:`$());
 //add BITFINEX websocket
-/`hostsToConnect upsert("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"book";"tETHUSD";"R0");`bitfinex;`order;`.bitfinex.order.upd);
-/`hostsToConnect upsert("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"trade";"tETHUSD";"R0");`bitfinex;`trade;`.bitfinex.trade.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"book";"tETHUSD";"R0");`bitfinex;`order;`.bitfinex.order.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"trade";"tETHUSD";"R0");`bitfinex;`trade;`.bitfinex.trade.upd);
 //add BitMEX websocket 
-/`hostsToConnect upsert("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:XBTUSD");`bitmex;`order;`.bitmex.upd);
-/`hostsToConnect upsert("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:XBTUSD");`bitmex;`trade;`.bitmex.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:XBTUSD");`bitmex;`order;`.bitmex.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:XBTUSD");`bitmex;`trade;`.bitmex.upd);
 
 //add record ID
-/hostsToConnect:update ws:1+til count i from hostsToConnect;
+hostsToConnect:update ws:1+til count i from hostsToConnect;
 /hostsToConnect:update callbackFunc:{` sv x} each `$string(callbackFunc,'ws) from hostsToConnect where callbackFunc like "*gda*";
 
 bookbuilder:{[x;y]
@@ -237,7 +237,7 @@ establishWS:{
     };
 
 //connect to the websockets
-/establishWS each hostsToConnect;
+establishWS each hostsToConnect;
 
 //open the websocket and check the connection status 
 connectionCheck:{[]
@@ -258,12 +258,5 @@ connectionCheck:{[]
     };
 
 /connection check every 10 min
-/ .z.ts:{connectionCheck[]};
-/ \t 600000
-
-
-.bitmex.h:.ws.open["wss://ws.bitmex.com/realtime?subscribe=trade:XBTUSD,orderBookL2:XBTUSD";`.bitmex.upd];
-
-
-
-
+.z.ts:{connectionCheck[]};
+\t 600000
