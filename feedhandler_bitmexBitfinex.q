@@ -2,6 +2,8 @@
 /conda install -c jmcmurray ws-client ws-server
 /.utl.require"ws-client";
 
+.debug.logggingOn:0b;
+
 h:@[hopen;(`$":localhost:5000";10000);0i];
 pub:{$[h=0;
         neg[h](`upd   ;x;y);
@@ -92,25 +94,25 @@ generateOrderbook:{[newOrder]
 
             //debug variable to see new records
             .debug.bitmex.new:new;
-            0N!"order pub start";
+            if[.debug.loggingOn;0N!"order pub start"];
             //publish to TP - order table
             pub[`order;new];
-            0N!"order pub end";
+            if[.debug.loggingOn;0N!"order pub end"];
             //update record in the connection check table
             upsert[`connChkTbl;(`bitmex;`order;.z.p)];
             
             //generate orderbook based on the order transactions
-            0N!"start generate book";
+            if[.debug.loggingOn;0N!"start generating book"];
             books:generateOrderbook[new];
             .debug.bitmex.books2:books;
-            0N!"end generate book";
+            if[.debug.loggingOn;0N!"end generating book"];
 
             //publish to TP - book table
-            0N!"start pub book";
+            if[.debug.loggingOn;0N!"start pub book"];
             / 0N!value flip books;
             / 0N!(count value flip books);
             pub[`book;books];
-            0N!"end pub book";
+            if[.debug.loggingOn;0N!"end pub book"];
             ];
         if[d[`table] like "trade";
             $[d[`action] like "insert";
@@ -118,10 +120,10 @@ generateOrderbook:{[newOrder]
                     newTrade:select time:("p"$"Z"$timestamp),sym:`$symbol,orderID:" ",price,tradeID:trdMatchID,side:BuySellDict[side],"f"$size,exchange:`bitmex from d`data;
                     .debug.bitmex.newTrade:newTrade;
                     //publish to TP - trade table
-                    0N!"start pub trade";
+                    if[.debug.loggingOn;0N!"start pub trade"];
                     / pub[`trade;value flip newTrade];
                     pub[`trade;newTrade];
-                    0N!"end pub trade";
+                    if[.debug.loggingOn;0N!"end pub trade"];
                     //update record in the connection check table
                     upsert[`connChkTbl;(`bitmex;`trade;.z.p)];
                     ];
