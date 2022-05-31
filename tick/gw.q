@@ -20,6 +20,9 @@ loadRestFunctionality:{
 hdbHandle:hopen`$":",.z.x 0;
 rdbHandle:hopen `$":",.z.x 1;
 
+// vwap calculation
+vwap_depth:{$[any z<=s:sums x;(deltas z & s) wavg y;0nf]};
+
 // Defining a function to query data from within a Q session
 getData:{[tbl;sd;ed;ids;exc]
   hdb:hdbHandle(`selectFunc;tbl;sd;ed;ids;exc);

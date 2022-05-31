@@ -35,46 +35,7 @@ hostsToConnect:([]hostQuery:();request:();exchange:`$();feed:`$();callbackFunc:`
 hostsToConnect:update ws:1+til count i from hostsToConnect;
 /hostsToConnect:update callbackFunc:{` sv x} each `$string(callbackFunc,'ws) from hostsToConnect where callbackFunc like "*gda*";
 
-bookbuilder:{[x;y]
-    .debug.xy:(x;y);
-    $[not y 0;x;
-        $[
-            `insert=y 4;
-                x,enlist[y 1]! enlist y 2 3;
-            `update=y 4;
-                $[any (y 1) in key x;
-                    [
-                        //update size
-                        a:.[x;(y 1;1);:;y 3];
-                        //update price if the price col is not null
-                        $[0n<>y 2;.[a;(y 1;0);:;y 2];a]
-                    ];
-                    x,enlist[y 1]! enlist y 2 3
-                ];  
-            `remove=y 4;
-                $[any (y 1) in key x;
-                    enlist[y 1] _ x;
-                    x];
-            x
-        ]
-    ]
-    };
 
-generateOrderbook:{[newOrder]
-    .debug.newOrder:newOrder;
-
-    //create the books based on the last book state
-    books:update bidbook:bookbuilder\[lastBookBySym[first sym]`bidbook;flip (side like "bid";orderID;price;size;action)],askbook:bookbuilder\[lastBookBySym[first sym]`askbook;flip (side like "ask";orderID;price;size;action)] by sym from newOrder;
-
-    //store the latest book state
-    .debug.books1:books;
-    lastBookBySym,:exec last bidbook,last askbook by sym from books;
-
-    //generate the orderbook 
-    books:select time,sym,bids:(value each bidbook)[;;0],bidsizes:(value each bidbook)[;;1],asks:(value each askbook)[;;0],asksizes:(value each askbook)[;;1] from books;
-    books:update bids:desc each distinct each bids,bidsizes:{sum each x group y}'[bidsizes;bids] @' desc each distinct each bids,asks:asc each distinct each asks,asksizes:{sum each x group y}'[asksizes;asks] @' asc each distinct each asks from books
-
-    };
 
 //bitmex trades and orders callback function 
 .bitmex.upd:{
@@ -100,19 +61,6 @@ generateOrderbook:{[newOrder]
             if[.debug.loggingOn;0N!"order pub end"];
             //update record in the connection check table
             upsert[`connChkTbl;(`bitmex;`order;.z.p)];
-            
-            //generate orderbook based on the order transactions
-            if[.debug.loggingOn;0N!"start generating book"];
-            books:generateOrderbook[new];
-            .debug.bitmex.books2:books;
-            if[.debug.loggingOn;0N!"end generating book"];
-
-            //publish to TP - book table
-            if[.debug.loggingOn;0N!"start pub book"];
-            / 0N!value flip books;
-            / 0N!(count value flip books);
-            pub[`book;books];
-            if[.debug.loggingOn;0N!"end pub book"];
             ];
         if[d[`table] like "trade";
             $[d[`action] like "insert";
@@ -163,16 +111,6 @@ generateOrderbook:{[newOrder]
         pub[`order;newOrder];
         //update record in the connection check table
         upsert[`connChkTbl;(`bitfinex;`order;.z.p)];
-
-        //create book based on the last book state 
-        neworderTbl: enlist(cols order)!newOrder; 
-    
-        //generate orderbook based on the order transactions
-        books:generateOrderbook[neworderTbl];
-        .debug.bitfinex.books2:books;
-
-        //publish to TP - book table
-        pub[`book;books]
     ];
     };
 
