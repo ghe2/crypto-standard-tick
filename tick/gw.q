@@ -21,6 +21,7 @@ hdbHandle:hopen`$":",.z.x 0;
 rdbHandle:hopen `$":",.z.x 1;
 
 // vwap calculation
+//TODO: This should be called somewhere other than in the dashboard
 vwap_depth:{$[any z<=s:sums x;(deltas z & s) wavg y;0nf]};
 
 // Defining a function to query data from within a Q session
