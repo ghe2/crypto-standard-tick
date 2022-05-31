@@ -107,8 +107,8 @@ generateOrderbook:{[newOrder]
 
             //publish to TP - book table
             0N!"start pub book";
-            0N!value flip books;
-            0N!(count value flip books);
+            / 0N!value flip books;
+            / 0N!(count value flip books);
             pub[`book;books];
             0N!"end pub book";
             ];
@@ -119,8 +119,9 @@ generateOrderbook:{[newOrder]
                     .debug.bitmex.newTrade:newTrade;
                     //publish to TP - trade table
                     0N!"start pub trade";
-                    pub[`trade;value flip newTrade];
-                    0n!"end pub trade";
+                    / pub[`trade;value flip newTrade];
+                    pub[`trade;newTrade];
+                    0N!"end pub trade";
                     //update record in the connection check table
                     upsert[`connChkTbl;(`bitmex;`trade;.z.p)];
                     ];
