@@ -2,7 +2,7 @@
   "id": "b91215f0-7e4a-1aa3-cb63-54f7e3615084",
   "name": "Crypto",
   "creationDate": "Mon, 14 Mar 2022 02:24:28 GMT",
-  "lastUpdateDate": "Tue, 31 May 2022 07:07:41 GMT",
+  "lastUpdateDate": "Wed, 01 Jun 2022 00:09:29 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -215,7 +215,6 @@
                     ]
                   },
                   "Basics": {
-                    "Enabled": false,
                     "LegendEnabled": false,
                     "LegendLabelColor": "",
                     "Name": "Bids",
@@ -307,7 +306,6 @@
                     ]
                   },
                   "Basics": {
-                    "Enabled": false,
                     "LegendEnabled": false,
                     "LegendLabelColor": "",
                     "Name": "Asks",
@@ -405,7 +403,6 @@
                     ]
                   },
                   "Basics": {
-                    "Enabled": false,
                     "LegendLabelColor": "",
                     "Name": "Trades",
                     "BackgroundColor": "#ffffff",
@@ -719,9 +716,8 @@
   },
   "data": {
     "vwap depth": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "time",
         "vwap_bid_1",
@@ -765,7 +761,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "{[crypto]\r\n  `time xasc select time, vwap_bid_1:vwap_depth'[bidsizes;bids;1] , vwap_bid_5000000:vwap_depth'[bidsizes;bids;500000], vwap_bid_10000000:vwap_depth'[bidsizes;bids;1000000] \r\n  , vwap_ask_1:vwap_depth'[asksizes;asks;1] , \r\n  vwap_ask_5000000:vwap_depth'[asksizes;asks;500000],vwap_ask_10000000:vwap_depth'[asksizes;asks;1000000]\r\n      from \r\n      getData[`book;.z.p-00:10;.z.p;crypto;`]\r\n//    select from bitmexbook where sym = crypto, time within .z.p - 00:01 00:00\r\n\r\n\r\n//  getData[`vwap;.z.p-00:10;.z.p;crypto;`]\r\n\r\n  }",
+      "_queryString": "{[crypto]\r\n  `time xasc select time, vwap_bid_1:vwap_depth'[bidsizes;bids;1] , vwap_bid_5000000:vwap_depth'[bidsizes;bids;500000], vwap_bid_10000000:vwap_depth'[bidsizes;bids;1000000] \r\n  , vwap_ask_1:vwap_depth'[asksizes;asks;1] , \r\n  vwap_ask_5000000:vwap_depth'[asksizes;asks;500000],vwap_ask_10000000:vwap_depth'[asksizes;asks;1000000]\r\n      from \r\n      getData[`book;.z.p-00:01;.z.p;crypto;`]\r\n//    select from bitmexbook where sym = crypto, time within .z.p - 00:01 00:00\r\n\r\n\r\n//  getData[`vwap;.z.p-00:10;.z.p;crypto;`]\r\n\r\n  }",
       "_queryParams": [
         {
           "name": "crypto",
@@ -946,8 +942,9 @@
       "_serverPaging": false
     },
     "order_bubbles": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "date",
         "time",
