@@ -75,17 +75,19 @@ generateOrderbook:{[newOrder]
 // define callback functions for when a topic arrives
 .rte.trade.vwap:{
     .debug.vwap:x;
-    res:update 0f^vwap, 0f^accVol from (select latestVwap:size wavg price, latestAccVol: sum size by sym, exchange, time:time.minute from x) lj vwap;
+    res:update 0f^vwap, 0f^accVol from (select latestVwap:size wavg price, latestAccVol: sum size by sym, exchange, time:time.minute from x) lj (update time:time.minute from vwap);
     res:select sym, exchange, time, vwap:((accVol*vwap)+(latestAccVol*latestVwap))%(accVol+latestAccVol), accVol:accVol+latestAccVol from res;
     //update the vwaps table
+    res:update time:time+.z.d from res;
     `vwap upsert res;
  }
 
 .rte.trade.ohlcv:{
     .debug.ohlcv:x;
-    res:update 0N^open, 0f^high, 0N^low, 0f^close, 0f^volume from (select latestOpen:first price, latestHigh:max price, latestLow:min price, latestClose:last price, latestVolume:sum size by sym, exchange, time:time.minute from x) lj ohlcv;
+    res:update 0N^open, 0f^high, 0N^low, 0f^close, 0f^volume from (select latestOpen:first price, latestHigh:max price, latestLow:min price, latestClose:last price, latestVolume:sum size by sym, exchange, time:time.minute from x) lj (update time:time.minute from ohlcv);
     res: update open: latestOpen from res where null open; 
     res:select sym, exchange, time, open: open, high: max (latestHigh;high), low:min(0w ^latestLow;0w ^ low), close:latestClose, volume: sum(volume;latestVolume) from res;
+    res:update time:time+.z.d from res;
     `ohlcv upsert res;
   } 
 

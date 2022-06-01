@@ -2,7 +2,7 @@
   "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
   "name": "Crypto Dashboard",
   "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
-  "lastUpdateDate": "Wed, 01 Jun 2022 05:21:02 GMT",
+  "lastUpdateDate": "Wed, 01 Jun 2022 06:14:17 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -736,44 +736,89 @@
               "Layers": [
                 {
                   "_Hidden": {
+                    "_Type": "Candlestick",
                     "_Index": 0,
                     "_LayerId": "layer_8977",
-                    "_PossibleColumns": [],
-                    "_PossibleColumnsWithItself": [],
-                    "_PossibleColumnsWithXYKey": [],
-                    "_PossibleRadius": [],
+                    "_PossibleColumns": [
+                      "date",
+                      "sym",
+                      "exchange",
+                      "time",
+                      "open",
+                      "high",
+                      "low",
+                      "close",
+                      "volume"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "date",
+                      "sym",
+                      "exchange",
+                      "time",
+                      "open",
+                      "high",
+                      "low",
+                      "close",
+                      "volume"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "date",
+                      "sym",
+                      "exchange",
+                      "time",
+                      "open",
+                      "high",
+                      "low",
+                      "close",
+                      "volume"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "date",
+                      "sym",
+                      "exchange",
+                      "time",
+                      "open",
+                      "high",
+                      "low",
+                      "close",
+                      "volume"
+                    ],
                     "_PossibleXAxes": [
                       "XAxis 1"
                     ],
                     "_PossibleYAxes": [
                       "YAxis 1"
-                    ],
-                    "_Type": "Line",
-                    "_PossibleLayers": [
-                      "nofill",
-                      "origin",
-                      "+1"
                     ]
                   },
-                  "Axes": {
-                    "XAxisID": "XAxis 1",
-                    "YAxisID": "YAxis 1"
-                  },
                   "Basics": {
-                    "Data": "",
-                    "BorderWidth": 0,
+                    "LegendEnabled": false,
                     "LegendLabelColor": "",
-                    "Name": "Layer 1"
+                    "Name": "Layer 1",
+                    "BorderWidth": 2,
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "ohlcv"
+                    }
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 1",
+                    "Close": "close",
+                    "High": "high",
+                    "Low": "low",
+                    "Open": "open"
                   },
                   "Labels": {
                     "Font": {
                       "Bold": false,
                       "Size": 12
                     }
-                  },
-                  "Points": {
-                    "PointBorderWidth": 0,
-                    "PointHoverBorderWidth": 0
                   }
                 }
               ],
@@ -803,13 +848,20 @@
                     "_Label": "YAxis 1"
                   },
                   "Labels": {
-                    "DateFormat": "YYYY-MM-DD",
+                    "BeginAtZero": false,
                     "MaxWidth": 0,
-                    "_ReverseCache": false
+                    "_ReverseCache": false,
+                    "DateFormat": "YYYY-MM-DD"
                   }
                 }
               ],
-              "version": "4.7.0"
+              "version": "4.7.0",
+              "format": {
+                "widgetTitle": {
+                  "_dashboardsType": "viewstate",
+                  "value": "tradeVolChart/syms"
+                }
+              }
             },
             "containerId": null,
             "components": [],
@@ -973,9 +1025,8 @@
       "_serverPaging": false
     },
     "trades_size_sum": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "date",
         "time",
@@ -1021,7 +1072,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[plot;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
       "_queryParams": [
         {
           "name": "plot",
@@ -1450,15 +1501,14 @@
       }
     },
     "tradeVolDropdown": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "plot"
       ],
       "_dataType": "query",
       "_dataSource": "kdb",
-      "_connection": "ctp",
+      "_connection": "GW",
       "_mappings": {
         "key": "plot",
         "mappings": {},
@@ -1489,7 +1539,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "([]plot:`trade`orderbook)",
+      "_queryString": "([]plot:`trade`order)",
       "_queryParams": [],
       "_subscriptionKey": "",
       "_hasUpdateQuery": false,
@@ -1930,8 +1980,9 @@
       "_serverPaging": false
     },
     "trade_summary": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "sym",
         "x",
@@ -1982,8 +2033,9 @@
       "_serverPaging": false
     },
     "sym_list": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "sym"
       ],
@@ -2031,20 +2083,20 @@
       "_pageSize": 2000,
       "_serverPaging": false
     },
-    "ohlvc": {
+    "ohlcv": {
       "_pagingType": "NONE",
       "_autoExecute": true,
       "_autoExec": true,
       "_columns": [
         "date",
-        "time",
         "sym",
-        "orderID",
-        "price",
-        "tradeID",
-        "side",
-        "size",
-        "exchange"
+        "exchange",
+        "time",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume"
       ],
       "_dataType": "query",
       "_dataSource": "kdb",
@@ -2080,7 +2132,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`ohlcv;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
       "_queryParams": [
         {
           "name": "plot",
@@ -2140,6 +2192,6 @@
   "advancedCss": "",
   "cssClasses": "",
   "version": "4.6.0P1",
-  "wasChanged": true,
+  "wasChanged": false,
   "shortcuts": []
 }
