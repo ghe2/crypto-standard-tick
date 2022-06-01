@@ -1,8 +1,11 @@
 #!/bin/bash
 # Sourcing Environment to get the ON_DISK_HDB directory
-#source environment.sh
+source environment.sh
 BASE_DIRECTORY=$(cd $(dirname $0) && pwd)
-ON_DISK_HDB=${BASE_DIRECTORY}/OnDiskDB
+if [[ ! -v ON_DISK_HDB ]]; then
+    ON_DISK_HDB=${BASE_DIRECTORY}/OnDiskDB
+    echo "On Disk HDB Not Defined in environment.sh; Setting to default of ${ON_DISK_HDB}"
+fi
 echo "Operating out of directory: ${BASE_DIRECTORY}"
 echo "On Disk DB set to: ${ON_DISK_HDB}"
 # Checking if directories exist
