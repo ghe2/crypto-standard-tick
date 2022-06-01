@@ -1,0 +1,2149 @@
+{
+  "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
+  "name": "Crypto Dashboard",
+  "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
+  "lastUpdateDate": "Wed, 01 Jun 2022 02:19:50 GMT",
+  "thumb": null,
+  "screenDetails": [
+    {
+      "label": "Screen 1",
+      "value": "a84d4490-5c31-f436-658f-9ece214ad840"
+    }
+  ],
+  "screens": [
+    {
+      "id": "a84d4490-5c31-f436-658f-9ece214ad840",
+      "name": "Screen 1",
+      "thumb": null,
+      "widgets": [
+        {
+          "id": "1be8ea0d-07c3-3a60-b41f-96647ae2b3fb",
+          "layout": {
+            "row": 9,
+            "column": 4,
+            "rowSpan": 7,
+            "colSpan": 32
+          },
+          "component": {
+            "id": "40edd9a3-9c7a-d7f3-35bd-102ec1f94067",
+            "key": "ChartJS",
+            "options": {
+              "Layers": [
+                {
+                  "_Hidden": {
+                    "_Type": "Bubble",
+                    "_Index": 0,
+                    "_LayerId": "layer_8977",
+                    "_PossibleColumns": [
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleXAxes": [
+                      "XAxis 1"
+                    ],
+                    "_PossibleYAxes": [
+                      "YAxis 1",
+                      "YAxis 2"
+                    ]
+                  },
+                  "Basics": {
+                    "LegendLabelColor": "",
+                    "Name": "Size",
+                    "BorderWidth": 0,
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "trades_size_sum"
+                    }
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "YAxisData": "size",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 2"
+                  },
+                  "Labels": {
+                    "Font": {
+                      "Bold": false,
+                      "Size": 12
+                    }
+                  }
+                },
+                {
+                  "_Hidden": {
+                    "_Type": "Line",
+                    "_Index": 1,
+                    "_LayerId": "layer_3299",
+                    "_PossibleColumns": [
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleXAxes": [
+                      "XAxis 1"
+                    ],
+                    "_PossibleYAxes": [
+                      "YAxis 1",
+                      "YAxis 2"
+                    ],
+                    "_PossibleLayers": [
+                      "Layer 1",
+                      "nofill",
+                      "origin",
+                      "+1",
+                      "+2"
+                    ]
+                  },
+                  "Basics": {
+                    "LegendLabelColor": "",
+                    "Name": "Price",
+                    "BackgroundColor": "#f23a65",
+                    "BorderColor": "#f23a65",
+                    "BorderWidth": 2,
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "trades_size_sum"
+                    }
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "YAxisData": "price",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 1"
+                  },
+                  "Labels": {
+                    "Font": {
+                      "Bold": false,
+                      "Size": 12
+                    }
+                  },
+                  "Line": {
+                    "Fill": "Layer 1"
+                  }
+                }
+              ],
+              "Legend": {
+                "LegendLayerThreshold": 5
+              },
+              "XAxes": [
+                {
+                  "_Hidden": {
+                    "_Type": "time",
+                    "_AxisId": "axis_67830",
+                    "_Index": 0,
+                    "_Label": "XAxis 1"
+                  },
+                  "Labels": {
+                    "MaxWidth": 0,
+                    "_ReverseCache": false,
+                    "Offset": false,
+                    "TimeFormats": {
+                      "Break": 86400000,
+                      "Day": "MMM D",
+                      "Distribution": "linear",
+                      "Hour": "hA",
+                      "IsoWeekday": false,
+                      "ShowMajor": false,
+                      "Millisecond": "h:mm:ss.SSS a",
+                      "Minute": "h:mm a",
+                      "Month": "MMM YYYY",
+                      "Quarter": "[Q]Q - YYYY",
+                      "Round": false,
+                      "Second": "h:mm:ss a",
+                      "TooltipFormat": "MMM D h:mm:ss.SSS a",
+                      "TriggerBreak": 86400000,
+                      "Unit": "",
+                      "Week": "ll",
+                      "Year": "YYYY"
+                    }
+                  },
+                  "Range": {
+                    "Max": 0,
+                    "Min": 0,
+                    "SoftRange": false,
+                    "SuggestedMax": 0,
+                    "SuggestedMin": 0,
+                    "UseDataRange": false
+                  }
+                }
+              ],
+              "YAxes": [
+                {
+                  "_Hidden": {
+                    "_Type": "linear",
+                    "_AxisId": "axis_67834",
+                    "_Index": 0,
+                    "_Label": "YAxis 1"
+                  },
+                  "Labels": {
+                    "Format": "Smart Number",
+                    "Prefix": "$",
+                    "MaxWidth": 0,
+                    "_ReverseCache": false,
+                    "Offset": false,
+                    "DateFormat": "YYYY-MM-DD"
+                  },
+                  "Range": {
+                    "UseMinMax": true,
+                    "UseDataRange": true
+                  }
+                },
+                {
+                  "_Hidden": {
+                    "_Type": "linear",
+                    "_AxisId": "axis_5838",
+                    "_Index": 1,
+                    "_Label": "YAxis 2"
+                  },
+                  "Labels": {
+                    "FontColor": "#F8F8F8",
+                    "Format": "Smart Number",
+                    "MaxWidth": 0,
+                    "_ReverseCache": false,
+                    "Offset": false,
+                    "DateFormat": "YYYY-MM-DD"
+                  },
+                  "Range": {
+                    "Max": 0,
+                    "Min": 0,
+                    "SoftRange": false,
+                    "SuggestedMax": 0,
+                    "SuggestedMin": 0,
+                    "UseDataRange": false
+                  },
+                  "Position": "right"
+                }
+              ],
+              "format": {
+                "widgetTitle": {
+                  "_dashboardsType": "viewstate",
+                  "value": "tradeVolChart/syms"
+                }
+              },
+              "version": "4.7.0"
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [],
+            "definitionId": "1007",
+            "hasOnSettingsChange": true
+          }
+        },
+        {
+          "id": "c7d8465e-9558-d844-b07b-c444e464ac98",
+          "layout": {
+            "row": 11,
+            "column": 0,
+            "rowSpan": 2,
+            "colSpan": 4
+          },
+          "component": {
+            "id": "e32fa5bf-1236-f357-7f7f-b06fef23d81a",
+            "key": "Dataform",
+            "options": {
+              "version": "4.6.1P2",
+              "isDataform": true,
+              "Basics": {
+                "Data": {
+                  "_dashboardsType": "data",
+                  "value": "tradeVolCountByTimeInterval/tradeVolArgs"
+                },
+                "SubmitButtonText": "Submit",
+                "ValidationAnalytic": "",
+                "ExpandDictParameters": true,
+                "ForceExecute": false,
+                "ShowReset": false,
+                "ShowSubmit": false,
+                "FloatSubmit": false,
+                "FloatReset": false,
+                "ViewStates": [
+                  {
+                    "PathEnc": "tradeVolChart%2Fplot",
+                    "DisplayName": "Table input",
+                    "HideParameter": false,
+                    "Tooltip": "",
+                    "FieldType": {
+                      "_Type": "Dropdown",
+                      "DropdownPossibleValues": [
+                        "",
+                        "plot"
+                      ],
+                      "Data": {
+                        "_dashboardsType": "data",
+                        "value": "tradeVolDropdown"
+                      },
+                      "AcceptEmptyValues": false,
+                      "ForceSelect": false,
+                      "MultiSelect": false,
+                      "ShowSearch": false,
+                      "AdvancedSearch": false,
+                      "FieldSummaryThreshold": 5,
+                      "TooltipSummaryThreshold": 5,
+                      "SelectAllValue": "",
+                      "DataSourceMapping": {
+                        "Value": "plot",
+                        "Text": "plot",
+                        "DropdownPossibleValues": [
+                          "plot"
+                        ]
+                      },
+                      "Items": []
+                    }
+                  }
+                ],
+                "Actions": []
+              },
+              "Style": {
+                "advanced": "",
+                "cssClasses": "",
+                "minWidth": "",
+                "display": "Row",
+                "inline": "Top",
+                "labelWidth": "",
+                "labelPadding": "",
+                "labelAlign": "Left",
+                "padding": "",
+                "verticalSpacing": "",
+                "submitOffset": "",
+                "resetOffset": "",
+                "formMargin": ""
+              },
+              "Alignment": {
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 5,
+                "paddingBottom": 0,
+                "innerPaddingLeft": 5,
+                "innerPaddingRight": 0,
+                "innerPaddingTop": 0,
+                "innerPaddingBottom": 0,
+                "titlePaddingLeft": 0,
+                "titlePaddingRight": 0,
+                "titlePaddingTop": 7,
+                "titlePaddingBottom": 7
+              },
+              "format": {
+                "widgetTitle": "",
+                "titleFontSize": 10,
+                "titleHorizontal": "Left",
+                "titleFontBold": false,
+                "titleShadow": false,
+                "titleTransparentBackground": false,
+                "tileBorderWidth": 0,
+                "tileBorderRounding": 0,
+                "tileBorderColor": "#000000",
+                "tileBackgroundColor": "#000000",
+                "tileTransparentBackground": true,
+                "tileShadow": false
+              }
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [],
+            "definitionId": "27",
+            "hasOnSettingsChange": true
+          }
+        },
+        {
+          "id": "ce956f24-13f9-9739-810c-9279a13426ba",
+          "layout": {
+            "row": 9,
+            "column": 0,
+            "rowSpan": 2,
+            "colSpan": 4
+          },
+          "component": {
+            "id": "a30d3e58-a7fd-36fc-cec6-3a980cfe95bb",
+            "key": "Dataform",
+            "options": {
+              "version": "4.6.1P2",
+              "isDataform": true,
+              "Basics": {
+                "Data": {
+                  "_dashboardsType": "data",
+                  "value": "tradeVolCountByTimeInterval/syms"
+                },
+                "SubmitButtonText": "Submit",
+                "ValidationAnalytic": "",
+                "ExpandDictParameters": true,
+                "ForceExecute": false,
+                "ShowReset": false,
+                "ShowSubmit": false,
+                "FloatSubmit": false,
+                "FloatReset": false,
+                "ViewStates": [
+                  {
+                    "PathEnc": "tradeVolChart%2Fsyms",
+                    "DisplayName": "Syms",
+                    "HideParameter": false,
+                    "Tooltip": "",
+                    "FieldType": {
+                      "_Type": "Dropdown",
+                      "DropdownPossibleValues": [
+                        "",
+                        "sym"
+                      ],
+                      "Data": {
+                        "_dashboardsType": "data",
+                        "value": "sym_list"
+                      },
+                      "AcceptEmptyValues": false,
+                      "ForceSelect": false,
+                      "MultiSelect": false,
+                      "ShowSearch": true,
+                      "AdvancedSearch": true,
+                      "FieldSummaryThreshold": 5,
+                      "TooltipSummaryThreshold": 5,
+                      "SelectAllValue": "",
+                      "DataSourceMapping": {
+                        "Value": "sym",
+                        "Text": "sym",
+                        "DropdownPossibleValues": [
+                          "sym"
+                        ]
+                      },
+                      "Items": []
+                    }
+                  }
+                ],
+                "Actions": []
+              },
+              "Style": {
+                "advanced": "",
+                "cssClasses": "",
+                "minWidth": "",
+                "display": "Row",
+                "inline": "Top",
+                "labelWidth": "",
+                "labelPadding": "",
+                "labelAlign": "Left",
+                "padding": "",
+                "verticalSpacing": "",
+                "submitOffset": "",
+                "resetOffset": "",
+                "formMargin": ""
+              },
+              "Alignment": {
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 5,
+                "paddingBottom": 0,
+                "innerPaddingLeft": 5,
+                "innerPaddingRight": 0,
+                "innerPaddingTop": 0,
+                "innerPaddingBottom": 0,
+                "titlePaddingLeft": 0,
+                "titlePaddingRight": 0,
+                "titlePaddingTop": 7,
+                "titlePaddingBottom": 7
+              },
+              "format": {
+                "widgetTitle": "",
+                "titleFontSize": 10,
+                "titleHorizontal": "Left",
+                "titleFontBold": false,
+                "titleShadow": false,
+                "titleTransparentBackground": false,
+                "tileBorderWidth": 0,
+                "tileBorderRounding": 0,
+                "tileBorderColor": "#000000",
+                "tileBackgroundColor": "#000000",
+                "tileTransparentBackground": true,
+                "tileShadow": false
+              }
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [],
+            "definitionId": "27",
+            "hasOnSettingsChange": true
+          }
+        },
+        {
+          "id": "bde08eae-541b-7895-c0c4-c5ab73362670",
+          "layout": {
+            "row": 0,
+            "column": 0,
+            "rowSpan": 9,
+            "colSpan": 36
+          },
+          "component": {
+            "id": "dd2da127-2c75-a8b1-1182-743716588f45",
+            "key": "Heatmap",
+            "options": {
+              "Animation": {
+                "Duration": 1500,
+                "Easing": "quinticInOut"
+              },
+              "Basics": {
+                "Actions": [],
+                "Data": {
+                  "_dashboardsType": "data",
+                  "value": "trade_summary"
+                },
+                "Focus": {
+                  "_dashboardsType": "viewstate",
+                  "value": "tradeVolChart/syms"
+                },
+                "Selected": {
+                  "_dashboardsType": "viewstate",
+                  "value": "tradeVolChart/syms"
+                },
+                "SelectedAttr": "sym",
+                "Theme": "Dark"
+              },
+              "ColorPalette": {
+                "ColorScheme": [
+                  {
+                    "type": "#5680bf"
+                  },
+                  {
+                    "type": "#5792bd"
+                  },
+                  {
+                    "type": "#629fc7"
+                  },
+                  {
+                    "type": "#63b0c7"
+                  },
+                  {
+                    "type": "#63c7c7"
+                  },
+                  {
+                    "type": "#65c2af"
+                  },
+                  {
+                    "type": "#54bf9d"
+                  },
+                  {
+                    "type": "#5dbd86"
+                  },
+                  {
+                    "type": "#69bf74"
+                  },
+                  {
+                    "type": "#67b860"
+                  }
+                ],
+                "ColorType": "Gradient",
+                "FixedColor": "#0061FF",
+                "HoverColor": "",
+                "SelectedColor": "",
+                "SelectedColorScheme": "blue green"
+              },
+              "Data": [
+                {
+                  "Color": "volume",
+                  "Column": "sym",
+                  "HighlightRules": [],
+                  "Name": "Volume",
+                  "Size": "volume"
+                }
+              ],
+              "FileExport": {
+                "FileName": [],
+                "ShowExportCsvButton": false,
+                "ShowExportExcelButton": false,
+                "ShowScreenshot": false
+              },
+              "GroupBy": {
+                "GroupByColumns": "sym",
+                "ScaleByChildren": false,
+                "ShowHeader": false,
+                "UseGroupBy": false,
+                "headerColor": "#ffffff"
+              },
+              "NodeLabel": {
+                "BorderColor": "#282828",
+                "BorderWidth": 2,
+                "DateFormat": "HHHH-MM-DD",
+                "Format": "General",
+                "HideTrailingZeros": false,
+                "MaxValue": 100,
+                "MinValue": 0,
+                "Precision": 0,
+                "Prefix": "",
+                "Scale": true,
+                "Show": true,
+                "ShowAbsolute": false,
+                "ShowLegend": true,
+                "Suffix": "",
+                "customLabel": "{{sym}} Trades: {{orderID}}\nVolume: {{size}}",
+                "gapWidth": 2,
+                "labelColor": "#ffffff",
+                "upperFontSize": "12",
+                "upperLabel": false,
+                "upperLabelColour": "#000",
+                "upperLabelHeight": "15"
+              },
+              "Tooltip": {
+                "ShowTooltip": true,
+                "TooltipTemplate": "<table><thead><tr style=\"padding-right: 10px;\"><th>{{_name}}</th><th></th></tr></thead><tr><td><svg style=\"padding: 0 5px; vertical-align: middle;\" width=\"12\" height=\"12\"><rect width=\"12\" height=\"12\"style=\"fill: {{_color}} ;stroke-width:3;stroke: {{_color}}\"></rect></svg>{{_label}}:</td><td style=\"padding-right: 10px; text-align: left;\"><span style=\"padding-left:10px\">{{_value}}</span></td></tr></table>"
+              },
+              "possibleColumns": [
+                "sym",
+                "orderID",
+                "size"
+              ],
+              "possibleLabels": [
+                "sym",
+                "orderID",
+                "size"
+              ],
+              "version": "4.5.0",
+              "Style": {
+                "advanced": "",
+                "cssClasses": ""
+              },
+              "Alignment": {
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "innerPaddingLeft": 0,
+                "innerPaddingRight": 0,
+                "innerPaddingTop": 0,
+                "innerPaddingBottom": 0,
+                "titlePaddingLeft": 0,
+                "titlePaddingRight": 0,
+                "titlePaddingTop": 7,
+                "titlePaddingBottom": 7
+              },
+              "format": {
+                "titleFontSize": 16,
+                "titleHorizontal": "Center",
+                "titleShadow": false,
+                "tileBorderWidth": 0,
+                "tileBorderRounding": 0,
+                "tileBorderColor": "#000000",
+                "tileBackgroundColor": "#000000",
+                "tileTransparentBackground": true,
+                "tileShadow": false
+              },
+              "possibleRules": [
+                "sym",
+                "orderID",
+                "size"
+              ]
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [],
+            "definitionId": "5",
+            "hasOnSettingsChange": true
+          }
+        },
+        {
+          "id": "6c2ca816-ec6b-46df-8175-a6d797bbc5b8",
+          "layout": {
+            "row": 16,
+            "column": 0,
+            "rowSpan": 8,
+            "colSpan": 36
+          },
+          "component": {
+            "id": "902ff361-66a8-85e1-fe0f-725e5395b30d",
+            "key": "ChartJS",
+            "options": {
+              "Layers": [
+                {
+                  "_Hidden": {
+                    "_Index": 0,
+                    "_LayerId": "layer_8977",
+                    "_PossibleColumns": [
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleXAxes": [
+                      "XAxis 1"
+                    ],
+                    "_PossibleYAxes": [
+                      "YAxis 1"
+                    ],
+                    "_Type": "Bubble"
+                  },
+                  "Basics": {
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "trade_summary_hdb"
+                    },
+                    "LegendLabelColor": "",
+                    "Name": "Layer 1",
+                    "BorderWidth": 0
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 1",
+                    "YAxisData": "size"
+                  },
+                  "Labels": {
+                    "Font": {
+                      "Bold": false,
+                      "Size": 12
+                    }
+                  }
+                }
+              ],
+              "Legend": {
+                "LegendLayerThreshold": 5
+              },
+              "XAxes": [
+                {
+                  "_Hidden": {
+                    "_Type": "time",
+                    "_AxisId": "axis_2052",
+                    "_Index": 0,
+                    "_Label": "XAxis 1"
+                  },
+                  "Labels": {
+                    "MaxWidth": 0,
+                    "_ReverseCache": false,
+                    "Offset": false,
+                    "TimeFormats": {
+                      "Break": 86400000,
+                      "Day": "MMM D",
+                      "Distribution": "linear",
+                      "Hour": "DD/MM-hA",
+                      "IsoWeekday": false,
+                      "ShowMajor": false,
+                      "Millisecond": "h:mm:ss.SSS a",
+                      "Minute": "h:mm a",
+                      "Month": "MMM YYYY",
+                      "Quarter": "[Q]Q - YYYY",
+                      "Round": false,
+                      "Second": "h:mm:ss a",
+                      "TooltipFormat": "",
+                      "TriggerBreak": 86400000,
+                      "Unit": "hour",
+                      "Week": "ll",
+                      "Year": "YYYY"
+                    }
+                  },
+                  "Range": {
+                    "Max": 0,
+                    "Min": 0,
+                    "SoftRange": false,
+                    "SuggestedMax": 0,
+                    "SuggestedMin": 0,
+                    "UseDataRange": false
+                  },
+                  "Stacked": true
+                }
+              ],
+              "YAxes": [
+                {
+                  "_Hidden": {
+                    "_Type": "linear",
+                    "_AxisId": "axis_2056",
+                    "_Index": 0,
+                    "_Label": "YAxis 1"
+                  },
+                  "Labels": {
+                    "DateFormat": "YYYY-MM-DD",
+                    "MaxWidth": 0,
+                    "_ReverseCache": false
+                  }
+                }
+              ],
+              "version": "4.7.0",
+              "Style": {
+                "Palette": {
+                  "0": {
+                    "type": "#0a3b40"
+                  },
+                  "1": {
+                    "type": "#005d67"
+                  }
+                }
+              }
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [],
+            "definitionId": "1007",
+            "hasOnSettingsChange": true
+          }
+        }
+      ],
+      "relativeHeight": true,
+      "rowCount": 24,
+      "rowHeight": 25,
+      "colCount": 36,
+      "floatable": true,
+      "isDefault": true
+    }
+  ],
+  "popups": [],
+  "tags": [],
+  "dashboardTheme": "Dark",
+  "themeSwitchable": true,
+  "saveTimestamp": null,
+  "relativeHeight": true,
+  "rowCount": 24,
+  "rowHeight": 25,
+  "colCount": 36,
+  "floatable": true,
+  "viewState": {
+    "selected": {
+      "_viewType": true,
+      "_default": "0",
+      "_type": "symbol"
+    },
+    ".settings": {},
+    "tradeVolChart": {
+      "plot": {
+        "_viewType": true,
+        "_default": "trade",
+        "_type": "symbol"
+      },
+      "syms": {
+        "_viewType": true,
+        "_default": "XBTUSD",
+        "_type": "symbol"
+      }
+    },
+    "trades_size_sum": {
+      "plot": {
+        "_viewType": true,
+        "_type": "symbol",
+        "_default": ""
+      },
+      "sym": {
+        "_viewType": true,
+        "_type": "symbol",
+        "_default": ""
+      }
+    }
+  },
+  "data": {
+    "rdb_table_count": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "Property",
+        "Value"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "test",
+      "_mappings": {
+        "key": "Property",
+        "mappings": {},
+        "value": "Value"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "rdb\"tables[]!count each value each tables[]\"",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "gw": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "cnt"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "cnt"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "last gw(`countBy;`startTS`endTS`table`byCols!(.z.p-0D00:00:10;.z.p;`trade;`sym);`callback;(0#`)!())",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trades_size_sum": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "date",
+        "time",
+        "sym",
+        "orderID",
+        "price",
+        "tradeID",
+        "side",
+        "size",
+        "exchange"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "plot",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "orderbook": {
+      "_pagingType": "NONE",
+      "_autoExecute": false,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "sym",
+        "side",
+        "size",
+        "price",
+        "tickDirection",
+        "trdMatchID",
+        "grossValue",
+        "homeNotional",
+        "foreignNotional"
+      ],
+      "_dataType": "analytic",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "sym"
+      },
+      "_maxRows": "100",
+      "_forceReset": true,
+      "_subscriptionType": "streaming",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_selectedAnalytic": "trade",
+      "_analyticParams": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_streamingParameters": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_subscriptionKey": "",
+      "_isStreamingSubscription": false,
+      "_hasUpdateQuery": false,
+      "_updateQueryString": "",
+      "_updateType": "query"
+    },
+    "vwap depth": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "symbol"
+      ],
+      "_dataType": "analytic",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "symbol",
+        "mappings": {},
+        "value": ""
+      },
+      "_maxRows": "1000",
+      "_subscriptionType": "streaming",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": false,
+          "weight": 2
+        }
+      ],
+      "_selectedAnalytic": "vwaps",
+      "_analyticParams": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_streamingParameters": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_subscriptionKey": "time",
+      "_isStreamingSubscription": false,
+      "_hasUpdateQuery": false,
+      "_updateQueryString": "",
+      "_updateType": "query"
+    },
+    "trades_stream": {
+      "_pagingType": "NONE",
+      "_autoExecute": false,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "sym",
+        "side",
+        "size",
+        "price",
+        "tickDirection",
+        "trdMatchID",
+        "grossValue",
+        "homeNotional",
+        "foreignNotional"
+      ],
+      "_dataType": "analytic",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "sym"
+      },
+      "_maxRows": "100",
+      "_forceReset": false,
+      "_subscriptionType": "streaming",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_selectedAnalytic": "trade",
+      "_analyticParams": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "",
+          "isViewState": false
+        }
+      ],
+      "_streamingParameters": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "",
+          "isViewState": false
+        }
+      ],
+      "_subscriptionKey": "time",
+      "_isStreamingSubscription": false,
+      "_hasUpdateQuery": false,
+      "_updateQueryString": "",
+      "_updateType": "query"
+    },
+    "orderbook_count": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "time",
+        "size",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "weight": 2,
+          "isExpanded": true
+        },
+        {
+          "weight": 1,
+          "isExpanded": false
+        },
+        {
+          "weight": 1,
+          "isExpanded": false
+        },
+        {
+          "weight": 0,
+          "isExpanded": true
+        },
+        {
+          "weight": 2,
+          "isExpanded": true
+        }
+      ],
+      "_queryString": "{[x]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(`orderbook;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select size:sum size,trades:count i by sym,time:\"z\"$time.date+10 xbar time.minute from res where sym = `XBTUSD\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "tradeVolCountByTimeInterval": {
+      "tradeVolArgs": {
+        "_pagingType": "NONE",
+        "_autoExecute": true,
+        "_autoExec": true,
+        "_columns": [],
+        "_dataType": "query",
+        "_dataSource": "kdb",
+        "_connection": "ctp",
+        "_mappings": {
+          "key": "plot",
+          "mappings": {},
+          "value": ""
+        },
+        "_maxRows": 2000,
+        "_subscriptionType": "static",
+        "_subscriptionInterval": 3,
+        "_layout": [
+          {
+            "isExpanded": true,
+            "weight": 2
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": true,
+            "weight": 0
+          },
+          {
+            "isExpanded": true,
+            "weight": 2
+          }
+        ],
+        "_queryString": "{[plot]}",
+        "_queryParams": [
+          {
+            "name": "plot",
+            "index": 0,
+            "type": "symbol",
+            "value": "<%tradeVolChart/plot%>",
+            "IsKdbParam": true,
+            "isViewState": true
+          }
+        ],
+        "_subscriptionKey": "",
+        "_hasUpdateQuery": false,
+        "_updateQueryParams": [],
+        "_updateQueryString": "",
+        "_updateType": "query",
+        "_pageSize": 2000,
+        "_serverPaging": false
+      },
+      "syms": {
+        "_pagingType": "NONE",
+        "_autoExecute": true,
+        "_autoExec": true,
+        "_columns": [],
+        "_dataType": "query",
+        "_dataSource": "kdb",
+        "_connection": "ctp",
+        "_mappings": {},
+        "_maxRows": 2000,
+        "_subscriptionType": "static",
+        "_subscriptionInterval": 3,
+        "_layout": [
+          {
+            "isExpanded": true,
+            "weight": 2
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": true,
+            "weight": 0
+          },
+          {
+            "isExpanded": false,
+            "weight": 2
+          }
+        ],
+        "_queryString": "{[syms]}",
+        "_queryParams": [
+          {
+            "name": "syms",
+            "index": 0,
+            "type": "symbol",
+            "value": "<%tradeVolChart/syms%>",
+            "IsKdbParam": true,
+            "isViewState": true
+          }
+        ],
+        "_subscriptionKey": "",
+        "_hasUpdateQuery": false,
+        "_updateQueryParams": [],
+        "_updateQueryString": "",
+        "_updateType": "query",
+        "_pageSize": 2000,
+        "_serverPaging": false
+      }
+    },
+    "tradeVolDropdown": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "plot"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "plot",
+        "mappings": {},
+        "value": ""
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "([]plot:`trade`orderbook)",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_count": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "time",
+        "size",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(`trade;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select size:sum size,trades:count i by sym,time:\"z\"$time.date+10 xbar time.minute from res where sym = `XBTUSD\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "agg_orderbook": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "cnt"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "cnt"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "last gw(`countBy;`startTS`endTS`table`byCols!(.z.p-0D00:00:10;.z.p;`orderbook;`sym);`callback;(0#`)!())",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "graphs": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "trades"
+      },
+      "_maxRows": 2000,
+      "_forceReset": false,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x;plot;syms]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(plot;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select trades:count i by sym from res\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        },
+        {
+          "name": "plot",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 2,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "heatmap_data": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "trades"
+      },
+      "_maxRows": 2000,
+      "_forceReset": false,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x;plot]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(plot;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select trades:count i by sym from res\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        },
+        {
+          "name": "plot",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary_rdb": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "dap",
+        "size"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "dap"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\nselect size:sum trades by time, dap from tab ",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary_hdb": {
+      "_autoExec": true,
+      "_autoExecute": true,
+      "_columns": [
+        "date",
+        "time",
+        "sym",
+        "orderID",
+        "price",
+        "tradeID",
+        "side",
+        "size",
+        "exchange"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": "20000",
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x]\r\n//  tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-3;\"p\"$.z.d+2);`callback;(0#`)!());\r\n  tab:getData[`trade;\"p\"$.z.d-3;\"p\"$.z.d+2;`;`]\r\n//  pivot:{[t]if[not count t;:t];u:`$string asc distinct last f:flip key t;pf:{x#(`$string y)!z};p:?[t;();g!g:-1_ k;(pf;`u;last k:key f;last key flip value t)];p};\r\n//  pivot select trades:sum trades by time, dap from tab\r\n }\r\n",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary_idb": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "dap",
+        "size"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\nselect size:sum trades by time, dap from tab where dap = `idb\r\n\r\n//select size:sum size,trades:count i by sym,time:\"z\"$time.date+10 xbar time.minute from res where sym = `XBTUSD",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "orderID",
+        "size"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "sym"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\n// 20 sublist `volume xdesc select sum trades, sum volume by sym from tab\r\n20 sublist `size xdesc select sum orderID, sum size by sym from getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`]",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "sym_list": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": ""
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\nselect sym from `volume xdesc select sum trades, sum volume by sym from tab",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    }
+  },
+  "worksheetPadding": 10,
+  "widgetsSpacing": 0,
+  "borderColor": "000000",
+  "borderBackground": "000000",
+  "transparentBackground": true,
+  "borderWidth": 0,
+  "borderRounding": 0,
+  "borderSpacing": 0,
+  "borderShadow": false,
+  "saveViewerState": "enabled",
+  "enableShareDashboard": false,
+  "notifications": {
+    "Notifications": {
+      "_Version": "4.2.0s2",
+      "Enabled": true,
+      "InBrowserNotifications": false,
+      "Position": "Bottom Right",
+      "MaxVisibleCount": 3,
+      "FadeOut": 5,
+      "Icon": "fa-bell-o",
+      "Sound": "beep",
+      "SoundVolume": 100,
+      "Grouping": false,
+      "GroupingInterval": 1,
+      "triggers": []
+    }
+  },
+  "showLoadingIndicators": false,
+  "unsavedViewerPrompt": false,
+  "advancedCss": "",
+  "cssClasses": "",
+  "version": "4.6.0P1",
+  "wasChanged": true,
+  "shortcuts": []
+}
