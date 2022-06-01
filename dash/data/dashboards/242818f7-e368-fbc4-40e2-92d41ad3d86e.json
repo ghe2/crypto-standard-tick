@@ -2,7 +2,7 @@
   "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
   "name": "Crypto Dashboard",
   "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
-  "lastUpdateDate": "Wed, 01 Jun 2022 02:19:50 GMT",
+  "lastUpdateDate": "Wed, 01 Jun 2022 05:21:02 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -625,7 +625,7 @@
                   "Column": "sym",
                   "HighlightRules": [],
                   "Name": "Volume",
-                  "Size": "volume"
+                  "Size": "x"
                 }
               ],
               "FileExport": {
@@ -656,7 +656,7 @@
                 "ShowAbsolute": false,
                 "ShowLegend": true,
                 "Suffix": "",
-                "customLabel": "{{sym}} Trades: {{orderID}}\nVolume: {{size}}",
+                "customLabel": "{{sym}} Trades: {{x}} Volume: {{size}}",
                 "gapWidth": 2,
                 "labelColor": "#ffffff",
                 "upperFontSize": "12",
@@ -670,12 +670,12 @@
               },
               "possibleColumns": [
                 "sym",
-                "orderID",
+                "x",
                 "size"
               ],
               "possibleLabels": [
                 "sym",
-                "orderID",
+                "x",
                 "size"
               ],
               "version": "4.5.0",
@@ -710,7 +710,7 @@
               },
               "possibleRules": [
                 "sym",
-                "orderID",
+                "x",
                 "size"
               ]
             },
@@ -722,7 +722,7 @@
           }
         },
         {
-          "id": "6c2ca816-ec6b-46df-8175-a6d797bbc5b8",
+          "id": "0d6768b6-6670-3b72-6cdf-28242a6073ec",
           "layout": {
             "row": 16,
             "column": 0,
@@ -730,7 +730,7 @@
             "colSpan": 36
           },
           "component": {
-            "id": "902ff361-66a8-85e1-fe0f-725e5395b30d",
+            "id": "706f9fcc-8f08-cb1a-b577-c3ff3dcdd821",
             "key": "ChartJS",
             "options": {
               "Layers": [
@@ -738,83 +738,42 @@
                   "_Hidden": {
                     "_Index": 0,
                     "_LayerId": "layer_8977",
-                    "_PossibleColumns": [
-                      "date",
-                      "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
-                      "size",
-                      "exchange"
-                    ],
-                    "_PossibleColumnsWithItself": [
-                      "<this>",
-                      "date",
-                      "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
-                      "size",
-                      "exchange"
-                    ],
-                    "_PossibleColumnsWithXYKey": [
-                      "<thisX>",
-                      "<thisY>",
-                      "<thisName>",
-                      "date",
-                      "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
-                      "size",
-                      "exchange"
-                    ],
-                    "_PossibleRadius": [
-                      "Fixed Size",
-                      "date",
-                      "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
-                      "size",
-                      "exchange"
-                    ],
+                    "_PossibleColumns": [],
+                    "_PossibleColumnsWithItself": [],
+                    "_PossibleColumnsWithXYKey": [],
+                    "_PossibleRadius": [],
                     "_PossibleXAxes": [
                       "XAxis 1"
                     ],
                     "_PossibleYAxes": [
                       "YAxis 1"
                     ],
-                    "_Type": "Bubble"
-                  },
-                  "Basics": {
-                    "Data": {
-                      "_dashboardsType": "data",
-                      "value": "trade_summary_hdb"
-                    },
-                    "LegendLabelColor": "",
-                    "Name": "Layer 1",
-                    "BorderWidth": 0
+                    "_Type": "Line",
+                    "_PossibleLayers": [
+                      "nofill",
+                      "origin",
+                      "+1"
+                    ]
                   },
                   "Axes": {
-                    "XAxisData": "time",
                     "XAxisID": "XAxis 1",
-                    "YAxisID": "YAxis 1",
-                    "YAxisData": "size"
+                    "YAxisID": "YAxis 1"
+                  },
+                  "Basics": {
+                    "Data": "",
+                    "BorderWidth": 0,
+                    "LegendLabelColor": "",
+                    "Name": "Layer 1"
                   },
                   "Labels": {
                     "Font": {
                       "Bold": false,
                       "Size": 12
                     }
+                  },
+                  "Points": {
+                    "PointBorderWidth": 0,
+                    "PointHoverBorderWidth": 0
                   }
                 }
               ],
@@ -824,51 +783,22 @@
               "XAxes": [
                 {
                   "_Hidden": {
-                    "_Type": "time",
-                    "_AxisId": "axis_2052",
+                    "_Type": "category",
+                    "_AxisId": "axis_3147",
                     "_Index": 0,
                     "_Label": "XAxis 1"
                   },
                   "Labels": {
-                    "MaxWidth": 0,
-                    "_ReverseCache": false,
-                    "Offset": false,
-                    "TimeFormats": {
-                      "Break": 86400000,
-                      "Day": "MMM D",
-                      "Distribution": "linear",
-                      "Hour": "DD/MM-hA",
-                      "IsoWeekday": false,
-                      "ShowMajor": false,
-                      "Millisecond": "h:mm:ss.SSS a",
-                      "Minute": "h:mm a",
-                      "Month": "MMM YYYY",
-                      "Quarter": "[Q]Q - YYYY",
-                      "Round": false,
-                      "Second": "h:mm:ss a",
-                      "TooltipFormat": "",
-                      "TriggerBreak": 86400000,
-                      "Unit": "hour",
-                      "Week": "ll",
-                      "Year": "YYYY"
-                    }
-                  },
-                  "Range": {
-                    "Max": 0,
-                    "Min": 0,
-                    "SoftRange": false,
-                    "SuggestedMax": 0,
-                    "SuggestedMin": 0,
-                    "UseDataRange": false
-                  },
-                  "Stacked": true
+                    "DateFormat": "YYYY-MM-DD",
+                    "MaxWidth": 0
+                  }
                 }
               ],
               "YAxes": [
                 {
                   "_Hidden": {
                     "_Type": "linear",
-                    "_AxisId": "axis_2056",
+                    "_AxisId": "axis_3151",
                     "_Index": 0,
                     "_Label": "YAxis 1"
                   },
@@ -879,17 +809,7 @@
                   }
                 }
               ],
-              "version": "4.7.0",
-              "Style": {
-                "Palette": {
-                  "0": {
-                    "type": "#0a3b40"
-                  },
-                  "1": {
-                    "type": "#005d67"
-                  }
-                }
-              }
+              "version": "4.7.0"
             },
             "containerId": null,
             "components": [],
@@ -1425,7 +1345,7 @@
         "_columns": [],
         "_dataType": "query",
         "_dataSource": "kdb",
-        "_connection": "ctp",
+        "_connection": "GW",
         "_mappings": {
           "key": "plot",
           "mappings": {},
@@ -1482,7 +1402,7 @@
         "_columns": [],
         "_dataType": "query",
         "_dataSource": "kdb",
-        "_connection": "ctp",
+        "_connection": "GW",
         "_mappings": {},
         "_maxRows": 2000,
         "_subscriptionType": "static",
@@ -1505,7 +1425,7 @@
             "weight": 0
           },
           {
-            "isExpanded": false,
+            "isExpanded": true,
             "weight": 2
           }
         ],
@@ -1890,8 +1810,9 @@
       "_serverPaging": false
     },
     "trade_summary_hdb": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "date",
         "time",
@@ -2009,12 +1930,11 @@
       "_serverPaging": false
     },
     "trade_summary": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "sym",
-        "orderID",
+        "x",
         "size"
       ],
       "_dataType": "query",
@@ -2051,7 +1971,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\n// 20 sublist `volume xdesc select sum trades, sum volume by sym from tab\r\n20 sublist `size xdesc select sum orderID, sum size by sym from getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`]",
+      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\n// 20 sublist `volume xdesc select sum trades, sum volume by sym from tab\r\n20 sublist `size xdesc select count i, sum size by sym from getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`]",
       "_queryParams": [],
       "_subscriptionKey": "",
       "_hasUpdateQuery": false,
@@ -2062,21 +1982,21 @@
       "_serverPaging": false
     },
     "sym_list": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "sym"
       ],
       "_dataType": "query",
       "_dataSource": "kdb",
-      "_connection": "ctp",
+      "_connection": "GW",
       "_mappings": {
         "key": "sym",
         "mappings": {},
         "value": ""
       },
       "_maxRows": 2000,
+      "_forceReset": true,
       "_subscriptionType": "static",
       "_subscriptionInterval": 3,
       "_layout": [
@@ -2101,8 +2021,84 @@
           "weight": 2
         }
       ],
-      "_queryString": "tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\nselect sym from `volume xdesc select sum trades, sum volume by sym from tab",
+      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\ntab:getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`];\r\nselect sym from `size xdesc select count i, sum size by sym from tab",
       "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "ohlvc": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "date",
+        "time",
+        "sym",
+        "orderID",
+        "price",
+        "tradeID",
+        "side",
+        "size",
+        "exchange"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "plot",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
       "_subscriptionKey": "",
       "_hasUpdateQuery": false,
       "_updateQueryParams": [],
