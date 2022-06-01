@@ -2,7 +2,7 @@
   "id": "b91215f0-7e4a-1aa3-cb63-54f7e3615084",
   "name": "Crypto",
   "creationDate": "Mon, 14 Mar 2022 02:24:28 GMT",
-  "lastUpdateDate": "Wed, 01 Jun 2022 00:09:29 GMT",
+  "lastUpdateDate": "Wed, 01 Jun 2022 04:56:48 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -431,7 +431,7 @@
                       "RuleBorderColor": "#00ff11",
                       "RuleColor": "#00ff11",
                       "RuleOperation": "==",
-                      "RuleValue": "Buy"
+                      "RuleValue": "bid"
                     },
                     "1": {
                       "RuleName": "Sell",
@@ -442,7 +442,7 @@
                       "RuleBorderColor": "#ff0000",
                       "RuleColor": "#ff0000",
                       "RuleOperation": "==",
-                      "RuleValue": "Sell"
+                      "RuleValue": "ask"
                     }
                   },
                   "Labels": {
@@ -716,8 +716,9 @@
   },
   "data": {
     "vwap depth": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "time",
         "vwap_bid_1",
@@ -1111,6 +1112,6 @@
   "advancedCss": "",
   "cssClasses": "",
   "version": "4.6.0P1",
-  "wasChanged": true,
+  "wasChanged": false,
   "shortcuts": []
 }
