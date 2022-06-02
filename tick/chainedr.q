@@ -21,7 +21,9 @@ upd_recovery:upd_realtime
 //////////////////////////////////////////////////// Order Book Logic /////////////////////////////////////////////////////////
 
 book: ([]`s#time:"p"$();`g#sym:`$();bids:();bidsizes:();asks:();asksizes:());
-lastBookBySym:enlist[`]!enlist `bidbook`askbook!(()!();()!()); 
+/ lastBookBySym:enlist[`]!enlist `bidbook`askbook!(()!();()!()); 
+lastBookBySymExch:([sym:`$();exchange:`$()]bidbook:();askbook:());
+`lastBookBySymExch upsert (`;`;()!();()!()); 
 
 bookbuilder:{[x;y]
     .debug.xy:(x;y);
@@ -49,17 +51,17 @@ bookbuilder:{[x;y]
     };
  
 generateOrderbook:{[newOrder]
-    .debug.newOrder:newOrder;
-
+    .debug.generateOrderBook:`newOrder`lastBookBySym!(newOrder;lastBookBySymExch);
     //create the books based on the last book state
-    books:update bidbook:bookbuilder\[lastBookBySym[first sym]`bidbook;flip (side like "bid";orderID;price;size;action)],askbook:bookbuilder\[lastBookBySym[first sym]`askbook;flip (side like "ask";orderID;price;size;action)] by sym from newOrder;
+    / books:update bidbook:bookbuilder\[lastBookBySym[first sym]`bidbook;flip (side like "bid";orderID;price;size;action)],askbook:bookbuilder\[lastBookBySym[first sym]`askbook;flip (side like "ask";orderID;price;size;action)] by sym from newOrder;
+    books:update bidbook:bookbuilder\[@[lastBookBySymExch;(first sym; first exchange)]`bidbook;flip (side like "bid";orderID;price;size;action)],askbook:bookbuilder\[@[lastBookBySymExch;(first sym; first exchange)]`askbook;flip (side like "ask";orderID;price;size;action)] by sym, exchange from newOrder;
 
-    //store the latest book state
+    //store the latest book statex
     .debug.books1:books;
-    lastBookBySym,:exec last bidbook,last askbook by sym from books;
-
+    / lastBookBySym,:exec last bidbook,last askbook by sym from books;
+    lastBookBySymExch,:exec last bidbook,last askbook by sym, exchange from books;
     //generate the orderbook 
-    books:select time,sym,bids:(value each bidbook)[;;0],bidsizes:(value each bidbook)[;;1],asks:(value each askbook)[;;0],asksizes:(value each askbook)[;;1] from books;
+    books:select time,sym,exchange,bids:(value each bidbook)[;;0],bidsizes:(value each bidbook)[;;1],asks:(value each askbook)[;;0],asksizes:(value each askbook)[;;1] from books;
     books:update bids:desc each distinct each bids,bidsizes:{sum each x group y}'[bidsizes;bids] @' desc each distinct each bids,asks:asc each distinct each asks,asksizes:{sum each x group y}'[asksizes;asks] @' asc each distinct each asks from books
 
     };

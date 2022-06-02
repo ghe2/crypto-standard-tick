@@ -2,7 +2,7 @@
   "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
   "name": "Crypto Dashboard",
   "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
-  "lastUpdateDate": "Wed, 01 Jun 2022 06:14:17 GMT",
+  "lastUpdateDate": "Thu, 02 Jun 2022 07:03:27 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -31,57 +31,32 @@
               "Layers": [
                 {
                   "_Hidden": {
-                    "_Type": "Bubble",
                     "_Index": 0,
                     "_LayerId": "layer_8977",
                     "_PossibleColumns": [
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleColumnsWithItself": [
                       "<this>",
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleColumnsWithXYKey": [
                       "<thisX>",
                       "<thisY>",
                       "<thisName>",
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleRadius": [
                       "Fixed Size",
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleXAxes": [
                       "XAxis 1"
@@ -89,22 +64,23 @@
                     "_PossibleYAxes": [
                       "YAxis 1",
                       "YAxis 2"
-                    ]
+                    ],
+                    "_Type": "Bar"
                   },
                   "Basics": {
-                    "LegendLabelColor": "",
-                    "Name": "Size",
-                    "BorderWidth": 0,
                     "Data": {
                       "_dashboardsType": "data",
-                      "value": "trades_size_sum"
-                    }
+                      "value": "trades_size_sum copy"
+                    },
+                    "LegendLabelColor": "",
+                    "Name": "Size",
+                    "BorderWidth": 0
                   },
                   "Axes": {
                     "XAxisData": "time",
-                    "YAxisData": "size",
                     "XAxisID": "XAxis 1",
-                    "YAxisID": "YAxis 2"
+                    "YAxisID": "YAxis 2",
+                    "YAxisData": "size"
                   },
                   "Labels": {
                     "Font": {
@@ -119,53 +95,29 @@
                     "_Index": 1,
                     "_LayerId": "layer_3299",
                     "_PossibleColumns": [
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleColumnsWithItself": [
                       "<this>",
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleColumnsWithXYKey": [
                       "<thisX>",
                       "<thisY>",
                       "<thisName>",
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleRadius": [
                       "Fixed Size",
-                      "date",
                       "time",
-                      "sym",
-                      "orderID",
-                      "price",
-                      "tradeID",
-                      "side",
                       "size",
-                      "exchange"
+                      "price"
                     ],
                     "_PossibleXAxes": [
                       "XAxis 1"
@@ -190,7 +142,7 @@
                     "BorderWidth": 2,
                     "Data": {
                       "_dashboardsType": "data",
-                      "value": "trades_size_sum"
+                      "value": "trades_size_sum copy"
                     }
                   },
                   "Axes": {
@@ -1501,8 +1453,9 @@
       }
     },
     "tradeVolDropdown": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "plot"
       ],
@@ -2133,6 +2086,75 @@
         }
       ],
       "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`ohlcv;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "plot",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trades_size_sum copy": {
+      "_autoExec": true,
+      "_autoExecute": true,
+      "_columns": [
+        "time",
+        "size",
+        "price"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc select size:sum size, size wavg price by time:time.date+time.minute from getData[plot;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
       "_queryParams": [
         {
           "name": "plot",
