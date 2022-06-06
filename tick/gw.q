@@ -34,9 +34,10 @@ getData:{[tbl;sd;ed;ids;exc]
 getCorrelation:{[exchange;startTime;endTime]
     data:getData[`vwap;startTime;endTime;`;exchange];
     res:select vwap:accVol wavg vwap by sym, time from data where not null vwap;
-    rack:(select asc distinct time from res) cross select distinct sym from res;
-    matrix:flip fills flip exec vwap by sym from rack lj res;
-    :{x cor/:\: x}matrix
+    times:([]time:asc distinct exec time from res);
+    rack:times cross select distinct sym from res;
+    matrix:update fills vwap by sym from rack lj res;
+    {x cor/:\: x} exec vwap by sym from matrix
  }
 
 // If the rest functionality has been imported successfully set registers
