@@ -62,7 +62,7 @@ if[.gda.restEnabled;
     "/getData";
     "API with format of getData";
     .db.getDataREST;
-    .rest.reg.data[`tbl;-11h;0b;`order;"Table to Query"],
+    .rest.reg.data[`tbl;-11h;0b;`trade;"Table to Query"],
       .rest.reg.data[`sd;-12h;0b;.z.p*0W;"Start Date"],
           .rest.reg.data[`ed;-12h;0b;.z.p*0W;"End Date"],
               .rest.reg.data[`ids;11h;0b;0#`;"Instruments to subscribe to"],
