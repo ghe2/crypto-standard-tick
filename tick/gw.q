@@ -38,7 +38,9 @@ getCorrelation:{[exchange;startTime;endTime]
     rack:times cross select distinct sym from res;
     col_order:exec sym from `mcap xdesc select mcap:sum vwap*accVol by sym from data where not null vwap;
     matrix:update fills vwap by sym from rack lj res;
-    :{x cor/:\: x} col_order xcols exec vwap by sym from matrix
+    correlation:{x cor/:\: x} col_order xcols exec vwap by sym from matrix;
+    areCols:(cols correlation) where {not all null value x} each -1_value update sym:key[correlation] from correlation;
+    :areCols!flip areCols!correlation[areCols][areCols]
  }
 
 // If the rest functionality has been imported successfully set registers
