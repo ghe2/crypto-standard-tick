@@ -2,7 +2,7 @@
   "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
   "name": "Crypto Dashboard",
   "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
-  "lastUpdateDate": "Thu, 02 Jun 2022 07:03:27 GMT",
+  "lastUpdateDate": "Mon, 06 Jun 2022 04:56:44 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -17,623 +17,59 @@
       "thumb": null,
       "widgets": [
         {
-          "id": "1be8ea0d-07c3-3a60-b41f-96647ae2b3fb",
-          "layout": {
-            "row": 9,
-            "column": 4,
-            "rowSpan": 7,
-            "colSpan": 32
-          },
-          "component": {
-            "id": "40edd9a3-9c7a-d7f3-35bd-102ec1f94067",
-            "key": "ChartJS",
-            "options": {
-              "Layers": [
-                {
-                  "_Hidden": {
-                    "_Index": 0,
-                    "_LayerId": "layer_8977",
-                    "_PossibleColumns": [
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleColumnsWithItself": [
-                      "<this>",
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleColumnsWithXYKey": [
-                      "<thisX>",
-                      "<thisY>",
-                      "<thisName>",
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleRadius": [
-                      "Fixed Size",
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleXAxes": [
-                      "XAxis 1"
-                    ],
-                    "_PossibleYAxes": [
-                      "YAxis 1",
-                      "YAxis 2"
-                    ],
-                    "_Type": "Bar"
-                  },
-                  "Basics": {
-                    "Data": {
-                      "_dashboardsType": "data",
-                      "value": "trades_size_sum copy"
-                    },
-                    "LegendLabelColor": "",
-                    "Name": "Size",
-                    "BorderWidth": 0
-                  },
-                  "Axes": {
-                    "XAxisData": "time",
-                    "XAxisID": "XAxis 1",
-                    "YAxisID": "YAxis 2",
-                    "YAxisData": "size"
-                  },
-                  "Labels": {
-                    "Font": {
-                      "Bold": false,
-                      "Size": 12
-                    }
-                  }
-                },
-                {
-                  "_Hidden": {
-                    "_Type": "Line",
-                    "_Index": 1,
-                    "_LayerId": "layer_3299",
-                    "_PossibleColumns": [
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleColumnsWithItself": [
-                      "<this>",
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleColumnsWithXYKey": [
-                      "<thisX>",
-                      "<thisY>",
-                      "<thisName>",
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleRadius": [
-                      "Fixed Size",
-                      "time",
-                      "size",
-                      "price"
-                    ],
-                    "_PossibleXAxes": [
-                      "XAxis 1"
-                    ],
-                    "_PossibleYAxes": [
-                      "YAxis 1",
-                      "YAxis 2"
-                    ],
-                    "_PossibleLayers": [
-                      "Layer 1",
-                      "nofill",
-                      "origin",
-                      "+1",
-                      "+2"
-                    ]
-                  },
-                  "Basics": {
-                    "LegendLabelColor": "",
-                    "Name": "Price",
-                    "BackgroundColor": "#f23a65",
-                    "BorderColor": "#f23a65",
-                    "BorderWidth": 2,
-                    "Data": {
-                      "_dashboardsType": "data",
-                      "value": "trades_size_sum copy"
-                    }
-                  },
-                  "Axes": {
-                    "XAxisData": "time",
-                    "YAxisData": "price",
-                    "XAxisID": "XAxis 1",
-                    "YAxisID": "YAxis 1"
-                  },
-                  "Labels": {
-                    "Font": {
-                      "Bold": false,
-                      "Size": 12
-                    }
-                  },
-                  "Line": {
-                    "Fill": "Layer 1"
-                  }
-                }
-              ],
-              "Legend": {
-                "LegendLayerThreshold": 5
-              },
-              "XAxes": [
-                {
-                  "_Hidden": {
-                    "_Type": "time",
-                    "_AxisId": "axis_67830",
-                    "_Index": 0,
-                    "_Label": "XAxis 1"
-                  },
-                  "Labels": {
-                    "MaxWidth": 0,
-                    "_ReverseCache": false,
-                    "Offset": false,
-                    "TimeFormats": {
-                      "Break": 86400000,
-                      "Day": "MMM D",
-                      "Distribution": "linear",
-                      "Hour": "hA",
-                      "IsoWeekday": false,
-                      "ShowMajor": false,
-                      "Millisecond": "h:mm:ss.SSS a",
-                      "Minute": "h:mm a",
-                      "Month": "MMM YYYY",
-                      "Quarter": "[Q]Q - YYYY",
-                      "Round": false,
-                      "Second": "h:mm:ss a",
-                      "TooltipFormat": "MMM D h:mm:ss.SSS a",
-                      "TriggerBreak": 86400000,
-                      "Unit": "",
-                      "Week": "ll",
-                      "Year": "YYYY"
-                    }
-                  },
-                  "Range": {
-                    "Max": 0,
-                    "Min": 0,
-                    "SoftRange": false,
-                    "SuggestedMax": 0,
-                    "SuggestedMin": 0,
-                    "UseDataRange": false
-                  }
-                }
-              ],
-              "YAxes": [
-                {
-                  "_Hidden": {
-                    "_Type": "linear",
-                    "_AxisId": "axis_67834",
-                    "_Index": 0,
-                    "_Label": "YAxis 1"
-                  },
-                  "Labels": {
-                    "Format": "Smart Number",
-                    "Prefix": "$",
-                    "MaxWidth": 0,
-                    "_ReverseCache": false,
-                    "Offset": false,
-                    "DateFormat": "YYYY-MM-DD"
-                  },
-                  "Range": {
-                    "UseMinMax": true,
-                    "UseDataRange": true
-                  }
-                },
-                {
-                  "_Hidden": {
-                    "_Type": "linear",
-                    "_AxisId": "axis_5838",
-                    "_Index": 1,
-                    "_Label": "YAxis 2"
-                  },
-                  "Labels": {
-                    "FontColor": "#F8F8F8",
-                    "Format": "Smart Number",
-                    "MaxWidth": 0,
-                    "_ReverseCache": false,
-                    "Offset": false,
-                    "DateFormat": "YYYY-MM-DD"
-                  },
-                  "Range": {
-                    "Max": 0,
-                    "Min": 0,
-                    "SoftRange": false,
-                    "SuggestedMax": 0,
-                    "SuggestedMin": 0,
-                    "UseDataRange": false
-                  },
-                  "Position": "right"
-                }
-              ],
-              "format": {
-                "widgetTitle": {
-                  "_dashboardsType": "viewstate",
-                  "value": "tradeVolChart/syms"
-                }
-              },
-              "version": "4.7.0"
-            },
-            "containerId": null,
-            "components": [],
-            "widgets": [],
-            "definitionId": "1007",
-            "hasOnSettingsChange": true
-          }
-        },
-        {
-          "id": "c7d8465e-9558-d844-b07b-c444e464ac98",
-          "layout": {
-            "row": 11,
-            "column": 0,
-            "rowSpan": 2,
-            "colSpan": 4
-          },
-          "component": {
-            "id": "e32fa5bf-1236-f357-7f7f-b06fef23d81a",
-            "key": "Dataform",
-            "options": {
-              "version": "4.6.1P2",
-              "isDataform": true,
-              "Basics": {
-                "Data": {
-                  "_dashboardsType": "data",
-                  "value": "tradeVolCountByTimeInterval/tradeVolArgs"
-                },
-                "SubmitButtonText": "Submit",
-                "ValidationAnalytic": "",
-                "ExpandDictParameters": true,
-                "ForceExecute": false,
-                "ShowReset": false,
-                "ShowSubmit": false,
-                "FloatSubmit": false,
-                "FloatReset": false,
-                "ViewStates": [
-                  {
-                    "PathEnc": "tradeVolChart%2Fplot",
-                    "DisplayName": "Table input",
-                    "HideParameter": false,
-                    "Tooltip": "",
-                    "FieldType": {
-                      "_Type": "Dropdown",
-                      "DropdownPossibleValues": [
-                        "",
-                        "plot"
-                      ],
-                      "Data": {
-                        "_dashboardsType": "data",
-                        "value": "tradeVolDropdown"
-                      },
-                      "AcceptEmptyValues": false,
-                      "ForceSelect": false,
-                      "MultiSelect": false,
-                      "ShowSearch": false,
-                      "AdvancedSearch": false,
-                      "FieldSummaryThreshold": 5,
-                      "TooltipSummaryThreshold": 5,
-                      "SelectAllValue": "",
-                      "DataSourceMapping": {
-                        "Value": "plot",
-                        "Text": "plot",
-                        "DropdownPossibleValues": [
-                          "plot"
-                        ]
-                      },
-                      "Items": []
-                    }
-                  }
-                ],
-                "Actions": []
-              },
-              "Style": {
-                "advanced": "",
-                "cssClasses": "",
-                "minWidth": "",
-                "display": "Row",
-                "inline": "Top",
-                "labelWidth": "",
-                "labelPadding": "",
-                "labelAlign": "Left",
-                "padding": "",
-                "verticalSpacing": "",
-                "submitOffset": "",
-                "resetOffset": "",
-                "formMargin": ""
-              },
-              "Alignment": {
-                "paddingLeft": 0,
-                "paddingRight": 0,
-                "paddingTop": 5,
-                "paddingBottom": 0,
-                "innerPaddingLeft": 5,
-                "innerPaddingRight": 0,
-                "innerPaddingTop": 0,
-                "innerPaddingBottom": 0,
-                "titlePaddingLeft": 0,
-                "titlePaddingRight": 0,
-                "titlePaddingTop": 7,
-                "titlePaddingBottom": 7
-              },
-              "format": {
-                "widgetTitle": "",
-                "titleFontSize": 10,
-                "titleHorizontal": "Left",
-                "titleFontBold": false,
-                "titleShadow": false,
-                "titleTransparentBackground": false,
-                "tileBorderWidth": 0,
-                "tileBorderRounding": 0,
-                "tileBorderColor": "#000000",
-                "tileBackgroundColor": "#000000",
-                "tileTransparentBackground": true,
-                "tileShadow": false
-              }
-            },
-            "containerId": null,
-            "components": [],
-            "widgets": [],
-            "definitionId": "27",
-            "hasOnSettingsChange": true
-          }
-        },
-        {
-          "id": "ce956f24-13f9-9739-810c-9279a13426ba",
-          "layout": {
-            "row": 9,
-            "column": 0,
-            "rowSpan": 2,
-            "colSpan": 4
-          },
-          "component": {
-            "id": "a30d3e58-a7fd-36fc-cec6-3a980cfe95bb",
-            "key": "Dataform",
-            "options": {
-              "version": "4.6.1P2",
-              "isDataform": true,
-              "Basics": {
-                "Data": {
-                  "_dashboardsType": "data",
-                  "value": "tradeVolCountByTimeInterval/syms"
-                },
-                "SubmitButtonText": "Submit",
-                "ValidationAnalytic": "",
-                "ExpandDictParameters": true,
-                "ForceExecute": false,
-                "ShowReset": false,
-                "ShowSubmit": false,
-                "FloatSubmit": false,
-                "FloatReset": false,
-                "ViewStates": [
-                  {
-                    "PathEnc": "tradeVolChart%2Fsyms",
-                    "DisplayName": "Syms",
-                    "HideParameter": false,
-                    "Tooltip": "",
-                    "FieldType": {
-                      "_Type": "Dropdown",
-                      "DropdownPossibleValues": [
-                        "",
-                        "sym"
-                      ],
-                      "Data": {
-                        "_dashboardsType": "data",
-                        "value": "sym_list"
-                      },
-                      "AcceptEmptyValues": false,
-                      "ForceSelect": false,
-                      "MultiSelect": false,
-                      "ShowSearch": true,
-                      "AdvancedSearch": true,
-                      "FieldSummaryThreshold": 5,
-                      "TooltipSummaryThreshold": 5,
-                      "SelectAllValue": "",
-                      "DataSourceMapping": {
-                        "Value": "sym",
-                        "Text": "sym",
-                        "DropdownPossibleValues": [
-                          "sym"
-                        ]
-                      },
-                      "Items": []
-                    }
-                  }
-                ],
-                "Actions": []
-              },
-              "Style": {
-                "advanced": "",
-                "cssClasses": "",
-                "minWidth": "",
-                "display": "Row",
-                "inline": "Top",
-                "labelWidth": "",
-                "labelPadding": "",
-                "labelAlign": "Left",
-                "padding": "",
-                "verticalSpacing": "",
-                "submitOffset": "",
-                "resetOffset": "",
-                "formMargin": ""
-              },
-              "Alignment": {
-                "paddingLeft": 0,
-                "paddingRight": 0,
-                "paddingTop": 5,
-                "paddingBottom": 0,
-                "innerPaddingLeft": 5,
-                "innerPaddingRight": 0,
-                "innerPaddingTop": 0,
-                "innerPaddingBottom": 0,
-                "titlePaddingLeft": 0,
-                "titlePaddingRight": 0,
-                "titlePaddingTop": 7,
-                "titlePaddingBottom": 7
-              },
-              "format": {
-                "widgetTitle": "",
-                "titleFontSize": 10,
-                "titleHorizontal": "Left",
-                "titleFontBold": false,
-                "titleShadow": false,
-                "titleTransparentBackground": false,
-                "tileBorderWidth": 0,
-                "tileBorderRounding": 0,
-                "tileBorderColor": "#000000",
-                "tileBackgroundColor": "#000000",
-                "tileTransparentBackground": true,
-                "tileShadow": false
-              }
-            },
-            "containerId": null,
-            "components": [],
-            "widgets": [],
-            "definitionId": "27",
-            "hasOnSettingsChange": true
-          }
-        },
-        {
-          "id": "bde08eae-541b-7895-c0c4-c5ab73362670",
+          "id": "4d28e581-0606-cd40-525f-e2286d2fa216",
           "layout": {
             "row": 0,
             "column": 0,
-            "rowSpan": 9,
+            "rowSpan": 24,
             "colSpan": 36
           },
           "component": {
-            "id": "dd2da127-2c75-a8b1-1182-743716588f45",
-            "key": "Heatmap",
+            "id": "23f660f6-d730-e703-622e-1e77141e532d",
+            "key": "Accordion",
             "options": {
-              "Animation": {
-                "Duration": 1500,
-                "Easing": "quinticInOut"
-              },
+              "version": "4.5.1",
               "Basics": {
-                "Actions": [],
-                "Data": {
-                  "_dashboardsType": "data",
-                  "value": "trade_summary"
-                },
-                "Focus": {
-                  "_dashboardsType": "viewstate",
-                  "value": "tradeVolChart/syms"
-                },
-                "Selected": {
-                  "_dashboardsType": "viewstate",
-                  "value": "tradeVolChart/syms"
-                },
-                "SelectedAttr": "sym",
-                "Theme": "Dark"
-              },
-              "ColorPalette": {
-                "ColorScheme": [
+                "ComponentName": "accordion",
+                "Direction": "Vertical",
+                "ScaleOnResize": false,
+                "Sections": [
                   {
-                    "type": "#5680bf"
+                    "SectionId": "section_4733",
+                    "Title": "Heatmap",
+                    "TitleAlign": "Left",
+                    "Expanded": true,
+                    "Flex": false,
+                    "Weight": 1,
+                    "Resizeable": false,
+                    "HideTitle": false
                   },
                   {
-                    "type": "#5792bd"
+                    "SectionId": "section_3059",
+                    "Title": "Price and Size",
+                    "TitleAlign": "Left",
+                    "Expanded": true,
+                    "Flex": false,
+                    "Weight": 1,
+                    "Resizeable": false,
+                    "HideTitle": false
                   },
                   {
-                    "type": "#629fc7"
-                  },
-                  {
-                    "type": "#63b0c7"
-                  },
-                  {
-                    "type": "#63c7c7"
-                  },
-                  {
-                    "type": "#65c2af"
-                  },
-                  {
-                    "type": "#54bf9d"
-                  },
-                  {
-                    "type": "#5dbd86"
-                  },
-                  {
-                    "type": "#69bf74"
-                  },
-                  {
-                    "type": "#67b860"
+                    "SectionId": "section_2622",
+                    "Title": "Candle and Correlation",
+                    "TitleAlign": "Left",
+                    "Expanded": true,
+                    "Flex": false,
+                    "Weight": 1,
+                    "Resizeable": false,
+                    "HideTitle": false
                   }
-                ],
-                "ColorType": "Gradient",
-                "FixedColor": "#0061FF",
-                "HoverColor": "",
-                "SelectedColor": "",
-                "SelectedColorScheme": "blue green"
+                ]
               },
-              "Data": [
-                {
-                  "Color": "volume",
-                  "Column": "sym",
-                  "HighlightRules": [],
-                  "Name": "Volume",
-                  "Size": "x"
-                }
-              ],
-              "FileExport": {
-                "FileName": [],
-                "ShowExportCsvButton": false,
-                "ShowExportExcelButton": false,
-                "ShowScreenshot": false
-              },
-              "GroupBy": {
-                "GroupByColumns": "sym",
-                "ScaleByChildren": false,
-                "ShowHeader": false,
-                "UseGroupBy": false,
-                "headerColor": "#ffffff"
-              },
-              "NodeLabel": {
-                "BorderColor": "#282828",
-                "BorderWidth": 2,
-                "DateFormat": "HHHH-MM-DD",
-                "Format": "General",
-                "HideTrailingZeros": false,
-                "MaxValue": 100,
-                "MinValue": 0,
-                "Precision": 0,
-                "Prefix": "",
-                "Scale": true,
-                "Show": true,
-                "ShowAbsolute": false,
-                "ShowLegend": true,
-                "Suffix": "",
-                "customLabel": "{{sym}} Trades: {{x}} Volume: {{size}}",
-                "gapWidth": 2,
-                "labelColor": "#ffffff",
-                "upperFontSize": "12",
-                "upperLabel": false,
-                "upperLabelColour": "#000",
-                "upperLabelHeight": "15"
-              },
-              "Tooltip": {
-                "ShowTooltip": true,
-                "TooltipTemplate": "<table><thead><tr style=\"padding-right: 10px;\"><th>{{_name}}</th><th></th></tr></thead><tr><td><svg style=\"padding: 0 5px; vertical-align: middle;\" width=\"12\" height=\"12\"><rect width=\"12\" height=\"12\"style=\"fill: {{_color}} ;stroke-width:3;stroke: {{_color}}\"></rect></svg>{{_label}}:</td><td style=\"padding-right: 10px; text-align: left;\"><span style=\"padding-left:10px\">{{_value}}</span></td></tr></table>"
-              },
-              "possibleColumns": [
-                "sym",
-                "x",
-                "size"
-              ],
-              "possibleLabels": [
-                "sym",
-                "x",
-                "size"
-              ],
-              "version": "4.5.0",
               "Style": {
                 "advanced": "",
-                "cssClasses": ""
+                "cssClasses": "",
+                "Theme": "Dark"
               },
               "Alignment": {
                 "paddingLeft": 0,
@@ -659,166 +95,1126 @@
                 "tileBackgroundColor": "#000000",
                 "tileTransparentBackground": true,
                 "tileShadow": false
-              },
-              "possibleRules": [
-                "sym",
-                "x",
-                "size"
-              ]
-            },
-            "containerId": null,
-            "components": [],
-            "widgets": [],
-            "definitionId": "5",
-            "hasOnSettingsChange": true
-          }
-        },
-        {
-          "id": "0d6768b6-6670-3b72-6cdf-28242a6073ec",
-          "layout": {
-            "row": 16,
-            "column": 0,
-            "rowSpan": 8,
-            "colSpan": 36
-          },
-          "component": {
-            "id": "706f9fcc-8f08-cb1a-b577-c3ff3dcdd821",
-            "key": "ChartJS",
-            "options": {
-              "Layers": [
-                {
-                  "_Hidden": {
-                    "_Type": "Candlestick",
-                    "_Index": 0,
-                    "_LayerId": "layer_8977",
-                    "_PossibleColumns": [
-                      "date",
-                      "sym",
-                      "exchange",
-                      "time",
-                      "open",
-                      "high",
-                      "low",
-                      "close",
-                      "volume"
-                    ],
-                    "_PossibleColumnsWithItself": [
-                      "<this>",
-                      "date",
-                      "sym",
-                      "exchange",
-                      "time",
-                      "open",
-                      "high",
-                      "low",
-                      "close",
-                      "volume"
-                    ],
-                    "_PossibleColumnsWithXYKey": [
-                      "<thisX>",
-                      "<thisY>",
-                      "<thisName>",
-                      "date",
-                      "sym",
-                      "exchange",
-                      "time",
-                      "open",
-                      "high",
-                      "low",
-                      "close",
-                      "volume"
-                    ],
-                    "_PossibleRadius": [
-                      "Fixed Size",
-                      "date",
-                      "sym",
-                      "exchange",
-                      "time",
-                      "open",
-                      "high",
-                      "low",
-                      "close",
-                      "volume"
-                    ],
-                    "_PossibleXAxes": [
-                      "XAxis 1"
-                    ],
-                    "_PossibleYAxes": [
-                      "YAxis 1"
-                    ]
-                  },
-                  "Basics": {
-                    "LegendEnabled": false,
-                    "LegendLabelColor": "",
-                    "Name": "Layer 1",
-                    "BorderWidth": 2,
-                    "Data": {
-                      "_dashboardsType": "data",
-                      "value": "ohlcv"
-                    }
-                  },
-                  "Axes": {
-                    "XAxisData": "time",
-                    "XAxisID": "XAxis 1",
-                    "YAxisID": "YAxis 1",
-                    "Close": "close",
-                    "High": "high",
-                    "Low": "low",
-                    "Open": "open"
-                  },
-                  "Labels": {
-                    "Font": {
-                      "Bold": false,
-                      "Size": 12
-                    }
-                  }
-                }
-              ],
-              "Legend": {
-                "LegendLayerThreshold": 5
-              },
-              "XAxes": [
-                {
-                  "_Hidden": {
-                    "_Type": "category",
-                    "_AxisId": "axis_3147",
-                    "_Index": 0,
-                    "_Label": "XAxis 1"
-                  },
-                  "Labels": {
-                    "DateFormat": "YYYY-MM-DD",
-                    "MaxWidth": 0
-                  }
-                }
-              ],
-              "YAxes": [
-                {
-                  "_Hidden": {
-                    "_Type": "linear",
-                    "_AxisId": "axis_3151",
-                    "_Index": 0,
-                    "_Label": "YAxis 1"
-                  },
-                  "Labels": {
-                    "BeginAtZero": false,
-                    "MaxWidth": 0,
-                    "_ReverseCache": false,
-                    "DateFormat": "YYYY-MM-DD"
-                  }
-                }
-              ],
-              "version": "4.7.0",
-              "format": {
-                "widgetTitle": {
-                  "_dashboardsType": "viewstate",
-                  "value": "tradeVolChart/syms"
-                }
               }
             },
             "containerId": null,
             "components": [],
-            "widgets": [],
-            "definitionId": "1007",
+            "widgets": [
+              {
+                "id": "d435cd81-e96b-da20-c506-a5119108cb0a",
+                "layout": {
+                  "row": null,
+                  "column": null,
+                  "rowSpan": 12,
+                  "colSpan": 6
+                },
+                "component": {
+                  "id": "491d1146-4393-dae7-4fb0-4d81306259ae",
+                  "key": "Panel",
+                  "options": {
+                    "version": "4.4.0",
+                    "Basics": {
+                      "ComponentName": "panel",
+                      "RelativeHeight": true,
+                      "Advanced": false,
+                      "UserLayout": false,
+                      "Floatable": true,
+                      "ColCount": 36,
+                      "RowHeight": 25,
+                      "RowCount": 24
+                    },
+                    "Style": {
+                      "advanced": "",
+                      "cssClasses": ""
+                    },
+                    "Alignment": {
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "innerPaddingLeft": 0,
+                      "innerPaddingRight": 0,
+                      "innerPaddingTop": 0,
+                      "innerPaddingBottom": 0,
+                      "titlePaddingLeft": 0,
+                      "titlePaddingRight": 0,
+                      "titlePaddingTop": 7,
+                      "titlePaddingBottom": 7
+                    },
+                    "format": {
+                      "titleFontSize": 16,
+                      "titleHorizontal": "Center",
+                      "titleShadow": false,
+                      "tileBorderWidth": 0,
+                      "tileBorderRounding": 0,
+                      "tileBorderColor": "#000000",
+                      "tileBackgroundColor": "#000000",
+                      "tileTransparentBackground": true,
+                      "tileShadow": false
+                    }
+                  },
+                  "containerId": null,
+                  "components": [],
+                  "widgets": [
+                    {
+                      "id": "106aade7-804e-baad-0a66-8b11c2e5b72f",
+                      "layout": {
+                        "row": 0,
+                        "column": 0,
+                        "rowSpan": 24,
+                        "colSpan": 36
+                      },
+                      "component": {
+                        "id": "f6ec9423-47bf-1f6b-5a46-271a6821712b",
+                        "key": "Accordion",
+                        "options": {
+                          "version": "4.5.1",
+                          "Basics": {
+                            "ComponentName": "accordion",
+                            "Direction": "Horizontal",
+                            "ScaleOnResize": false,
+                            "Sections": [
+                              {
+                                "SectionId": "section_2690",
+                                "Title": "Candlestick",
+                                "TitleAlign": "Left",
+                                "Expanded": true,
+                                "Flex": false,
+                                "Weight": 1,
+                                "Resizeable": false,
+                                "HideTitle": false
+                              },
+                              {
+                                "SectionId": "section_2885",
+                                "Title": "Section",
+                                "TitleAlign": "Left",
+                                "Expanded": true,
+                                "Flex": false,
+                                "MinSize": 0,
+                                "MaxSize": 0,
+                                "Weight": 1,
+                                "Resizeable": false,
+                                "HideTitle": false
+                              }
+                            ]
+                          },
+                          "Style": {
+                            "advanced": "",
+                            "cssClasses": "",
+                            "Theme": "Dark"
+                          },
+                          "Alignment": {
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "innerPaddingLeft": 0,
+                            "innerPaddingRight": 0,
+                            "innerPaddingTop": 0,
+                            "innerPaddingBottom": 0,
+                            "titlePaddingLeft": 0,
+                            "titlePaddingRight": 0,
+                            "titlePaddingTop": 7,
+                            "titlePaddingBottom": 7
+                          },
+                          "format": {
+                            "titleFontSize": 16,
+                            "titleHorizontal": "Center",
+                            "titleShadow": false,
+                            "tileBorderWidth": 0,
+                            "tileBorderRounding": 0,
+                            "tileBorderColor": "#000000",
+                            "tileBackgroundColor": "#000000",
+                            "tileTransparentBackground": true,
+                            "tileShadow": false
+                          }
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [
+                          {
+                            "id": "323000b3-c518-6ba0-ae93-cd2a28695604",
+                            "layout": {
+                              "row": 16,
+                              "column": 0,
+                              "rowSpan": 8,
+                              "colSpan": 36
+                            },
+                            "component": {
+                              "id": "1f7316c8-8bb8-c2ea-d0e0-fb25720cdb95",
+                              "key": "ChartJS",
+                              "options": {
+                                "Layers": [
+                                  {
+                                    "_Hidden": {
+                                      "_Type": "Candlestick",
+                                      "_Index": 0,
+                                      "_LayerId": "layer_8977",
+                                      "_PossibleColumns": [
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleColumnsWithItself": [
+                                        "<this>",
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleColumnsWithXYKey": [
+                                        "<thisX>",
+                                        "<thisY>",
+                                        "<thisName>",
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleRadius": [
+                                        "Fixed Size",
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleXAxes": [
+                                        "XAxis 1"
+                                      ],
+                                      "_PossibleYAxes": [
+                                        "YAxis 1"
+                                      ]
+                                    },
+                                    "Basics": {
+                                      "LegendEnabled": false,
+                                      "LegendLabelColor": "",
+                                      "Name": "Layer 1",
+                                      "BorderWidth": 2,
+                                      "Data": {
+                                        "_dashboardsType": "data",
+                                        "value": "ohlcv"
+                                      }
+                                    },
+                                    "Axes": {
+                                      "XAxisData": "time",
+                                      "XAxisID": "XAxis 1",
+                                      "YAxisID": "YAxis 1",
+                                      "Close": "close",
+                                      "High": "high",
+                                      "Low": "low",
+                                      "Open": "open"
+                                    },
+                                    "Labels": {
+                                      "Font": {
+                                        "Bold": false,
+                                        "Size": 12
+                                      }
+                                    }
+                                  }
+                                ],
+                                "Legend": {
+                                  "LegendLayerThreshold": 5
+                                },
+                                "XAxes": [
+                                  {
+                                    "_Hidden": {
+                                      "_Type": "category",
+                                      "_AxisId": "axis_3147",
+                                      "_Index": 0,
+                                      "_Label": "XAxis 1"
+                                    },
+                                    "Labels": {
+                                      "DateFormat": "YYYY-MM-DD",
+                                      "MaxWidth": 0
+                                    }
+                                  }
+                                ],
+                                "YAxes": [
+                                  {
+                                    "_Hidden": {
+                                      "_Type": "linear",
+                                      "_AxisId": "axis_3151",
+                                      "_Index": 0,
+                                      "_Label": "YAxis 1"
+                                    },
+                                    "Labels": {
+                                      "BeginAtZero": false,
+                                      "MaxWidth": 0,
+                                      "_ReverseCache": false,
+                                      "DateFormat": "YYYY-MM-DD"
+                                    }
+                                  }
+                                ],
+                                "version": "4.7.0",
+                                "format": {
+                                  "widgetTitle": {
+                                    "_dashboardsType": "viewstate",
+                                    "value": "tradeVolChart/syms"
+                                  }
+                                }
+                              },
+                              "containerId": null,
+                              "components": [],
+                              "widgets": [],
+                              "definitionId": "1007",
+                              "hasOnSettingsChange": true
+                            },
+                            "sectionId": "section_2690"
+                          },
+                          {
+                            "id": "2af24ac8-8c31-bae6-9123-750b096c6fa8",
+                            "layout": {
+                              "row": null,
+                              "column": null,
+                              "rowSpan": 12,
+                              "colSpan": 6
+                            },
+                            "component": {
+                              "id": "1a10e313-8d83-8f4f-d082-f9be85c7a324",
+                              "key": "Datagrid",
+                              "options": {
+                                "version": "4.7.1",
+                                "datagridPossibleColumns": [
+                                  "key",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "SOLUSD",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT"
+                                ],
+                                "datagridPossibleColumnsWithItself": [
+                                  "<this>",
+                                  "key",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "SOLUSD",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT"
+                                ],
+                                "selectedColumnPossibleValues": [
+                                  "key",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "SOLUSD",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT"
+                                ],
+                                "highlightTargetPossibleValues": [
+                                  "key",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "SOLUSD",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT",
+                                  "*"
+                                ],
+                                "sortingPossibleValues": [
+                                  "",
+                                  "key",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "SOLUSD",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT"
+                                ],
+                                "Basics": {
+                                  "Data": {
+                                    "_dashboardsType": "data",
+                                    "value": "correlation"
+                                  }
+                                },
+                                "ColumnsConfiguration": [
+                                  {
+                                    "Field": "key",
+                                    "DisplayName": "key",
+                                    "WidthWeight": 100,
+                                    "MinWidthAbsolute": 100,
+                                    "TextAlign": "left"
+                                  },
+                                  {
+                                    "Field": "ETHUSD",
+                                    "DisplayName": "ETHUSD",
+                                    "Format": "Formatted Number",
+                                    "Precision": 4,
+                                    "WidthWeight": 140,
+                                    "MinWidthAbsolute": 140,
+                                    "TextAlign": "right"
+                                  }
+                                ],
+                                "Alignment": {
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "innerPaddingLeft": 0,
+                                  "innerPaddingRight": 0,
+                                  "innerPaddingTop": 0,
+                                  "innerPaddingBottom": 0,
+                                  "titlePaddingLeft": 0,
+                                  "titlePaddingRight": 0
+                                },
+                                "format": {
+                                  "tileBorderWidth": 0,
+                                  "tileBorderRounding": 0,
+                                  "tileBorderColor": "#000000",
+                                  "tileBackgroundColor": "#000000",
+                                  "tileTransparentBackground": true,
+                                  "tileShadow": false
+                                }
+                              },
+                              "containerId": null,
+                              "components": [],
+                              "widgets": [],
+                              "definitionId": "21",
+                              "hasOnSettingsChange": true
+                            },
+                            "sectionId": "section_2885"
+                          }
+                        ],
+                        "definitionId": "56",
+                        "hasOnSettingsChange": true
+                      }
+                    }
+                  ],
+                  "definitionId": "50",
+                  "hasOnSettingsChange": true
+                },
+                "sectionId": "section_2622"
+              },
+              {
+                "id": "b74e2001-d28c-9ded-ffad-7a1d8e3a4292",
+                "layout": {
+                  "row": null,
+                  "column": null,
+                  "rowSpan": 12,
+                  "colSpan": 6
+                },
+                "component": {
+                  "id": "8eb6795e-fe12-d949-15a5-2fac0122ffd1",
+                  "key": "Panel",
+                  "options": {
+                    "version": "4.4.0",
+                    "Basics": {
+                      "ComponentName": "panel",
+                      "RelativeHeight": true,
+                      "Advanced": false,
+                      "UserLayout": false,
+                      "Floatable": true,
+                      "ColCount": 36,
+                      "RowHeight": 25,
+                      "RowCount": 24
+                    },
+                    "Style": {
+                      "advanced": "",
+                      "cssClasses": ""
+                    },
+                    "Alignment": {
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "innerPaddingLeft": 0,
+                      "innerPaddingRight": 0,
+                      "innerPaddingTop": 0,
+                      "innerPaddingBottom": 0,
+                      "titlePaddingLeft": 0,
+                      "titlePaddingRight": 0,
+                      "titlePaddingTop": 7,
+                      "titlePaddingBottom": 7
+                    },
+                    "format": {
+                      "titleFontSize": 16,
+                      "titleHorizontal": "Center",
+                      "titleShadow": false,
+                      "tileBorderWidth": 0,
+                      "tileBorderRounding": 0,
+                      "tileBorderColor": "#000000",
+                      "tileBackgroundColor": "#000000",
+                      "tileTransparentBackground": true,
+                      "tileShadow": false
+                    }
+                  },
+                  "containerId": null,
+                  "components": [],
+                  "widgets": [
+                    {
+                      "id": "ca2fdb2c-695d-c2a4-f04d-9dd1c163822e",
+                      "layout": {
+                        "row": 0,
+                        "column": 4,
+                        "rowSpan": 24,
+                        "colSpan": 32
+                      },
+                      "component": {
+                        "id": "93ae3dff-4f68-a1f7-ae35-87bc64ceb040",
+                        "key": "ChartJS",
+                        "options": {
+                          "Layers": [
+                            {
+                              "_Hidden": {
+                                "_Type": "Bar",
+                                "_Index": 0,
+                                "_LayerId": "layer_8977",
+                                "_PossibleColumns": [
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithItself": [
+                                  "<this>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithXYKey": [
+                                  "<thisX>",
+                                  "<thisY>",
+                                  "<thisName>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleRadius": [
+                                  "Fixed Size",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleXAxes": [
+                                  "XAxis 1"
+                                ],
+                                "_PossibleYAxes": [
+                                  "YAxis 1",
+                                  "YAxis 2"
+                                ]
+                              },
+                              "Basics": {
+                                "LegendLabelColor": "",
+                                "Name": "Size",
+                                "BorderWidth": 0,
+                                "Data": {
+                                  "_dashboardsType": "data",
+                                  "value": "trades_size_sum copy"
+                                }
+                              },
+                              "Axes": {
+                                "XAxisData": "time",
+                                "YAxisData": "size",
+                                "XAxisID": "XAxis 1",
+                                "YAxisID": "YAxis 2"
+                              },
+                              "Labels": {
+                                "Font": {
+                                  "Bold": false,
+                                  "Size": 12
+                                }
+                              }
+                            },
+                            {
+                              "_Hidden": {
+                                "_Type": "Line",
+                                "_Index": 1,
+                                "_LayerId": "layer_3299",
+                                "_PossibleColumns": [
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithItself": [
+                                  "<this>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithXYKey": [
+                                  "<thisX>",
+                                  "<thisY>",
+                                  "<thisName>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleRadius": [
+                                  "Fixed Size",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleXAxes": [
+                                  "XAxis 1"
+                                ],
+                                "_PossibleYAxes": [
+                                  "YAxis 1",
+                                  "YAxis 2"
+                                ],
+                                "_PossibleLayers": [
+                                  "Layer 1",
+                                  "nofill",
+                                  "origin",
+                                  "+1",
+                                  "+2"
+                                ]
+                              },
+                              "Basics": {
+                                "LegendLabelColor": "",
+                                "Name": "Price",
+                                "BackgroundColor": "#f23a65",
+                                "BorderColor": "#f23a65",
+                                "BorderWidth": 2,
+                                "Data": {
+                                  "_dashboardsType": "data",
+                                  "value": "trades_size_sum copy"
+                                }
+                              },
+                              "Axes": {
+                                "XAxisData": "time",
+                                "YAxisData": "price",
+                                "XAxisID": "XAxis 1",
+                                "YAxisID": "YAxis 1"
+                              },
+                              "Labels": {
+                                "Font": {
+                                  "Bold": false,
+                                  "Size": 12
+                                }
+                              },
+                              "Line": {
+                                "Fill": "Layer 1"
+                              }
+                            }
+                          ],
+                          "Legend": {
+                            "LegendLayerThreshold": 5
+                          },
+                          "XAxes": [
+                            {
+                              "_Hidden": {
+                                "_Type": "time",
+                                "_AxisId": "axis_67830",
+                                "_Index": 0,
+                                "_Label": "XAxis 1"
+                              },
+                              "Labels": {
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "Offset": false,
+                                "TimeFormats": {
+                                  "Break": 86400000,
+                                  "Day": "MMM D",
+                                  "Distribution": "linear",
+                                  "Hour": "hA",
+                                  "IsoWeekday": false,
+                                  "ShowMajor": false,
+                                  "Millisecond": "h:mm:ss.SSS a",
+                                  "Minute": "h:mm a",
+                                  "Month": "MMM YYYY",
+                                  "Quarter": "[Q]Q - YYYY",
+                                  "Round": false,
+                                  "Second": "h:mm:ss a",
+                                  "TooltipFormat": "MMM D h:mm:ss.SSS a",
+                                  "TriggerBreak": 86400000,
+                                  "Unit": "",
+                                  "Week": "ll",
+                                  "Year": "YYYY"
+                                }
+                              },
+                              "Range": {
+                                "Max": 0,
+                                "Min": 0,
+                                "SoftRange": false,
+                                "SuggestedMax": 0,
+                                "SuggestedMin": 0,
+                                "UseDataRange": false
+                              }
+                            }
+                          ],
+                          "YAxes": [
+                            {
+                              "_Hidden": {
+                                "_Type": "linear",
+                                "_AxisId": "axis_67834",
+                                "_Index": 0,
+                                "_Label": "YAxis 1"
+                              },
+                              "Labels": {
+                                "Format": "Smart Number",
+                                "Prefix": "$",
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "Offset": false,
+                                "DateFormat": "YYYY-MM-DD"
+                              },
+                              "Range": {
+                                "UseMinMax": true,
+                                "UseDataRange": true
+                              }
+                            },
+                            {
+                              "_Hidden": {
+                                "_Type": "linear",
+                                "_AxisId": "axis_5838",
+                                "_Index": 1,
+                                "_Label": "YAxis 2"
+                              },
+                              "Labels": {
+                                "FontColor": "#F8F8F8",
+                                "Format": "Smart Number",
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "Offset": false,
+                                "DateFormat": "YYYY-MM-DD"
+                              },
+                              "Range": {
+                                "Max": 0,
+                                "Min": 0,
+                                "SoftRange": false,
+                                "SuggestedMax": 0,
+                                "SuggestedMin": 0,
+                                "UseDataRange": false
+                              },
+                              "Position": "right"
+                            }
+                          ],
+                          "format": {
+                            "widgetTitle": {
+                              "_dashboardsType": "viewstate",
+                              "value": "tradeVolChart/syms"
+                            }
+                          },
+                          "version": "4.7.0"
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [],
+                        "definitionId": "1007",
+                        "hasOnSettingsChange": true
+                      }
+                    },
+                    {
+                      "id": "6766b473-25a5-08cb-1f4c-5bbe387479b8",
+                      "layout": {
+                        "row": 0,
+                        "column": 0,
+                        "rowSpan": 4,
+                        "colSpan": 4
+                      },
+                      "component": {
+                        "id": "4f467ff0-b652-a8c0-7335-b8f7003fb0d1",
+                        "key": "Dataform",
+                        "options": {
+                          "version": "4.6.1P2",
+                          "isDataform": true,
+                          "Basics": {
+                            "Data": {
+                              "_dashboardsType": "data",
+                              "value": "tradeVolCountByTimeInterval/syms"
+                            },
+                            "SubmitButtonText": "Submit",
+                            "ValidationAnalytic": "",
+                            "ExpandDictParameters": true,
+                            "ForceExecute": false,
+                            "ShowReset": false,
+                            "ShowSubmit": false,
+                            "FloatSubmit": false,
+                            "FloatReset": false,
+                            "ViewStates": [
+                              {
+                                "PathEnc": "tradeVolChart%2Fsyms",
+                                "DisplayName": "Syms",
+                                "HideParameter": false,
+                                "Tooltip": "",
+                                "FieldType": {
+                                  "_Type": "Dropdown",
+                                  "DropdownPossibleValues": [
+                                    "",
+                                    "sym"
+                                  ],
+                                  "Data": {
+                                    "_dashboardsType": "data",
+                                    "value": "sym_list"
+                                  },
+                                  "AcceptEmptyValues": false,
+                                  "ForceSelect": false,
+                                  "MultiSelect": false,
+                                  "ShowSearch": true,
+                                  "AdvancedSearch": true,
+                                  "FieldSummaryThreshold": 5,
+                                  "TooltipSummaryThreshold": 5,
+                                  "SelectAllValue": "",
+                                  "DataSourceMapping": {
+                                    "Value": "sym",
+                                    "Text": "sym",
+                                    "DropdownPossibleValues": [
+                                      "sym"
+                                    ]
+                                  },
+                                  "Items": []
+                                }
+                              }
+                            ],
+                            "Actions": []
+                          },
+                          "Style": {
+                            "advanced": "",
+                            "cssClasses": "",
+                            "minWidth": "",
+                            "display": "Row",
+                            "inline": "Top",
+                            "labelWidth": "",
+                            "labelPadding": "",
+                            "labelAlign": "Left",
+                            "padding": "",
+                            "verticalSpacing": "",
+                            "submitOffset": "",
+                            "resetOffset": "",
+                            "formMargin": ""
+                          },
+                          "Alignment": {
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 5,
+                            "paddingBottom": 0,
+                            "innerPaddingLeft": 5,
+                            "innerPaddingRight": 0,
+                            "innerPaddingTop": 0,
+                            "innerPaddingBottom": 0,
+                            "titlePaddingLeft": 0,
+                            "titlePaddingRight": 0,
+                            "titlePaddingTop": 7,
+                            "titlePaddingBottom": 7
+                          },
+                          "format": {
+                            "widgetTitle": "",
+                            "titleFontSize": 10,
+                            "titleHorizontal": "Left",
+                            "titleFontBold": false,
+                            "titleShadow": false,
+                            "titleTransparentBackground": false,
+                            "tileBorderWidth": 0,
+                            "tileBorderRounding": 0,
+                            "tileBorderColor": "#000000",
+                            "tileBackgroundColor": "#000000",
+                            "tileTransparentBackground": true,
+                            "tileShadow": false
+                          }
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [],
+                        "definitionId": "27",
+                        "hasOnSettingsChange": true
+                      }
+                    }
+                  ],
+                  "definitionId": "50",
+                  "hasOnSettingsChange": true
+                },
+                "sectionId": "section_3059"
+              },
+              {
+                "id": "a71e03cf-0443-7198-8d49-57e754117da5",
+                "layout": {
+                  "row": null,
+                  "column": null,
+                  "rowSpan": 12,
+                  "colSpan": 6
+                },
+                "component": {
+                  "id": "f385a47a-de6e-7245-1ee5-ff7d6dbc36ac",
+                  "key": "Panel",
+                  "options": {
+                    "version": "4.4.0",
+                    "Basics": {
+                      "ComponentName": "panel",
+                      "RelativeHeight": true,
+                      "Advanced": false,
+                      "UserLayout": false,
+                      "Floatable": true,
+                      "ColCount": 36,
+                      "RowHeight": 25,
+                      "RowCount": 24
+                    },
+                    "Style": {
+                      "advanced": "",
+                      "cssClasses": ""
+                    },
+                    "Alignment": {
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "innerPaddingLeft": 0,
+                      "innerPaddingRight": 0,
+                      "innerPaddingTop": 0,
+                      "innerPaddingBottom": 0,
+                      "titlePaddingLeft": 0,
+                      "titlePaddingRight": 0,
+                      "titlePaddingTop": 7,
+                      "titlePaddingBottom": 7
+                    },
+                    "format": {
+                      "titleFontSize": 16,
+                      "titleHorizontal": "Center",
+                      "titleShadow": false,
+                      "tileBorderWidth": 0,
+                      "tileBorderRounding": 0,
+                      "tileBorderColor": "#000000",
+                      "tileBackgroundColor": "#000000",
+                      "tileTransparentBackground": true,
+                      "tileShadow": false
+                    }
+                  },
+                  "containerId": null,
+                  "components": [],
+                  "widgets": [
+                    {
+                      "id": "56cee3c4-c78b-811c-be45-788b594ead46",
+                      "layout": {
+                        "row": 0,
+                        "column": 0,
+                        "rowSpan": 24,
+                        "colSpan": 36
+                      },
+                      "component": {
+                        "id": "f98bd4da-c8e2-7d15-0aa6-d1f061d0ffdf",
+                        "key": "Heatmap",
+                        "options": {
+                          "Animation": {
+                            "Duration": 1500,
+                            "Easing": "quinticInOut"
+                          },
+                          "Basics": {
+                            "Actions": [],
+                            "Data": {
+                              "_dashboardsType": "data",
+                              "value": "trade_summary"
+                            },
+                            "Focus": {
+                              "_dashboardsType": "viewstate",
+                              "value": "tradeVolChart/syms"
+                            },
+                            "Selected": {
+                              "_dashboardsType": "viewstate",
+                              "value": "tradeVolChart/syms"
+                            },
+                            "SelectedAttr": "sym",
+                            "Theme": "Dark"
+                          },
+                          "ColorPalette": {
+                            "ColorScheme": [
+                              {
+                                "type": "#5680bf"
+                              },
+                              {
+                                "type": "#5792bd"
+                              },
+                              {
+                                "type": "#629fc7"
+                              },
+                              {
+                                "type": "#63b0c7"
+                              },
+                              {
+                                "type": "#63c7c7"
+                              },
+                              {
+                                "type": "#65c2af"
+                              },
+                              {
+                                "type": "#54bf9d"
+                              },
+                              {
+                                "type": "#5dbd86"
+                              },
+                              {
+                                "type": "#69bf74"
+                              },
+                              {
+                                "type": "#67b860"
+                              }
+                            ],
+                            "ColorType": "Gradient",
+                            "FixedColor": "#0061FF",
+                            "HoverColor": "",
+                            "SelectedColor": "",
+                            "SelectedColorScheme": "blue green"
+                          },
+                          "Data": [
+                            {
+                              "Color": "volume",
+                              "Column": "sym",
+                              "HighlightRules": [],
+                              "Name": "Volume",
+                              "Size": "x"
+                            }
+                          ],
+                          "FileExport": {
+                            "FileName": [],
+                            "ShowExportCsvButton": false,
+                            "ShowExportExcelButton": false,
+                            "ShowScreenshot": false
+                          },
+                          "GroupBy": {
+                            "GroupByColumns": "sym",
+                            "ScaleByChildren": false,
+                            "ShowHeader": false,
+                            "UseGroupBy": false,
+                            "headerColor": "#ffffff"
+                          },
+                          "NodeLabel": {
+                            "BorderColor": "#282828",
+                            "BorderWidth": 2,
+                            "DateFormat": "HHHH-MM-DD",
+                            "Format": "General",
+                            "HideTrailingZeros": false,
+                            "MaxValue": 100,
+                            "MinValue": 0,
+                            "Precision": 0,
+                            "Prefix": "",
+                            "Scale": true,
+                            "Show": true,
+                            "ShowAbsolute": false,
+                            "ShowLegend": true,
+                            "Suffix": "",
+                            "customLabel": "{{sym}} Trades: {{x}} Volume: {{size}}",
+                            "gapWidth": 2,
+                            "labelColor": "#ffffff",
+                            "upperFontSize": "12",
+                            "upperLabel": false,
+                            "upperLabelColour": "#000",
+                            "upperLabelHeight": "15"
+                          },
+                          "Tooltip": {
+                            "ShowTooltip": true,
+                            "TooltipTemplate": "<table><thead><tr style=\"padding-right: 10px;\"><th>{{_name}}</th><th></th></tr></thead><tr><td><svg style=\"padding: 0 5px; vertical-align: middle;\" width=\"12\" height=\"12\"><rect width=\"12\" height=\"12\"style=\"fill: {{_color}} ;stroke-width:3;stroke: {{_color}}\"></rect></svg>{{_label}}:</td><td style=\"padding-right: 10px; text-align: left;\"><span style=\"padding-left:10px\">{{_value}}</span></td></tr></table>"
+                          },
+                          "possibleColumns": [
+                            "sym",
+                            "x",
+                            "size"
+                          ],
+                          "possibleLabels": [
+                            "sym",
+                            "x",
+                            "size"
+                          ],
+                          "version": "4.5.0",
+                          "Style": {
+                            "advanced": "",
+                            "cssClasses": ""
+                          },
+                          "Alignment": {
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "innerPaddingLeft": 0,
+                            "innerPaddingRight": 0,
+                            "innerPaddingTop": 0,
+                            "innerPaddingBottom": 0,
+                            "titlePaddingLeft": 0,
+                            "titlePaddingRight": 0,
+                            "titlePaddingTop": 7,
+                            "titlePaddingBottom": 7
+                          },
+                          "format": {
+                            "titleFontSize": 16,
+                            "titleHorizontal": "Center",
+                            "titleShadow": false,
+                            "tileBorderWidth": 0,
+                            "tileBorderRounding": 0,
+                            "tileBorderColor": "#000000",
+                            "tileBackgroundColor": "#000000",
+                            "tileTransparentBackground": true,
+                            "tileShadow": false
+                          },
+                          "possibleRules": [
+                            "sym",
+                            "x",
+                            "size"
+                          ]
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [],
+                        "definitionId": "5",
+                        "hasOnSettingsChange": true
+                      }
+                    }
+                  ],
+                  "definitionId": "50",
+                  "hasOnSettingsChange": true
+                },
+                "sectionId": "section_4733"
+              }
+            ],
+            "definitionId": "56",
             "hasOnSettingsChange": true
           }
         }
@@ -977,8 +1373,9 @@
       "_serverPaging": false
     },
     "trades_size_sum": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "date",
         "time",
@@ -2037,9 +2434,8 @@
       "_serverPaging": false
     },
     "ohlcv": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "date",
         "sym",
@@ -2113,8 +2509,9 @@
       "_serverPaging": false
     },
     "trades_size_sum copy": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "time",
         "size",
@@ -2180,6 +2577,69 @@
       "_updateType": "query",
       "_pageSize": 2000,
       "_serverPaging": false
+    },
+    "correlation": {
+      "_autoExec": true,
+      "_autoExecute": true,
+      "_columns": [
+        "key",
+        "BCHUSD",
+        "BNBUSD",
+        "DOGEUSD",
+        "DOGEUSDT",
+        "DOTUSD",
+        "ETHUSD",
+        "ETHUSDT",
+        "LINKUSD",
+        "LTCUSD",
+        "SOLUSD",
+        "XBTM22",
+        "XBTU22",
+        "XBTUSD",
+        "XBTUSDT"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "key",
+        "mappings": {},
+        "value": "ETHUSD"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "getCorrelation[`bitmex;.z.p-10:00:00;.z.p]",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
     }
   },
   "worksheetPadding": 10,
@@ -2214,6 +2674,6 @@
   "advancedCss": "",
   "cssClasses": "",
   "version": "4.6.0P1",
-  "wasChanged": false,
+  "wasChanged": true,
   "shortcuts": []
 }
