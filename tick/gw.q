@@ -45,8 +45,8 @@ if[.gda.restEnabled;
   .db.getDataREST:{
     .debug.x:x;
     tbl:x[`arg;`tbl];
-    sd:$[(.z.p*0)~x[`arg;`sd];.z.p-00:00:10.000000000;x[`arg;`sd]];
-    ed:$[(.z.p*0)~x[`arg;`ed];.z.p;x[`arg;`sd]];
+    sd:$[(.z.p*0W)~x[`arg;`sd];.z.p-00:00:10.000000000;x[`arg;`sd]];
+    ed:$[(.z.p*0W)~x[`arg;`ed];.z.p;x[`arg;`sd]];
     ids:x[`arg;`ids];
     exc:x[`arg;`exc];
     hdb:hdbHandle(`selectFunc;tbl;sd;ed;ids;exc);
@@ -63,8 +63,8 @@ if[.gda.restEnabled;
     "API with format of getData";
     .db.getDataREST;
     .rest.reg.data[`tbl;-11h;0b;`order;"Table to Query"],
-      .rest.reg.data[`sd;-12h;0b;.z.p*0;"Start Date"],
-          .rest.reg.data[`ed;-12h;0b;.z.p*0;"End Date"],
+      .rest.reg.data[`sd;-12h;0b;.z.p*0W;"Start Date"],
+          .rest.reg.data[`ed;-12h;0b;.z.p*0W;"End Date"],
               .rest.reg.data[`ids;11h;0b;0#`;"Instruments to subscribe to"],
                   .rest.reg.data[`exc;11h;0b;0#`;"Exchange to subscribe to"]];
 
