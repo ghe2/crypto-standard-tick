@@ -37,7 +37,7 @@ getCorrelation:{[exchange;startTime;endTime]
     times:([]time:asc distinct exec time from res);
     rack:times cross select distinct sym from res;
     matrix:update fills vwap by sym from rack lj res;
-    {x cor/:\: x} exec vwap by sym from matrix
+    :{x cor/:\: x} exec vwap by sym from matrix
  }
 
 // If the rest functionality has been imported successfully set registers
