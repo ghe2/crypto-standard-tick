@@ -29,7 +29,7 @@ selectFuncAPI:{[tbl;sd;ed;ids;exc]
   if[not all null (sd;ed); wClause,:enlist(within;`time;(enlist;sd;ed))];
   if[not all null exc; wClause,:enlist(in;`exchange;enlist (),exc)];
   $[`date in cols tbl;
-  [wClause:enlist(within;`date;(enlist;`sd.date;`ed.date)),wClause;
+  [wClause:(enlist(within;`date;(enlist;`sd.date;`ed.date))),wClause;
       ?[tbl;wClause;0b;()]];
   [res:$[.z.d within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl];
     `date xcols update date:.z.d from res]] };
