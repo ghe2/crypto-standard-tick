@@ -17,8 +17,8 @@ loadRestFunctionality:{
 @[loadRestFunctionality;runCommand;{0N!"GDA Rest Failed to Load",x}];
 
 // Opening IPC handles to the RDB and HDB
-hdbHandle:hopen`$":",.z.x 0;
-rdbHandle:hopen `$":",.z.x 1;
+hdbHandle:`$":",.z.x 0;
+rdbHandle:`$":",.z.x 1;
 
 // vwap calculation
 //TODO: This should be called somewhere other than in the dashboard
