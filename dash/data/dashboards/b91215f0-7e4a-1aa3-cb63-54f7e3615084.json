@@ -1,0 +1,1117 @@
+{
+  "id": "b91215f0-7e4a-1aa3-cb63-54f7e3615084",
+  "name": "Crypto",
+  "creationDate": "Mon, 14 Mar 2022 02:24:28 GMT",
+  "lastUpdateDate": "Wed, 01 Jun 2022 04:56:48 GMT",
+  "thumb": null,
+  "screenDetails": [
+    {
+      "label": "Screen 1",
+      "value": "f873b5d3-fb1b-8bcd-c234-41ce67686abd"
+    }
+  ],
+  "screens": [
+    {
+      "id": "f873b5d3-fb1b-8bcd-c234-41ce67686abd",
+      "name": "Screen 1",
+      "thumb": null,
+      "widgets": [
+        {
+          "id": "c621206b-d435-4350-face-e07e6385a276",
+          "layout": {
+            "row": 2,
+            "column": 0,
+            "rowSpan": 22,
+            "colSpan": 36
+          },
+          "component": {
+            "id": "f3a32fe1-8b59-a93f-e9c8-c65775246024",
+            "key": "ChartJS",
+            "options": {
+              "Layers": [
+                {
+                  "_Hidden": {
+                    "_Type": "Bubble",
+                    "_Index": 0,
+                    "_LayerId": "layer_60159",
+                    "_PossibleColumns": [
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "side",
+                      "price",
+                      "size",
+                      "action",
+                      "orderType",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "side",
+                      "price",
+                      "size",
+                      "action",
+                      "orderType",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "side",
+                      "price",
+                      "size",
+                      "action",
+                      "orderType",
+                      "exchange"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "side",
+                      "price",
+                      "size",
+                      "action",
+                      "orderType",
+                      "exchange"
+                    ],
+                    "_PossibleXAxes": [
+                      "XAxis 1"
+                    ],
+                    "_PossibleYAxes": [
+                      "YAxis 1"
+                    ]
+                  },
+                  "Basics": {
+                    "LegendLabelColor": "",
+                    "Name": "Orders",
+                    "BackgroundColor": "#ffffff",
+                    "BackgroundOpacity": 10,
+                    "BorderColor": "#ffffff",
+                    "BorderOpacity": 10,
+                    "BorderWidth": 1,
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "order_bubbles"
+                    }
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "Radius": "size",
+                    "RadiusScaling": 0.00005,
+                    "YAxisData": "price",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 1"
+                  },
+                  "HighlightRules": {
+                    "0": {
+                      "RuleName": "buy",
+                      "RuleSource": "<this>",
+                      "RuleTarget": "*",
+                      "RuleType": "",
+                      "Show": false,
+                      "RuleBorderColor": "#F8F8F8",
+                      "RuleColor": "#0dff00",
+                      "RuleOperation": "==",
+                      "RuleValue": "Buy"
+                    },
+                    "1": {
+                      "RuleName": "sell",
+                      "RuleSource": "side",
+                      "RuleTarget": "*",
+                      "RuleType": "",
+                      "Show": false,
+                      "RuleBorderColor": "#F8F8F8",
+                      "RuleColor": "#ff0000",
+                      "RuleOperation": "==",
+                      "RuleValue": "Sell"
+                    }
+                  },
+                  "Labels": {
+                    "Font": {
+                      "Bold": false,
+                      "Size": 12
+                    }
+                  },
+                  "Bubbles": {
+                    "HoverBackgroundOpacity": 20,
+                    "HoverBorderOpacity": 20
+                  }
+                },
+                {
+                  "_Hidden": {
+                    "_Type": "Line",
+                    "_Index": 1,
+                    "_LayerId": "layer_8977",
+                    "_PossibleColumns": [
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleXAxes": [
+                      "XAxis 1"
+                    ],
+                    "_PossibleYAxes": [
+                      "YAxis 1"
+                    ],
+                    "_PossibleLayers": [
+                      "Layer 1",
+                      "nofill",
+                      "Layer 3",
+                      "Layer 4",
+                      "origin",
+                      "+1",
+                      "+2",
+                      "+3",
+                      "+4"
+                    ]
+                  },
+                  "Basics": {
+                    "LegendEnabled": false,
+                    "LegendLabelColor": "",
+                    "Name": "Bids",
+                    "BorderWidth": 2,
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "vwap depth"
+                    }
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "YAxisData": "vwap_bid_*",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 1"
+                  },
+                  "Labels": {
+                    "Font": {
+                      "Bold": false,
+                      "Size": 12
+                    }
+                  },
+                  "Points": {
+                    "PointBorderWidth": 0,
+                    "PointHoverBorderWidth": 0
+                  }
+                },
+                {
+                  "_Hidden": {
+                    "_Type": "Line",
+                    "_Index": 2,
+                    "_LayerId": "layer_11381",
+                    "_PossibleColumns": [
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "time",
+                      "vwap_bid_1",
+                      "vwap_bid_5000000",
+                      "vwap_bid_10000000",
+                      "vwap_ask_1",
+                      "vwap_ask_5000000",
+                      "vwap_ask_10000000"
+                    ],
+                    "_PossibleXAxes": [
+                      "XAxis 1"
+                    ],
+                    "_PossibleYAxes": [
+                      "YAxis 1"
+                    ],
+                    "_PossibleLayers": [
+                      "Layer 1",
+                      "Layer 2",
+                      "nofill",
+                      "Layer 4",
+                      "origin",
+                      "+1",
+                      "+2",
+                      "+3",
+                      "+4"
+                    ]
+                  },
+                  "Basics": {
+                    "LegendEnabled": false,
+                    "LegendLabelColor": "",
+                    "Name": "Asks",
+                    "BackgroundColor": "#F23A66",
+                    "BorderColor": "#F23A66",
+                    "BorderWidth": 2,
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "vwap depth"
+                    }
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "YAxisData": "vwap_ask_*",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 1"
+                  },
+                  "Labels": {
+                    "Font": {
+                      "Bold": false,
+                      "Size": 12
+                    }
+                  },
+                  "Line": {
+                    "FadeToTransparent": true
+                  },
+                  "Points": {
+                    "PointBackgroundColor": "#F23A66",
+                    "PointBorderColor": "#F23A66",
+                    "PointBorderWidth": 0,
+                    "PointHoverBackgroundColor": "#F23A66",
+                    "PointHoverBorderColor": "#F23A66",
+                    "PointHoverBorderWidth": 0
+                  }
+                },
+                {
+                  "_Hidden": {
+                    "_Type": "Bubble",
+                    "_Index": 3,
+                    "_LayerId": "layer_4866",
+                    "_PossibleColumns": [
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithItself": [
+                      "<this>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleColumnsWithXYKey": [
+                      "<thisX>",
+                      "<thisY>",
+                      "<thisName>",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleRadius": [
+                      "Fixed Size",
+                      "date",
+                      "time",
+                      "sym",
+                      "orderID",
+                      "price",
+                      "tradeID",
+                      "side",
+                      "size",
+                      "exchange"
+                    ],
+                    "_PossibleXAxes": [
+                      "XAxis 1"
+                    ],
+                    "_PossibleYAxes": [
+                      "YAxis 1"
+                    ]
+                  },
+                  "Basics": {
+                    "LegendLabelColor": "",
+                    "Name": "Trades",
+                    "BackgroundColor": "#ffffff",
+                    "BorderColor": "#ffffff",
+                    "BorderWidth": 5,
+                    "Data": {
+                      "_dashboardsType": "data",
+                      "value": "trades"
+                    }
+                  },
+                  "Axes": {
+                    "XAxisData": "time",
+                    "Radius": "size",
+                    "RadiusScaling": 0.001,
+                    "YAxisData": "price",
+                    "XAxisID": "XAxis 1",
+                    "YAxisID": "YAxis 1"
+                  },
+                  "HighlightRules": {
+                    "0": {
+                      "RuleName": "buy",
+                      "RuleSource": "side",
+                      "RuleTarget": "*",
+                      "RuleType": "",
+                      "Show": false,
+                      "RuleBorderColor": "#00ff11",
+                      "RuleColor": "#00ff11",
+                      "RuleOperation": "==",
+                      "RuleValue": "bid"
+                    },
+                    "1": {
+                      "RuleName": "Sell",
+                      "RuleSource": "side",
+                      "RuleTarget": "*",
+                      "RuleType": "",
+                      "Show": false,
+                      "RuleBorderColor": "#ff0000",
+                      "RuleColor": "#ff0000",
+                      "RuleOperation": "==",
+                      "RuleValue": "ask"
+                    }
+                  },
+                  "Labels": {
+                    "Font": {
+                      "Bold": false,
+                      "Size": 12
+                    }
+                  },
+                  "Bubbles": {
+                    "PointStyle": "crossRot"
+                  }
+                }
+              ],
+              "Legend": {
+                "LegendLayerThreshold": 5
+              },
+              "XAxes": [
+                {
+                  "_Hidden": {
+                    "_Type": "time",
+                    "_AxisId": "axis_673",
+                    "_Index": 0,
+                    "_Label": "XAxis 1"
+                  },
+                  "Labels": {
+                    "MaxRotation": 0,
+                    "MaxWidth": 10,
+                    "_ReverseCache": false,
+                    "Offset": false,
+                    "TimeFormats": {
+                      "Break": 86400000,
+                      "Day": "MMM D",
+                      "Distribution": "linear",
+                      "Hour": "hA",
+                      "IsoWeekday": false,
+                      "ShowMajor": true,
+                      "Millisecond": "h:mm:ss.SSS a",
+                      "Minute": "h:mm a",
+                      "Month": "MMM YYYY",
+                      "Quarter": "[Q]Q - YYYY",
+                      "Round": true,
+                      "Second": "h:mm:ss a",
+                      "TooltipFormat": "",
+                      "TriggerBreak": 86400000,
+                      "Unit": "millisecond",
+                      "Week": "ll",
+                      "Year": "YYYY"
+                    }
+                  },
+                  "Range": {
+                    "UseMinMax": true,
+                    "Max": 0,
+                    "Min": 0,
+                    "SoftRange": false,
+                    "SuggestedMax": 0,
+                    "SuggestedMin": 0,
+                    "UseDataRange": false
+                  }
+                }
+              ],
+              "YAxes": [
+                {
+                  "_Hidden": {
+                    "_Type": "linear",
+                    "_AxisId": "axis_677",
+                    "_Index": 0,
+                    "_Label": "YAxis 1"
+                  },
+                  "Labels": {
+                    "MaxWidth": 0,
+                    "_ReverseCache": false,
+                    "DateFormat": "YYYY-MM-DD"
+                  },
+                  "Range": {
+                    "UseMinMax": true,
+                    "UseDataRange": true
+                  }
+                }
+              ],
+              "version": "4.7.0",
+              "Zoom": {
+                "DragPan": false,
+                "DragZoom": false,
+                "ScrollZoom": false
+              },
+              "Overlay": {
+                "PreferIntersect": true
+              },
+              "Style": {
+                "Palette": {
+                  "0": {
+                    "type": "#9FA3A6"
+                  },
+                  "1": {
+                    "type": "#7647CC"
+                  },
+                  "2": {
+                    "type": "#0061FF"
+                  },
+                  "3": {
+                    "type": "#FFC300"
+                  },
+                  "4": {
+                    "type": "#F23A66"
+                  },
+                  "5": {
+                    "type": "#009BAB"
+                  },
+                  "7": {
+                    "type": "#005D67"
+                  },
+                  "8": {
+                    "type": "#A90B31"
+                  }
+                }
+              },
+              "format": {
+                "widgetTitle": "BitMEX Orders and VWAP Levels for 1, 5M, 10M size"
+              }
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [],
+            "definitionId": "1007",
+            "hasOnSettingsChange": true
+          }
+        },
+        {
+          "id": "29318f35-9081-94e8-d995-137063a36f6e",
+          "layout": {
+            "row": 0,
+            "column": 0,
+            "rowSpan": 2,
+            "colSpan": 19
+          },
+          "component": {
+            "id": "713584fc-bbff-dea5-eee8-ec628085e864",
+            "key": "Dataform",
+            "options": {
+              "version": "4.6.1P2",
+              "isDataform": true,
+              "Basics": {
+                "Data": {
+                  "_dashboardsType": "data",
+                  "value": "params"
+                },
+                "SubmitButtonText": "Submit",
+                "ValidationAnalytic": "",
+                "ExpandDictParameters": true,
+                "ForceExecute": false,
+                "ShowReset": false,
+                "ShowSubmit": true,
+                "FloatSubmit": true,
+                "FloatReset": false,
+                "ViewStates": [
+                  {
+                    "PathEnc": "TICKER",
+                    "DisplayName": "T I C K E R",
+                    "HideParameter": false,
+                    "Tooltip": "",
+                    "FieldType": {
+                      "_Type": "Dropdown",
+                      "DropdownPossibleValues": [
+                        "",
+                        "sym"
+                      ],
+                      "Data": {
+                        "_dashboardsType": "data",
+                        "value": "crypto_coins"
+                      },
+                      "AcceptEmptyValues": false,
+                      "ForceSelect": true,
+                      "MultiSelect": false,
+                      "ShowSearch": true,
+                      "AdvancedSearch": true,
+                      "FieldSummaryThreshold": 5,
+                      "TooltipSummaryThreshold": 5,
+                      "SelectAllValue": "",
+                      "DataSourceMapping": {
+                        "Value": "sym",
+                        "Text": "sym",
+                        "DropdownPossibleValues": [
+                          "sym"
+                        ]
+                      },
+                      "Items": []
+                    }
+                  }
+                ],
+                "Actions": []
+              },
+              "Style": {
+                "advanced": "",
+                "cssClasses": "",
+                "minWidth": "",
+                "display": "Row",
+                "inline": "Top",
+                "labelWidth": "",
+                "labelPadding": "",
+                "labelAlign": "Left",
+                "padding": "",
+                "verticalSpacing": "",
+                "submitOffset": "",
+                "resetOffset": "",
+                "formMargin": ""
+              },
+              "Alignment": {
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "innerPaddingLeft": 0,
+                "innerPaddingRight": 0,
+                "innerPaddingTop": 0,
+                "innerPaddingBottom": 0,
+                "titlePaddingLeft": 0,
+                "titlePaddingRight": 0,
+                "titlePaddingTop": 7,
+                "titlePaddingBottom": 7
+              },
+              "format": {
+                "titleFontSize": 16,
+                "titleHorizontal": "Center",
+                "titleShadow": false,
+                "tileBorderWidth": 0,
+                "tileBorderRounding": 0,
+                "tileBorderColor": "#000000",
+                "tileBackgroundColor": "#000000",
+                "tileTransparentBackground": true,
+                "tileShadow": false
+              }
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [],
+            "definitionId": "27",
+            "hasOnSettingsChange": true
+          }
+        }
+      ],
+      "relativeHeight": true,
+      "rowCount": 24,
+      "rowHeight": 25,
+      "colCount": 36,
+      "floatable": true,
+      "isDefault": true
+    }
+  ],
+  "popups": [],
+  "tags": [],
+  "dashboardTheme": "Dark",
+  "themeSwitchable": true,
+  "saveTimestamp": null,
+  "relativeHeight": true,
+  "rowCount": 24,
+  "rowHeight": 25,
+  "colCount": 36,
+  "floatable": true,
+  "viewState": {
+    "selected": {
+      "_viewType": true,
+      "_default": "0",
+      "_type": "symbol"
+    },
+    ".settings": {},
+    "TICKER": {
+      "_viewType": true,
+      "_default": "XBTUSD",
+      "_type": "symbol"
+    }
+  },
+  "data": {
+    "vwap depth": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "vwap_bid_1",
+        "vwap_bid_5000000",
+        "vwap_bid_10000000",
+        "vwap_ask_1",
+        "vwap_ask_5000000",
+        "vwap_ask_10000000"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "vwap_bid_1"
+      },
+      "_maxRows": "20000",
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[crypto]\r\n  `time xasc select time, vwap_bid_1:vwap_depth'[bidsizes;bids;1] , vwap_bid_5000000:vwap_depth'[bidsizes;bids;500000], vwap_bid_10000000:vwap_depth'[bidsizes;bids;1000000] \r\n  , vwap_ask_1:vwap_depth'[asksizes;asks;1] , \r\n  vwap_ask_5000000:vwap_depth'[asksizes;asks;500000],vwap_ask_10000000:vwap_depth'[asksizes;asks;1000000]\r\n      from \r\n      getData[`book;.z.p-00:01;.z.p;crypto;`]\r\n//    select from bitmexbook where sym = crypto, time within .z.p - 00:01 00:00\r\n\r\n\r\n//  getData[`vwap;.z.p-00:10;.z.p;crypto;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "crypto",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%TICKER%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "time",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "vwap_levels": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "developer",
+      "_mappings": {
+        "key": "instrumentID",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": "20000",
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "weight": 2,
+          "isExpanded": true
+        },
+        {
+          "weight": 1,
+          "isExpanded": false
+        },
+        {
+          "weight": 1,
+          "isExpanded": false
+        },
+        {
+          "weight": 0,
+          "isExpanded": true
+        },
+        {
+          "weight": 2,
+          "isExpanded": true
+        }
+      ],
+      "_queryString": "{[TICKER]\r\n  select instrumentID, time, vwap_bid_1:vwap_depth'[bidsizes;bids;1] , vwap_bid_5:vwap_depth'[bidsizes;bids;5], vwap_bid_15:vwap_depth'[bidsizes;bids;15] , vwap_ask_1:vwap_depth'[asksizes;asks;1]  , vwap_ask_5:vwap_depth'[asksizes;asks;5],  vwap_ask_15:vwap_depth'[asksizes;asks;15]  from eqOrderbook where instrumentID = TICKER, time within .z.p - 00:01 00:00}",
+      "_queryParams": [
+        {
+          "name": "TICKER",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%TICKER%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "params": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "crypto",
+      "_mappings": {},
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[crypto]}",
+      "_queryParams": [
+        {
+          "name": "crypto",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%TICKER%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "crypto_coins": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "RDB",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": ""
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "select sym from desc select count i by sym from trade",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "order_bubbles": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "date",
+        "time",
+        "sym",
+        "orderID",
+        "side",
+        "price",
+        "size",
+        "action",
+        "orderType",
+        "exchange"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "sym"
+      },
+      "_maxRows": "20000",
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[crypto]\r\n  // update fills price by id from select from orderbook where sym = crypto, time within .z.p - 00:01 00:00\r\n  update fills price by orderID from getData[`order;.z.p-00:01;.z.p;crypto;`]\r\n }",
+      "_queryParams": [
+        {
+          "name": "crypto",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%TICKER%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trades": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "date",
+        "time",
+        "sym",
+        "orderID",
+        "price",
+        "tradeID",
+        "side",
+        "size",
+        "exchange"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "date",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[TICKER]\r\n//  select from trade where sym = TICKER, time within .z.p - 00:01 00:00\r\n  getData[`trade;.z.p - 00:01;.z.p;TICKER;`]\r\n  }",
+      "_queryParams": [
+        {
+          "name": "TICKER",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%TICKER%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    }
+  },
+  "worksheetPadding": 10,
+  "widgetsSpacing": 0,
+  "borderColor": "000000",
+  "borderBackground": "000000",
+  "transparentBackground": true,
+  "borderWidth": 0,
+  "borderRounding": 0,
+  "borderSpacing": 0,
+  "borderShadow": false,
+  "saveViewerState": "enabled",
+  "enableShareDashboard": false,
+  "notifications": {
+    "Notifications": {
+      "_Version": "4.2.0s2",
+      "Enabled": true,
+      "InBrowserNotifications": false,
+      "Position": "Bottom Right",
+      "MaxVisibleCount": 3,
+      "FadeOut": 5,
+      "Icon": "fa-bell-o",
+      "Sound": "beep",
+      "SoundVolume": 100,
+      "Grouping": false,
+      "GroupingInterval": 1,
+      "triggers": []
+    }
+  },
+  "showLoadingIndicators": false,
+  "unsavedViewerPrompt": false,
+  "advancedCss": "",
+  "cssClasses": "",
+  "version": "4.6.0P1",
+  "wasChanged": false,
+  "shortcuts": []
+}

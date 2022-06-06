@@ -17,8 +17,12 @@ loadRestFunctionality:{
 @[loadRestFunctionality;runCommand;{0N!"GDA Rest Failed to Load",x}];
 
 // Opening IPC handles to the RDB and HDB
-hdbHandle:hopen`$":",.z.x 0;
-rdbHandle:hopen `$":",.z.x 1;
+hdbHandle:`$":",.z.x 0;
+rdbHandle:`$":",.z.x 1;
+
+// vwap calculation
+//TODO: This should be called somewhere other than in the dashboard
+vwap_depth:{$[any z<=s:sums x;(deltas z & s) wavg y;0nf]};
 
 // Defining a function to query data from within a Q session
 getData:{[tbl;sd;ed;ids;exc]
@@ -26,14 +30,24 @@ getData:{[tbl;sd;ed;ids;exc]
   rdb:rdbHandle(`selectFunc;tbl;sd;ed;ids;exc);
   hdb,rdb };
 
+// Defining correlation code
+getCorrelation:{[exchange;startTime;endTime]
+    data:getData[`vwap;startTime;endTime;`;exchange];
+    res:select vwap:accVol wavg vwap by sym, time from data where not null vwap;
+    times:([]time:asc distinct exec time from res);
+    rack:times cross select distinct sym from res;
+    matrix:update fills vwap by sym from rack lj res;
+    :{x cor/:\: x} exec vwap by sym from matrix
+ }
+
 // If the rest functionality has been imported successfully set registers
 if[.gda.restEnabled;
   // Defining the function to be called from the REST endpoint
   .db.getDataREST:{
     .debug.x:x;
     tbl:x[`arg;`tbl];
-    sd:x[`arg;`sd];
-    ed:x[`arg;`ed];
+    sd:$[(.z.p*0)~x[`arg;`sd];.z.p-00:00:10.000000000;x[`arg;`sd]];
+    ed:$[(.z.p*0)~x[`arg;`ed];.z.p;x[`arg;`sd]];
     ids:x[`arg;`ids];
     exc:x[`arg;`exc];
     hdb:hdbHandle(`selectFunc;tbl;sd;ed;ids;exc);
@@ -49,9 +63,9 @@ if[.gda.restEnabled;
     "/getData";
     "API with format of getData";
     .db.getDataREST;
-    .rest.reg.data[`tbl;-11h;0b;`order;"Table to Query"],
-      .rest.reg.data[`sd;-12h;0b;.z.p-00:00:10.000000000;"Start Date"],
-          .rest.reg.data[`ed;-12h;0b;.z.p;"End Date"],
+    .rest.reg.data[`tbl;-11h;0b;`trade;"Table to Query"],
+      .rest.reg.data[`sd;-12h;0b;.z.p*0;"Start Date"],
+          .rest.reg.data[`ed;-12h;0b;.z.p*0;"End Date"],
               .rest.reg.data[`ids;11h;0b;0#`;"Instruments to subscribe to"],
                   .rest.reg.data[`exc;11h;0b;0#`;"Exchange to subscribe to"]];
 

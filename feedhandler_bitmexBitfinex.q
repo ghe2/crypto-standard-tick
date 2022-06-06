@@ -2,6 +2,8 @@
 /conda install -c jmcmurray ws-client ws-server
 /.utl.require"ws-client";
 
+.debug.loggingOn:0b;
+
 h:@[hopen;(`$":localhost:5000";10000);0i];
 pub:{$[h=0;
         neg[h](`upd   ;x;y);
@@ -23,56 +25,22 @@ BuySellDict:("Buy";"Sell")!(`bid;`ask);
 //create the ws subscription table
 hostsToConnect:([]hostQuery:();request:();exchange:`$();feed:`$();callbackFunc:`$());
 //add BITFINEX websocket
-/`hostsToConnect upsert("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"book";"tETHUSD";"R0");`bitfinex;`order;`.bitfinex.order.upd);
-/`hostsToConnect upsert("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"trade";"tETHUSD";"R0");`bitfinex;`trade;`.bitfinex.trade.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"book";"tETHUSD";"R0");`bitfinex;`order;`.bitfinex.order.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"trade";"tETHUSD";"R0");`bitfinex;`trade;`.bitfinex.trade.upd);
 //add BitMEX websocket 
-/`hostsToConnect upsert("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:XBTUSD");`bitmex;`order;`.bitmex.upd);
-/`hostsToConnect upsert("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:XBTUSD");`bitmex;`trade;`.bitmex.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:XBTUSD");`bitmex;`order;`.bitmex.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:ETHUSD");`bitmex;`order;`.bitmex.upd);
+
+
+// Uncommented for sub to all exchanges
+// `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:XBTUSD");`bitmex;`trade;`.bitmex.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade");`bitmex;`trade;`.bitmex.upd);
 
 //add record ID
-/hostsToConnect:update ws:1+til count i from hostsToConnect;
+hostsToConnect:update ws:1+til count i from hostsToConnect;
 /hostsToConnect:update callbackFunc:{` sv x} each `$string(callbackFunc,'ws) from hostsToConnect where callbackFunc like "*gda*";
 
-bookbuilder:{[x;y]
-    .debug.xy:(x;y);
-    $[not y 0;x;
-        $[
-            `insert=y 4;
-                x,enlist[y 1]! enlist y 2 3;
-            `update=y 4;
-                $[any (y 1) in key x;
-                    [
-                        //update size
-                        a:.[x;(y 1;1);:;y 3];
-                        //update price if the price col is not null
-                        $[0n<>y 2;.[a;(y 1;0);:;y 2];a]
-                    ];
-                    x,enlist[y 1]! enlist y 2 3
-                ];  
-            `remove=y 4;
-                $[any (y 1) in key x;
-                    enlist[y 1] _ x;
-                    x];
-            x
-        ]
-    ]
-    };
 
-generateOrderbook:{[newOrder]
-    .debug.newOrder:newOrder;
-
-    //create the books based on the last book state
-    books:update bidbook:bookbuilder\[lastBookBySym[first sym]`bidbook;flip (side like "bid";orderID;price;size;action)],askbook:bookbuilder\[lastBookBySym[first sym]`askbook;flip (side like "ask";orderID;price;size;action)] by sym from newOrder;
-
-    //store the latest book state
-    .debug.books1:books;
-    lastBookBySym,:exec last bidbook,last askbook by sym from books;
-
-    //generate the orderbook 
-    books:select time,sym,bids:(value each bidbook)[;;0],bidsizes:(value each bidbook)[;;1],asks:(value each askbook)[;;0],asksizes:(value each askbook)[;;1] from books;
-    books:update bids:desc each distinct each bids,bidsizes:{sum each x group y}'[bidsizes;bids] @' desc each distinct each bids,asks:asc each distinct each asks,asksizes:{sum each x group y}'[asksizes;asks] @' asc each distinct each asks from books
-
-    };
 
 //bitmex trades and orders callback function 
 .bitmex.upd:{
@@ -92,25 +60,12 @@ generateOrderbook:{[newOrder]
 
             //debug variable to see new records
             .debug.bitmex.new:new;
-            0N!"order pub start";
+            if[.debug.loggingOn;0N!"order pub start"];
             //publish to TP - order table
             pub[`order;new];
-            0N!"order pub end";
+            if[.debug.loggingOn;0N!"order pub end"];
             //update record in the connection check table
             upsert[`connChkTbl;(`bitmex;`order;.z.p)];
-            
-            //generate orderbook based on the order transactions
-            0N!"start generate book";
-            books:generateOrderbook[new];
-            .debug.bitmex.books2:books;
-            0N!"end generate book";
-
-            //publish to TP - book table
-            0N!"start pub book";
-            0N!value flip books;
-            0N!(count value flip books);
-            pub[`book;books];
-            0N!"end pub book";
             ];
         if[d[`table] like "trade";
             $[d[`action] like "insert";
@@ -118,9 +73,10 @@ generateOrderbook:{[newOrder]
                     newTrade:select time:("p"$"Z"$timestamp),sym:`$symbol,orderID:" ",price,tradeID:trdMatchID,side:BuySellDict[side],"f"$size,exchange:`bitmex from d`data;
                     .debug.bitmex.newTrade:newTrade;
                     //publish to TP - trade table
-                    0N!"start pub trade";
-                    pub[`trade;value flip newTrade];
-                    0n!"end pub trade";
+                    if[.debug.loggingOn;0N!"start pub trade"];
+                    / pub[`trade;value flip newTrade];
+                    pub[`trade;newTrade];
+                    if[.debug.loggingOn;0N!"end pub trade"];
                     //update record in the connection check table
                     upsert[`connChkTbl;(`bitmex;`trade;.z.p)];
                     ];
@@ -160,16 +116,6 @@ generateOrderbook:{[newOrder]
         pub[`order;newOrder];
         //update record in the connection check table
         upsert[`connChkTbl;(`bitfinex;`order;.z.p)];
-
-        //create book based on the last book state 
-        neworderTbl: enlist(cols order)!newOrder; 
-    
-        //generate orderbook based on the order transactions
-        books:generateOrderbook[neworderTbl];
-        .debug.bitfinex.books2:books;
-
-        //publish to TP - book table
-        pub[`book;books]
     ];
     };
 
@@ -234,7 +180,7 @@ establishWS:{
     };
 
 //connect to the websockets
-/establishWS each hostsToConnect;
+establishWS each hostsToConnect;
 
 //open the websocket and check the connection status 
 connectionCheck:{[]
@@ -255,12 +201,5 @@ connectionCheck:{[]
     };
 
 /connection check every 10 min
-/ .z.ts:{connectionCheck[]};
-/ \t 600000
-
-
-.bitmex.h:.ws.open["wss://ws.bitmex.com/realtime?subscribe=trade:XBTUSD,orderBookL2:XBTUSD";`.bitmex.upd];
-
-
-
-
+.z.ts:{connectionCheck[]};
+\t 600000

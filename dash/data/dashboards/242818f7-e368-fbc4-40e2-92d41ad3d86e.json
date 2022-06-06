@@ -1,0 +1,2764 @@
+{
+  "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
+  "name": "Crypto Dashboard",
+  "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
+  "lastUpdateDate": "Mon, 06 Jun 2022 05:15:45 GMT",
+  "thumb": null,
+  "screenDetails": [
+    {
+      "label": "Screen 1",
+      "value": "a84d4490-5c31-f436-658f-9ece214ad840"
+    }
+  ],
+  "screens": [
+    {
+      "id": "a84d4490-5c31-f436-658f-9ece214ad840",
+      "name": "Screen 1",
+      "thumb": null,
+      "widgets": [
+        {
+          "id": "4d28e581-0606-cd40-525f-e2286d2fa216",
+          "layout": {
+            "row": 0,
+            "column": 0,
+            "rowSpan": 24,
+            "colSpan": 36
+          },
+          "component": {
+            "id": "23f660f6-d730-e703-622e-1e77141e532d",
+            "key": "Accordion",
+            "options": {
+              "version": "4.5.1",
+              "Basics": {
+                "ComponentName": "accordion",
+                "Direction": "Vertical",
+                "ScaleOnResize": false,
+                "Sections": [
+                  {
+                    "SectionId": "section_4733",
+                    "Title": "Heatmap",
+                    "TitleAlign": "Left",
+                    "Expanded": false,
+                    "Flex": false,
+                    "Weight": 1,
+                    "Resizeable": false,
+                    "HideTitle": false
+                  },
+                  {
+                    "SectionId": "section_3059",
+                    "Title": "Price and Size",
+                    "TitleAlign": "Left",
+                    "Expanded": true,
+                    "Flex": false,
+                    "Weight": 1,
+                    "Resizeable": false,
+                    "HideTitle": false
+                  },
+                  {
+                    "SectionId": "section_2622",
+                    "Title": "Candle and Correlation",
+                    "TitleAlign": "Left",
+                    "Expanded": true,
+                    "Flex": false,
+                    "Weight": 1,
+                    "Resizeable": false,
+                    "HideTitle": false
+                  }
+                ]
+              },
+              "Style": {
+                "advanced": "",
+                "cssClasses": "",
+                "Theme": "Dark"
+              },
+              "Alignment": {
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "innerPaddingLeft": 0,
+                "innerPaddingRight": 0,
+                "innerPaddingTop": 0,
+                "innerPaddingBottom": 0,
+                "titlePaddingLeft": 0,
+                "titlePaddingRight": 0,
+                "titlePaddingTop": 7,
+                "titlePaddingBottom": 7
+              },
+              "format": {
+                "titleFontSize": 16,
+                "titleHorizontal": "Center",
+                "titleShadow": false,
+                "tileBorderWidth": 0,
+                "tileBorderRounding": 0,
+                "tileBorderColor": "#000000",
+                "tileBackgroundColor": "#000000",
+                "tileTransparentBackground": true,
+                "tileShadow": false
+              }
+            },
+            "containerId": null,
+            "components": [],
+            "widgets": [
+              {
+                "id": "d435cd81-e96b-da20-c506-a5119108cb0a",
+                "layout": {
+                  "row": null,
+                  "column": null,
+                  "rowSpan": 12,
+                  "colSpan": 6
+                },
+                "component": {
+                  "id": "491d1146-4393-dae7-4fb0-4d81306259ae",
+                  "key": "Panel",
+                  "options": {
+                    "version": "4.4.0",
+                    "Basics": {
+                      "ComponentName": "panel",
+                      "RelativeHeight": true,
+                      "Advanced": false,
+                      "UserLayout": false,
+                      "Floatable": true,
+                      "ColCount": 36,
+                      "RowHeight": 25,
+                      "RowCount": 24
+                    },
+                    "Style": {
+                      "advanced": "",
+                      "cssClasses": ""
+                    },
+                    "Alignment": {
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "innerPaddingLeft": 0,
+                      "innerPaddingRight": 0,
+                      "innerPaddingTop": 0,
+                      "innerPaddingBottom": 0,
+                      "titlePaddingLeft": 0,
+                      "titlePaddingRight": 0,
+                      "titlePaddingTop": 7,
+                      "titlePaddingBottom": 7
+                    },
+                    "format": {
+                      "titleFontSize": 16,
+                      "titleHorizontal": "Center",
+                      "titleShadow": false,
+                      "tileBorderWidth": 0,
+                      "tileBorderRounding": 0,
+                      "tileBorderColor": "#000000",
+                      "tileBackgroundColor": "#000000",
+                      "tileTransparentBackground": true,
+                      "tileShadow": false
+                    }
+                  },
+                  "containerId": null,
+                  "components": [],
+                  "widgets": [
+                    {
+                      "id": "106aade7-804e-baad-0a66-8b11c2e5b72f",
+                      "layout": {
+                        "row": 0,
+                        "column": 0,
+                        "rowSpan": 24,
+                        "colSpan": 36
+                      },
+                      "component": {
+                        "id": "f6ec9423-47bf-1f6b-5a46-271a6821712b",
+                        "key": "Accordion",
+                        "options": {
+                          "version": "4.5.1",
+                          "Basics": {
+                            "ComponentName": "accordion",
+                            "Direction": "Horizontal",
+                            "ScaleOnResize": false,
+                            "Sections": [
+                              {
+                                "SectionId": "section_2690",
+                                "Title": "Candlestick",
+                                "TitleAlign": "Left",
+                                "Expanded": true,
+                                "Flex": false,
+                                "Weight": 1,
+                                "Resizeable": false,
+                                "HideTitle": false
+                              },
+                              {
+                                "SectionId": "section_2885",
+                                "Title": "Section",
+                                "TitleAlign": "Left",
+                                "Expanded": true,
+                                "Flex": false,
+                                "MinSize": 0,
+                                "MaxSize": 0,
+                                "Weight": 1,
+                                "Resizeable": false,
+                                "HideTitle": false
+                              }
+                            ]
+                          },
+                          "Style": {
+                            "advanced": "",
+                            "cssClasses": "",
+                            "Theme": "Dark"
+                          },
+                          "Alignment": {
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "innerPaddingLeft": 0,
+                            "innerPaddingRight": 0,
+                            "innerPaddingTop": 0,
+                            "innerPaddingBottom": 0,
+                            "titlePaddingLeft": 0,
+                            "titlePaddingRight": 0,
+                            "titlePaddingTop": 7,
+                            "titlePaddingBottom": 7
+                          },
+                          "format": {
+                            "titleFontSize": 16,
+                            "titleHorizontal": "Center",
+                            "titleShadow": false,
+                            "tileBorderWidth": 0,
+                            "tileBorderRounding": 0,
+                            "tileBorderColor": "#000000",
+                            "tileBackgroundColor": "#000000",
+                            "tileTransparentBackground": true,
+                            "tileShadow": false
+                          }
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [
+                          {
+                            "id": "323000b3-c518-6ba0-ae93-cd2a28695604",
+                            "layout": {
+                              "row": 16,
+                              "column": 0,
+                              "rowSpan": 8,
+                              "colSpan": 36
+                            },
+                            "component": {
+                              "id": "1f7316c8-8bb8-c2ea-d0e0-fb25720cdb95",
+                              "key": "ChartJS",
+                              "options": {
+                                "Layers": [
+                                  {
+                                    "_Hidden": {
+                                      "_Type": "Candlestick",
+                                      "_Index": 0,
+                                      "_LayerId": "layer_8977",
+                                      "_PossibleColumns": [
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleColumnsWithItself": [
+                                        "<this>",
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleColumnsWithXYKey": [
+                                        "<thisX>",
+                                        "<thisY>",
+                                        "<thisName>",
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleRadius": [
+                                        "Fixed Size",
+                                        "date",
+                                        "sym",
+                                        "exchange",
+                                        "time",
+                                        "open",
+                                        "high",
+                                        "low",
+                                        "close",
+                                        "volume"
+                                      ],
+                                      "_PossibleXAxes": [
+                                        "XAxis 1"
+                                      ],
+                                      "_PossibleYAxes": [
+                                        "YAxis 1"
+                                      ]
+                                    },
+                                    "Basics": {
+                                      "LegendEnabled": false,
+                                      "LegendLabelColor": "",
+                                      "Name": "Layer 1",
+                                      "BorderWidth": 2,
+                                      "Data": {
+                                        "_dashboardsType": "data",
+                                        "value": "ohlcv"
+                                      }
+                                    },
+                                    "Axes": {
+                                      "XAxisData": "time",
+                                      "XAxisID": "XAxis 1",
+                                      "YAxisID": "YAxis 1",
+                                      "Close": "close",
+                                      "High": "high",
+                                      "Low": "low",
+                                      "Open": "open"
+                                    },
+                                    "Labels": {
+                                      "Font": {
+                                        "Bold": false,
+                                        "Size": 12
+                                      }
+                                    }
+                                  }
+                                ],
+                                "Legend": {
+                                  "LegendLayerThreshold": 5
+                                },
+                                "XAxes": [
+                                  {
+                                    "_Hidden": {
+                                      "_Type": "category",
+                                      "_AxisId": "axis_3147",
+                                      "_Index": 0,
+                                      "_Label": "XAxis 1"
+                                    },
+                                    "Labels": {
+                                      "DateFormat": "YYYY-MM-DD",
+                                      "MaxWidth": 0
+                                    }
+                                  }
+                                ],
+                                "YAxes": [
+                                  {
+                                    "_Hidden": {
+                                      "_Type": "linear",
+                                      "_AxisId": "axis_3151",
+                                      "_Index": 0,
+                                      "_Label": "YAxis 1"
+                                    },
+                                    "Labels": {
+                                      "BeginAtZero": false,
+                                      "MaxWidth": 0,
+                                      "_ReverseCache": false,
+                                      "DateFormat": "YYYY-MM-DD"
+                                    }
+                                  }
+                                ],
+                                "version": "4.7.0",
+                                "format": {
+                                  "widgetTitle": {
+                                    "_dashboardsType": "viewstate",
+                                    "value": "tradeVolChart/syms"
+                                  }
+                                }
+                              },
+                              "containerId": null,
+                              "components": [],
+                              "widgets": [],
+                              "definitionId": "1007",
+                              "hasOnSettingsChange": true
+                            },
+                            "sectionId": "section_2690"
+                          },
+                          {
+                            "id": "2af24ac8-8c31-bae6-9123-750b096c6fa8",
+                            "layout": {
+                              "row": null,
+                              "column": null,
+                              "rowSpan": 12,
+                              "colSpan": 6
+                            },
+                            "component": {
+                              "id": "1a10e313-8d83-8f4f-d082-f9be85c7a324",
+                              "key": "Datagrid",
+                              "options": {
+                                "version": "4.7.1",
+                                "datagridPossibleColumns": [
+                                  "key",
+                                  "ADAUSD",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "BNBUSDT",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "EOSUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "ETH_USDT",
+                                  "GMTUSD",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "LTCUSDT",
+                                  "SOLUSD",
+                                  "XBTEUR",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT",
+                                  "XBT_USDT",
+                                  "XRPUSD",
+                                  "XRPUSDT"
+                                ],
+                                "datagridPossibleColumnsWithItself": [
+                                  "<this>",
+                                  "key",
+                                  "ADAUSD",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "BNBUSDT",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "EOSUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "ETH_USDT",
+                                  "GMTUSD",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "LTCUSDT",
+                                  "SOLUSD",
+                                  "XBTEUR",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT",
+                                  "XBT_USDT",
+                                  "XRPUSD",
+                                  "XRPUSDT"
+                                ],
+                                "selectedColumnPossibleValues": [
+                                  "key",
+                                  "ADAUSD",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "BNBUSDT",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "EOSUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "ETH_USDT",
+                                  "GMTUSD",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "LTCUSDT",
+                                  "SOLUSD",
+                                  "XBTEUR",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT",
+                                  "XBT_USDT",
+                                  "XRPUSD",
+                                  "XRPUSDT"
+                                ],
+                                "highlightTargetPossibleValues": [
+                                  "key",
+                                  "ADAUSD",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "BNBUSDT",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "EOSUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "ETH_USDT",
+                                  "GMTUSD",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "LTCUSDT",
+                                  "SOLUSD",
+                                  "XBTEUR",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT",
+                                  "XBT_USDT",
+                                  "XRPUSD",
+                                  "XRPUSDT",
+                                  "*"
+                                ],
+                                "sortingPossibleValues": [
+                                  "",
+                                  "key",
+                                  "ADAUSD",
+                                  "BCHUSD",
+                                  "BNBUSD",
+                                  "BNBUSDT",
+                                  "DOGEUSD",
+                                  "DOGEUSDT",
+                                  "DOTUSD",
+                                  "EOSUSD",
+                                  "ETHUSD",
+                                  "ETHUSDT",
+                                  "ETH_USDT",
+                                  "GMTUSD",
+                                  "LINKUSD",
+                                  "LTCUSD",
+                                  "LTCUSDT",
+                                  "SOLUSD",
+                                  "XBTEUR",
+                                  "XBTM22",
+                                  "XBTU22",
+                                  "XBTUSD",
+                                  "XBTUSDT",
+                                  "XBT_USDT",
+                                  "XRPUSD",
+                                  "XRPUSDT"
+                                ],
+                                "Basics": {
+                                  "Data": {
+                                    "_dashboardsType": "data",
+                                    "value": "correlation"
+                                  }
+                                },
+                                "ColumnsConfiguration": [
+                                  {
+                                    "Field": "key",
+                                    "DisplayName": "key",
+                                    "WidthWeight": 100,
+                                    "MinWidthAbsolute": 100,
+                                    "TextAlign": "left",
+                                    "FooterWeights": "key"
+                                  },
+                                  {
+                                    "Field": "*",
+                                    "DisplayName": "*",
+                                    "Format": "Number",
+                                    "WidthWeight": 100,
+                                    "FooterWeights": "key"
+                                  }
+                                ],
+                                "Alignment": {
+                                  "paddingLeft": 0,
+                                  "paddingRight": 0,
+                                  "paddingTop": 0,
+                                  "paddingBottom": 0,
+                                  "innerPaddingLeft": 0,
+                                  "innerPaddingRight": 0,
+                                  "innerPaddingTop": 0,
+                                  "innerPaddingBottom": 0,
+                                  "titlePaddingLeft": 0,
+                                  "titlePaddingRight": 0
+                                },
+                                "format": {
+                                  "tileBorderWidth": 0,
+                                  "tileBorderRounding": 0,
+                                  "tileBorderColor": "#000000",
+                                  "tileBackgroundColor": "#000000",
+                                  "tileTransparentBackground": true,
+                                  "tileShadow": false
+                                },
+                                "Selection": {
+                                  "RowSelectionColumn": "key"
+                                },
+                                "HighlightRules": [
+                                  {
+                                    "Name": "",
+                                    "Enabled": true,
+                                    "Target": "*",
+                                    "ConditionSource": "<this>",
+                                    "ConditionOperator": "",
+                                    "ConditionValue": "previous value",
+                                    "Color": "",
+                                    "BackgroundColor": "",
+                                    "BorderColor": "",
+                                    "Icon": "",
+                                    "IconColor": "",
+                                    "RuleType": "gradient",
+                                    "RuleMin": -1,
+                                    "RuleMax": 1,
+                                    "RuleLimitEnabled": false,
+                                    "TargetElement": "background",
+                                    "Palette": [
+                                      {
+                                        "color": "#ff0000"
+                                      },
+                                      {
+                                        "color": "#ff9f0f"
+                                      },
+                                      {
+                                        "color": "#00ff00"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "containerId": null,
+                              "components": [],
+                              "widgets": [],
+                              "definitionId": "21",
+                              "hasOnSettingsChange": true
+                            },
+                            "sectionId": "section_2885"
+                          }
+                        ],
+                        "definitionId": "56",
+                        "hasOnSettingsChange": true
+                      }
+                    }
+                  ],
+                  "definitionId": "50",
+                  "hasOnSettingsChange": true
+                },
+                "sectionId": "section_2622"
+              },
+              {
+                "id": "b74e2001-d28c-9ded-ffad-7a1d8e3a4292",
+                "layout": {
+                  "row": null,
+                  "column": null,
+                  "rowSpan": 12,
+                  "colSpan": 6
+                },
+                "component": {
+                  "id": "8eb6795e-fe12-d949-15a5-2fac0122ffd1",
+                  "key": "Panel",
+                  "options": {
+                    "version": "4.4.0",
+                    "Basics": {
+                      "ComponentName": "panel",
+                      "RelativeHeight": true,
+                      "Advanced": false,
+                      "UserLayout": false,
+                      "Floatable": true,
+                      "ColCount": 36,
+                      "RowHeight": 25,
+                      "RowCount": 24
+                    },
+                    "Style": {
+                      "advanced": "",
+                      "cssClasses": ""
+                    },
+                    "Alignment": {
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "innerPaddingLeft": 0,
+                      "innerPaddingRight": 0,
+                      "innerPaddingTop": 0,
+                      "innerPaddingBottom": 0,
+                      "titlePaddingLeft": 0,
+                      "titlePaddingRight": 0,
+                      "titlePaddingTop": 7,
+                      "titlePaddingBottom": 7
+                    },
+                    "format": {
+                      "titleFontSize": 16,
+                      "titleHorizontal": "Center",
+                      "titleShadow": false,
+                      "tileBorderWidth": 0,
+                      "tileBorderRounding": 0,
+                      "tileBorderColor": "#000000",
+                      "tileBackgroundColor": "#000000",
+                      "tileTransparentBackground": true,
+                      "tileShadow": false
+                    }
+                  },
+                  "containerId": null,
+                  "components": [],
+                  "widgets": [
+                    {
+                      "id": "ca2fdb2c-695d-c2a4-f04d-9dd1c163822e",
+                      "layout": {
+                        "row": 0,
+                        "column": 4,
+                        "rowSpan": 24,
+                        "colSpan": 32
+                      },
+                      "component": {
+                        "id": "93ae3dff-4f68-a1f7-ae35-87bc64ceb040",
+                        "key": "ChartJS",
+                        "options": {
+                          "Layers": [
+                            {
+                              "_Hidden": {
+                                "_Type": "Bar",
+                                "_Index": 0,
+                                "_LayerId": "layer_8977",
+                                "_PossibleColumns": [
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithItself": [
+                                  "<this>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithXYKey": [
+                                  "<thisX>",
+                                  "<thisY>",
+                                  "<thisName>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleRadius": [
+                                  "Fixed Size",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleXAxes": [
+                                  "XAxis 1"
+                                ],
+                                "_PossibleYAxes": [
+                                  "YAxis 1",
+                                  "YAxis 2"
+                                ]
+                              },
+                              "Basics": {
+                                "LegendLabelColor": "",
+                                "Name": "Size",
+                                "BorderWidth": 0,
+                                "Data": {
+                                  "_dashboardsType": "data",
+                                  "value": "trades_size_sum copy"
+                                }
+                              },
+                              "Axes": {
+                                "XAxisData": "time",
+                                "YAxisData": "size",
+                                "XAxisID": "XAxis 1",
+                                "YAxisID": "YAxis 2"
+                              },
+                              "Labels": {
+                                "Font": {
+                                  "Bold": false,
+                                  "Size": 12
+                                }
+                              }
+                            },
+                            {
+                              "_Hidden": {
+                                "_Type": "Line",
+                                "_Index": 1,
+                                "_LayerId": "layer_3299",
+                                "_PossibleColumns": [
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithItself": [
+                                  "<this>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleColumnsWithXYKey": [
+                                  "<thisX>",
+                                  "<thisY>",
+                                  "<thisName>",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleRadius": [
+                                  "Fixed Size",
+                                  "time",
+                                  "size",
+                                  "price"
+                                ],
+                                "_PossibleXAxes": [
+                                  "XAxis 1"
+                                ],
+                                "_PossibleYAxes": [
+                                  "YAxis 1",
+                                  "YAxis 2"
+                                ],
+                                "_PossibleLayers": [
+                                  "Layer 1",
+                                  "nofill",
+                                  "origin",
+                                  "+1",
+                                  "+2"
+                                ]
+                              },
+                              "Basics": {
+                                "LegendLabelColor": "",
+                                "Name": "Price",
+                                "BackgroundColor": "#f23a65",
+                                "BorderColor": "#f23a65",
+                                "BorderWidth": 2,
+                                "Data": {
+                                  "_dashboardsType": "data",
+                                  "value": "trades_size_sum copy"
+                                }
+                              },
+                              "Axes": {
+                                "XAxisData": "time",
+                                "YAxisData": "price",
+                                "XAxisID": "XAxis 1",
+                                "YAxisID": "YAxis 1"
+                              },
+                              "Labels": {
+                                "Font": {
+                                  "Bold": false,
+                                  "Size": 12
+                                }
+                              },
+                              "Line": {
+                                "Fill": "Layer 1"
+                              }
+                            }
+                          ],
+                          "Legend": {
+                            "LegendLayerThreshold": 5
+                          },
+                          "XAxes": [
+                            {
+                              "_Hidden": {
+                                "_Type": "time",
+                                "_AxisId": "axis_67830",
+                                "_Index": 0,
+                                "_Label": "XAxis 1"
+                              },
+                              "Labels": {
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "Offset": false,
+                                "TimeFormats": {
+                                  "Break": 86400000,
+                                  "Day": "MMM D",
+                                  "Distribution": "linear",
+                                  "Hour": "hA",
+                                  "IsoWeekday": false,
+                                  "ShowMajor": false,
+                                  "Millisecond": "h:mm:ss.SSS a",
+                                  "Minute": "h:mm a",
+                                  "Month": "MMM YYYY",
+                                  "Quarter": "[Q]Q - YYYY",
+                                  "Round": false,
+                                  "Second": "h:mm:ss a",
+                                  "TooltipFormat": "MMM D h:mm:ss.SSS a",
+                                  "TriggerBreak": 86400000,
+                                  "Unit": "",
+                                  "Week": "ll",
+                                  "Year": "YYYY"
+                                }
+                              },
+                              "Range": {
+                                "Max": 0,
+                                "Min": 0,
+                                "SoftRange": false,
+                                "SuggestedMax": 0,
+                                "SuggestedMin": 0,
+                                "UseDataRange": false
+                              }
+                            }
+                          ],
+                          "YAxes": [
+                            {
+                              "_Hidden": {
+                                "_Type": "linear",
+                                "_AxisId": "axis_67834",
+                                "_Index": 0,
+                                "_Label": "YAxis 1"
+                              },
+                              "Labels": {
+                                "Format": "Smart Number",
+                                "Prefix": "$",
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "Offset": false,
+                                "DateFormat": "YYYY-MM-DD"
+                              },
+                              "Range": {
+                                "UseMinMax": true,
+                                "UseDataRange": true
+                              }
+                            },
+                            {
+                              "_Hidden": {
+                                "_Type": "linear",
+                                "_AxisId": "axis_5838",
+                                "_Index": 1,
+                                "_Label": "YAxis 2"
+                              },
+                              "Labels": {
+                                "FontColor": "#F8F8F8",
+                                "Format": "Smart Number",
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "Offset": false,
+                                "DateFormat": "YYYY-MM-DD"
+                              },
+                              "Range": {
+                                "Max": 0,
+                                "Min": 0,
+                                "SoftRange": false,
+                                "SuggestedMax": 0,
+                                "SuggestedMin": 0,
+                                "UseDataRange": false
+                              },
+                              "Position": "right"
+                            }
+                          ],
+                          "format": {
+                            "widgetTitle": {
+                              "_dashboardsType": "viewstate",
+                              "value": "tradeVolChart/syms"
+                            }
+                          },
+                          "version": "4.7.0"
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [],
+                        "definitionId": "1007",
+                        "hasOnSettingsChange": true
+                      }
+                    },
+                    {
+                      "id": "6766b473-25a5-08cb-1f4c-5bbe387479b8",
+                      "layout": {
+                        "row": 0,
+                        "column": 0,
+                        "rowSpan": 4,
+                        "colSpan": 4
+                      },
+                      "component": {
+                        "id": "4f467ff0-b652-a8c0-7335-b8f7003fb0d1",
+                        "key": "Dataform",
+                        "options": {
+                          "version": "4.6.1P2",
+                          "isDataform": true,
+                          "Basics": {
+                            "Data": {
+                              "_dashboardsType": "data",
+                              "value": "tradeVolCountByTimeInterval/syms"
+                            },
+                            "SubmitButtonText": "Submit",
+                            "ValidationAnalytic": "",
+                            "ExpandDictParameters": true,
+                            "ForceExecute": false,
+                            "ShowReset": false,
+                            "ShowSubmit": false,
+                            "FloatSubmit": false,
+                            "FloatReset": false,
+                            "ViewStates": [
+                              {
+                                "PathEnc": "tradeVolChart%2Fsyms",
+                                "DisplayName": "Syms",
+                                "HideParameter": false,
+                                "Tooltip": "",
+                                "FieldType": {
+                                  "_Type": "Dropdown",
+                                  "DropdownPossibleValues": [
+                                    "",
+                                    "sym"
+                                  ],
+                                  "Data": {
+                                    "_dashboardsType": "data",
+                                    "value": "sym_list"
+                                  },
+                                  "AcceptEmptyValues": false,
+                                  "ForceSelect": false,
+                                  "MultiSelect": false,
+                                  "ShowSearch": true,
+                                  "AdvancedSearch": true,
+                                  "FieldSummaryThreshold": 5,
+                                  "TooltipSummaryThreshold": 5,
+                                  "SelectAllValue": "",
+                                  "DataSourceMapping": {
+                                    "Value": "sym",
+                                    "Text": "sym",
+                                    "DropdownPossibleValues": [
+                                      "sym"
+                                    ]
+                                  },
+                                  "Items": []
+                                }
+                              }
+                            ],
+                            "Actions": []
+                          },
+                          "Style": {
+                            "advanced": "",
+                            "cssClasses": "",
+                            "minWidth": "",
+                            "display": "Row",
+                            "inline": "Top",
+                            "labelWidth": "",
+                            "labelPadding": "",
+                            "labelAlign": "Left",
+                            "padding": "",
+                            "verticalSpacing": "",
+                            "submitOffset": "",
+                            "resetOffset": "",
+                            "formMargin": ""
+                          },
+                          "Alignment": {
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 5,
+                            "paddingBottom": 0,
+                            "innerPaddingLeft": 5,
+                            "innerPaddingRight": 0,
+                            "innerPaddingTop": 0,
+                            "innerPaddingBottom": 0,
+                            "titlePaddingLeft": 0,
+                            "titlePaddingRight": 0,
+                            "titlePaddingTop": 7,
+                            "titlePaddingBottom": 7
+                          },
+                          "format": {
+                            "widgetTitle": "",
+                            "titleFontSize": 10,
+                            "titleHorizontal": "Left",
+                            "titleFontBold": false,
+                            "titleShadow": false,
+                            "titleTransparentBackground": false,
+                            "tileBorderWidth": 0,
+                            "tileBorderRounding": 0,
+                            "tileBorderColor": "#000000",
+                            "tileBackgroundColor": "#000000",
+                            "tileTransparentBackground": true,
+                            "tileShadow": false
+                          }
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [],
+                        "definitionId": "27",
+                        "hasOnSettingsChange": true
+                      }
+                    }
+                  ],
+                  "definitionId": "50",
+                  "hasOnSettingsChange": true
+                },
+                "sectionId": "section_3059"
+              },
+              {
+                "id": "a71e03cf-0443-7198-8d49-57e754117da5",
+                "layout": {
+                  "row": null,
+                  "column": null,
+                  "rowSpan": 12,
+                  "colSpan": 6
+                },
+                "component": {
+                  "id": "f385a47a-de6e-7245-1ee5-ff7d6dbc36ac",
+                  "key": "Panel",
+                  "options": {
+                    "version": "4.4.0",
+                    "Basics": {
+                      "ComponentName": "panel",
+                      "RelativeHeight": true,
+                      "Advanced": false,
+                      "UserLayout": false,
+                      "Floatable": true,
+                      "ColCount": 36,
+                      "RowHeight": 25,
+                      "RowCount": 24
+                    },
+                    "Style": {
+                      "advanced": "",
+                      "cssClasses": ""
+                    },
+                    "Alignment": {
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 0,
+                      "paddingBottom": 0,
+                      "innerPaddingLeft": 0,
+                      "innerPaddingRight": 0,
+                      "innerPaddingTop": 0,
+                      "innerPaddingBottom": 0,
+                      "titlePaddingLeft": 0,
+                      "titlePaddingRight": 0,
+                      "titlePaddingTop": 7,
+                      "titlePaddingBottom": 7
+                    },
+                    "format": {
+                      "titleFontSize": 16,
+                      "titleHorizontal": "Center",
+                      "titleShadow": false,
+                      "tileBorderWidth": 0,
+                      "tileBorderRounding": 0,
+                      "tileBorderColor": "#000000",
+                      "tileBackgroundColor": "#000000",
+                      "tileTransparentBackground": true,
+                      "tileShadow": false
+                    }
+                  },
+                  "containerId": null,
+                  "components": [],
+                  "widgets": [
+                    {
+                      "id": "56cee3c4-c78b-811c-be45-788b594ead46",
+                      "layout": {
+                        "row": 0,
+                        "column": 0,
+                        "rowSpan": 24,
+                        "colSpan": 36
+                      },
+                      "component": {
+                        "id": "f98bd4da-c8e2-7d15-0aa6-d1f061d0ffdf",
+                        "key": "Heatmap",
+                        "options": {
+                          "Animation": {
+                            "Duration": 1500,
+                            "Easing": "quinticInOut"
+                          },
+                          "Basics": {
+                            "Actions": [],
+                            "Data": {
+                              "_dashboardsType": "data",
+                              "value": "trade_summary"
+                            },
+                            "Focus": {
+                              "_dashboardsType": "viewstate",
+                              "value": "tradeVolChart/syms"
+                            },
+                            "Selected": {
+                              "_dashboardsType": "viewstate",
+                              "value": "tradeVolChart/syms"
+                            },
+                            "SelectedAttr": "sym",
+                            "Theme": "Dark"
+                          },
+                          "ColorPalette": {
+                            "ColorScheme": [
+                              {
+                                "type": "#5680bf"
+                              },
+                              {
+                                "type": "#5792bd"
+                              },
+                              {
+                                "type": "#629fc7"
+                              },
+                              {
+                                "type": "#63b0c7"
+                              },
+                              {
+                                "type": "#63c7c7"
+                              },
+                              {
+                                "type": "#65c2af"
+                              },
+                              {
+                                "type": "#54bf9d"
+                              },
+                              {
+                                "type": "#5dbd86"
+                              },
+                              {
+                                "type": "#69bf74"
+                              },
+                              {
+                                "type": "#67b860"
+                              }
+                            ],
+                            "ColorType": "Gradient",
+                            "FixedColor": "#0061FF",
+                            "HoverColor": "",
+                            "SelectedColor": "",
+                            "SelectedColorScheme": "blue green"
+                          },
+                          "Data": [
+                            {
+                              "Color": "volume",
+                              "Column": "sym",
+                              "HighlightRules": [],
+                              "Name": "Volume",
+                              "Size": "x"
+                            }
+                          ],
+                          "FileExport": {
+                            "FileName": [],
+                            "ShowExportCsvButton": false,
+                            "ShowExportExcelButton": false,
+                            "ShowScreenshot": false
+                          },
+                          "GroupBy": {
+                            "GroupByColumns": "sym",
+                            "ScaleByChildren": false,
+                            "ShowHeader": false,
+                            "UseGroupBy": false,
+                            "headerColor": "#ffffff"
+                          },
+                          "NodeLabel": {
+                            "BorderColor": "#282828",
+                            "BorderWidth": 2,
+                            "DateFormat": "HHHH-MM-DD",
+                            "Format": "General",
+                            "HideTrailingZeros": false,
+                            "MaxValue": 100,
+                            "MinValue": 0,
+                            "Precision": 0,
+                            "Prefix": "",
+                            "Scale": true,
+                            "Show": true,
+                            "ShowAbsolute": false,
+                            "ShowLegend": true,
+                            "Suffix": "",
+                            "customLabel": "{{sym}} Trades: {{x}} Volume: {{size}}",
+                            "gapWidth": 2,
+                            "labelColor": "#ffffff",
+                            "upperFontSize": "12",
+                            "upperLabel": false,
+                            "upperLabelColour": "#000",
+                            "upperLabelHeight": "15"
+                          },
+                          "Tooltip": {
+                            "ShowTooltip": true,
+                            "TooltipTemplate": "<table><thead><tr style=\"padding-right: 10px;\"><th>{{_name}}</th><th></th></tr></thead><tr><td><svg style=\"padding: 0 5px; vertical-align: middle;\" width=\"12\" height=\"12\"><rect width=\"12\" height=\"12\"style=\"fill: {{_color}} ;stroke-width:3;stroke: {{_color}}\"></rect></svg>{{_label}}:</td><td style=\"padding-right: 10px; text-align: left;\"><span style=\"padding-left:10px\">{{_value}}</span></td></tr></table>"
+                          },
+                          "possibleColumns": [
+                            "sym",
+                            "x",
+                            "size"
+                          ],
+                          "possibleLabels": [
+                            "sym",
+                            "x",
+                            "size"
+                          ],
+                          "version": "4.5.0",
+                          "Style": {
+                            "advanced": "",
+                            "cssClasses": ""
+                          },
+                          "Alignment": {
+                            "paddingLeft": 0,
+                            "paddingRight": 0,
+                            "paddingTop": 0,
+                            "paddingBottom": 0,
+                            "innerPaddingLeft": 0,
+                            "innerPaddingRight": 0,
+                            "innerPaddingTop": 0,
+                            "innerPaddingBottom": 0,
+                            "titlePaddingLeft": 0,
+                            "titlePaddingRight": 0,
+                            "titlePaddingTop": 7,
+                            "titlePaddingBottom": 7
+                          },
+                          "format": {
+                            "titleFontSize": 16,
+                            "titleHorizontal": "Center",
+                            "titleShadow": false,
+                            "tileBorderWidth": 0,
+                            "tileBorderRounding": 0,
+                            "tileBorderColor": "#000000",
+                            "tileBackgroundColor": "#000000",
+                            "tileTransparentBackground": true,
+                            "tileShadow": false
+                          },
+                          "possibleRules": [
+                            "sym",
+                            "x",
+                            "size"
+                          ]
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [],
+                        "definitionId": "5",
+                        "hasOnSettingsChange": true
+                      }
+                    }
+                  ],
+                  "definitionId": "50",
+                  "hasOnSettingsChange": true
+                },
+                "sectionId": "section_4733"
+              }
+            ],
+            "definitionId": "56",
+            "hasOnSettingsChange": true
+          }
+        }
+      ],
+      "relativeHeight": true,
+      "rowCount": 24,
+      "rowHeight": 25,
+      "colCount": 36,
+      "floatable": true,
+      "isDefault": true
+    }
+  ],
+  "popups": [],
+  "tags": [],
+  "dashboardTheme": "Dark",
+  "themeSwitchable": true,
+  "saveTimestamp": null,
+  "relativeHeight": true,
+  "rowCount": 24,
+  "rowHeight": 25,
+  "colCount": 36,
+  "floatable": true,
+  "viewState": {
+    "selected": {
+      "_viewType": true,
+      "_default": "0",
+      "_type": "symbol"
+    },
+    ".settings": {},
+    "tradeVolChart": {
+      "plot": {
+        "_viewType": true,
+        "_default": "trade",
+        "_type": "symbol"
+      },
+      "syms": {
+        "_viewType": true,
+        "_default": "XBTUSD",
+        "_type": "symbol"
+      }
+    },
+    "trades_size_sum": {
+      "plot": {
+        "_viewType": true,
+        "_type": "symbol",
+        "_default": ""
+      },
+      "sym": {
+        "_viewType": true,
+        "_type": "symbol",
+        "_default": ""
+      }
+    }
+  },
+  "data": {
+    "rdb_table_count": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "Property",
+        "Value"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "test",
+      "_mappings": {
+        "key": "Property",
+        "mappings": {},
+        "value": "Value"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "rdb\"tables[]!count each value each tables[]\"",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "gw": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "cnt"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "cnt"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "last gw(`countBy;`startTS`endTS`table`byCols!(.z.p-0D00:00:10;.z.p;`trade;`sym);`callback;(0#`)!())",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trades_size_sum": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "date",
+        "time",
+        "sym",
+        "orderID",
+        "price",
+        "tradeID",
+        "side",
+        "size",
+        "exchange"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[plot;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "plot",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "orderbook": {
+      "_pagingType": "NONE",
+      "_autoExecute": false,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "sym",
+        "side",
+        "size",
+        "price",
+        "tickDirection",
+        "trdMatchID",
+        "grossValue",
+        "homeNotional",
+        "foreignNotional"
+      ],
+      "_dataType": "analytic",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "sym"
+      },
+      "_maxRows": "100",
+      "_forceReset": true,
+      "_subscriptionType": "streaming",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_selectedAnalytic": "trade",
+      "_analyticParams": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_streamingParameters": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_subscriptionKey": "",
+      "_isStreamingSubscription": false,
+      "_hasUpdateQuery": false,
+      "_updateQueryString": "",
+      "_updateType": "query"
+    },
+    "vwap depth": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "symbol"
+      ],
+      "_dataType": "analytic",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "symbol",
+        "mappings": {},
+        "value": ""
+      },
+      "_maxRows": "1000",
+      "_subscriptionType": "streaming",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": false,
+          "weight": 2
+        }
+      ],
+      "_selectedAnalytic": "vwaps",
+      "_analyticParams": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_streamingParameters": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "XBTUSD",
+          "isViewState": false
+        }
+      ],
+      "_subscriptionKey": "time",
+      "_isStreamingSubscription": false,
+      "_hasUpdateQuery": false,
+      "_updateQueryString": "",
+      "_updateType": "query"
+    },
+    "trades_stream": {
+      "_pagingType": "NONE",
+      "_autoExecute": false,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "sym",
+        "side",
+        "size",
+        "price",
+        "tickDirection",
+        "trdMatchID",
+        "grossValue",
+        "homeNotional",
+        "foreignNotional"
+      ],
+      "_dataType": "analytic",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "sym"
+      },
+      "_maxRows": "100",
+      "_forceReset": false,
+      "_subscriptionType": "streaming",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_selectedAnalytic": "trade",
+      "_analyticParams": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "",
+          "isViewState": false
+        }
+      ],
+      "_streamingParameters": [
+        {
+          "id": "x",
+          "name": "x",
+          "type": "symbol",
+          "description": "",
+          "required": false,
+          "value": "",
+          "isViewState": false
+        }
+      ],
+      "_subscriptionKey": "time",
+      "_isStreamingSubscription": false,
+      "_hasUpdateQuery": false,
+      "_updateQueryString": "",
+      "_updateType": "query"
+    },
+    "orderbook_count": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "time",
+        "size",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "weight": 2,
+          "isExpanded": true
+        },
+        {
+          "weight": 1,
+          "isExpanded": false
+        },
+        {
+          "weight": 1,
+          "isExpanded": false
+        },
+        {
+          "weight": 0,
+          "isExpanded": true
+        },
+        {
+          "weight": 2,
+          "isExpanded": true
+        }
+      ],
+      "_queryString": "{[x]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(`orderbook;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select size:sum size,trades:count i by sym,time:\"z\"$time.date+10 xbar time.minute from res where sym = `XBTUSD\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "tradeVolCountByTimeInterval": {
+      "tradeVolArgs": {
+        "_pagingType": "NONE",
+        "_autoExecute": true,
+        "_autoExec": true,
+        "_columns": [],
+        "_dataType": "query",
+        "_dataSource": "kdb",
+        "_connection": "GW",
+        "_mappings": {
+          "key": "plot",
+          "mappings": {},
+          "value": ""
+        },
+        "_maxRows": 2000,
+        "_subscriptionType": "static",
+        "_subscriptionInterval": 3,
+        "_layout": [
+          {
+            "isExpanded": true,
+            "weight": 2
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": true,
+            "weight": 0
+          },
+          {
+            "isExpanded": true,
+            "weight": 2
+          }
+        ],
+        "_queryString": "{[plot]}",
+        "_queryParams": [
+          {
+            "name": "plot",
+            "index": 0,
+            "type": "symbol",
+            "value": "<%tradeVolChart/plot%>",
+            "IsKdbParam": true,
+            "isViewState": true
+          }
+        ],
+        "_subscriptionKey": "",
+        "_hasUpdateQuery": false,
+        "_updateQueryParams": [],
+        "_updateQueryString": "",
+        "_updateType": "query",
+        "_pageSize": 2000,
+        "_serverPaging": false
+      },
+      "syms": {
+        "_pagingType": "NONE",
+        "_autoExecute": true,
+        "_autoExec": true,
+        "_columns": [],
+        "_dataType": "query",
+        "_dataSource": "kdb",
+        "_connection": "GW",
+        "_mappings": {},
+        "_maxRows": 2000,
+        "_subscriptionType": "static",
+        "_subscriptionInterval": 3,
+        "_layout": [
+          {
+            "isExpanded": true,
+            "weight": 2
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": false,
+            "weight": 1
+          },
+          {
+            "isExpanded": true,
+            "weight": 0
+          },
+          {
+            "isExpanded": true,
+            "weight": 2
+          }
+        ],
+        "_queryString": "{[syms]}",
+        "_queryParams": [
+          {
+            "name": "syms",
+            "index": 0,
+            "type": "symbol",
+            "value": "<%tradeVolChart/syms%>",
+            "IsKdbParam": true,
+            "isViewState": true
+          }
+        ],
+        "_subscriptionKey": "",
+        "_hasUpdateQuery": false,
+        "_updateQueryParams": [],
+        "_updateQueryString": "",
+        "_updateType": "query",
+        "_pageSize": 2000,
+        "_serverPaging": false
+      }
+    },
+    "tradeVolDropdown": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "plot"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "plot",
+        "mappings": {},
+        "value": ""
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "([]plot:`trade`order)",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_count": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "time",
+        "size",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(`trade;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select size:sum size,trades:count i by sym,time:\"z\"$time.date+10 xbar time.minute from res where sym = `XBTUSD\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "agg_orderbook": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "cnt"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "cnt"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "last gw(`countBy;`startTS`endTS`table`byCols!(.z.p-0D00:00:10;.z.p;`orderbook;`sym);`callback;(0#`)!())",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "graphs": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "trades"
+      },
+      "_maxRows": 2000,
+      "_forceReset": false,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x;plot;syms]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(plot;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select trades:count i by sym from res\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        },
+        {
+          "name": "plot",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 2,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "heatmap_data": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "trades"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "trades"
+      },
+      "_maxRows": 2000,
+      "_forceReset": false,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x;plot]\r\n  res:last gw(`.kxi.getData;(`table`startTS`endTS)!(plot;\"p\"$.z.d-2;\"p\"$.z.d+2);`f;(0#`)!());\r\n  select trades:count i by sym from res\r\n }",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        },
+        {
+          "name": "plot",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary_rdb": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "dap",
+        "size"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "dap"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\nselect size:sum trades by time, dap from tab ",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary_hdb": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "date",
+        "time",
+        "sym",
+        "orderID",
+        "price",
+        "tradeID",
+        "side",
+        "size",
+        "exchange"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": "20000",
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[x]\r\n//  tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-3;\"p\"$.z.d+2);`callback;(0#`)!());\r\n  tab:getData[`trade;\"p\"$.z.d-3;\"p\"$.z.d+2;`;`]\r\n//  pivot:{[t]if[not count t;:t];u:`$string asc distinct last f:flip key t;pf:{x#(`$string y)!z};p:?[t;();g!g:-1_ k;(pf;`u;last k:key f;last key flip value t)];p};\r\n//  pivot select trades:sum trades by time, dap from tab\r\n }\r\n",
+      "_queryParams": [
+        {
+          "name": "x",
+          "index": 0,
+          "type": "symbol",
+          "value": "",
+          "IsKdbParam": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary_idb": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "dap",
+        "size"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "ctp",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\nselect size:sum trades by time, dap from tab where dap = `idb\r\n\r\n//select size:sum size,trades:count i by sym,time:\"z\"$time.date+10 xbar time.minute from res where sym = `XBTUSD",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trade_summary": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "x",
+        "size"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "sym"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\n// 20 sublist `volume xdesc select sum trades, sum volume by sym from tab\r\n20 sublist `size xdesc select count i, sum size by sym from getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`]",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "sym_list": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": ""
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "static",
+      "_subscriptionInterval": 3,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\ntab:getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`];\r\nselect sym from `size xdesc select count i, sum size by sym from tab",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "ohlcv": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "date",
+        "sym",
+        "exchange",
+        "time",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`ohlcv;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "plot",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "trades_size_sum copy": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "time",
+        "size",
+        "price"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "time",
+        "mappings": {},
+        "value": "time"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc select size:sum size, size wavg price by time:time.date+time.minute from getData[plot;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "plot",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "correlation": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "key",
+        "BCHUSD",
+        "BNBUSD",
+        "DOGEUSD",
+        "DOGEUSDT",
+        "DOTUSD",
+        "ETHUSD",
+        "ETHUSDT",
+        "LINKUSD",
+        "LTCUSD",
+        "SOLUSD",
+        "XBTM22",
+        "XBTU22",
+        "XBTUSD",
+        "XBTUSDT"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "key",
+        "mappings": {},
+        "value": "ETHUSD"
+      },
+      "_maxRows": 2000,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "getCorrelation[`bitmex;.z.p-10:00:00;.z.p]",
+      "_queryParams": [],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    }
+  },
+  "worksheetPadding": 10,
+  "widgetsSpacing": 0,
+  "borderColor": "000000",
+  "borderBackground": "000000",
+  "transparentBackground": true,
+  "borderWidth": 0,
+  "borderRounding": 0,
+  "borderSpacing": 0,
+  "borderShadow": false,
+  "saveViewerState": "enabled",
+  "enableShareDashboard": false,
+  "notifications": {
+    "Notifications": {
+      "_Version": "4.2.0s2",
+      "Enabled": true,
+      "InBrowserNotifications": false,
+      "Position": "Bottom Right",
+      "MaxVisibleCount": 3,
+      "FadeOut": 5,
+      "Icon": "fa-bell-o",
+      "Sound": "beep",
+      "SoundVolume": 100,
+      "Grouping": false,
+      "GroupingInterval": 1,
+      "triggers": []
+    }
+  },
+  "showLoadingIndicators": false,
+  "unsavedViewerPrompt": false,
+  "advancedCss": "",
+  "cssClasses": "",
+  "version": "4.6.0P1",
+  "wasChanged": false,
+  "shortcuts": []
+}
