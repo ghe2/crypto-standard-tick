@@ -1,6 +1,6 @@
 /q tick/r.q [host]:port[:usr:pwd] [host]:port[:usr:pwd]
 /2008.09.09 .k ->.q
-
+.z.zd:(17;2;6)
 if[not "w"=first string .z.o;system "sleep 1"];
 
 upd:insert;
