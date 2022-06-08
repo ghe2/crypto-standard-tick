@@ -1,2 +1,2 @@
 #!/bin/bash
-ON_DISK_HDB="/data/KX_DB"
+# ON_DISK_HDB="/path/to/HDB"
