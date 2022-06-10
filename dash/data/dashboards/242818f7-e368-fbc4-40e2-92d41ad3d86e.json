@@ -2,7 +2,7 @@
   "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
   "name": "Crypto Dashboard",
   "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
-  "lastUpdateDate": "Mon, 06 Jun 2022 06:02:22 GMT",
+  "lastUpdateDate": "Fri, 10 Jun 2022 04:47:21 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -157,7 +157,7 @@
                   "components": [],
                   "widgets": [
                     {
-                      "id": "106aade7-804e-baad-0a66-8b11c2e5b72f",
+                      "id": "79c54ebd-5a46-ddd3-2cf5-b6ab2b418ce2",
                       "layout": {
                         "row": 0,
                         "column": 0,
@@ -165,42 +165,286 @@
                         "colSpan": 36
                       },
                       "component": {
-                        "id": "f6ec9423-47bf-1f6b-5a46-271a6821712b",
-                        "key": "Accordion",
+                        "id": "6b168458-5077-5d16-0435-c42bb244a37a",
+                        "key": "Datagrid",
                         "options": {
-                          "version": "4.5.1",
+                          "version": "4.7.1",
+                          "datagridPossibleColumns": [
+                            "key",
+                            "XBT_USDT",
+                            "LINK_USDT",
+                            "ETH_USDT",
+                            "XBTUSDT",
+                            "XBTUSD",
+                            "MATIC_USDT",
+                            "ETHUSDT",
+                            "XBTM22",
+                            "METAMEXTUSDT",
+                            "XBTEUR",
+                            "XBTU22",
+                            "XBTN22",
+                            "LTCUSDT",
+                            "XBTZ22",
+                            "SOLUSDT",
+                            "ETHUSD",
+                            "AVAXUSDT",
+                            "LUNAUSDT",
+                            "BNBUSDT",
+                            "DOGEUSDT",
+                            "SOLUSD",
+                            "ETHUSDM22_ETH",
+                            "BNBUSD",
+                            "BCHUSD",
+                            "LTCUSD",
+                            "ALTMEXTUSDT",
+                            "APEUSDT",
+                            "ETHUSDM22",
+                            "MATICUSDT",
+                            "DOTUSD",
+                            "AXSUSD",
+                            "LINKUSD",
+                            "AVAXUSD",
+                            "ADAUSDT",
+                            "ADAUSD",
+                            "MANAUSDT",
+                            "LUNAUSD",
+                            "XRPUSD",
+                            "ETHM22",
+                            "GMTUSD",
+                            "DOGEUSD",
+                            "NEARUSD",
+                            "EOSUSD",
+                            "APEUSD",
+                            "GALUSD",
+                            "ADAM22",
+                            "XRPM22"
+                          ],
+                          "datagridPossibleColumnsWithItself": [
+                            "<this>",
+                            "key",
+                            "XBT_USDT",
+                            "LINK_USDT",
+                            "ETH_USDT",
+                            "XBTUSDT",
+                            "XBTUSD",
+                            "MATIC_USDT",
+                            "ETHUSDT",
+                            "XBTM22",
+                            "METAMEXTUSDT",
+                            "XBTEUR",
+                            "XBTU22",
+                            "XBTN22",
+                            "LTCUSDT",
+                            "XBTZ22",
+                            "SOLUSDT",
+                            "ETHUSD",
+                            "AVAXUSDT",
+                            "LUNAUSDT",
+                            "BNBUSDT",
+                            "DOGEUSDT",
+                            "SOLUSD",
+                            "ETHUSDM22_ETH",
+                            "BNBUSD",
+                            "BCHUSD",
+                            "LTCUSD",
+                            "ALTMEXTUSDT",
+                            "APEUSDT",
+                            "ETHUSDM22",
+                            "MATICUSDT",
+                            "DOTUSD",
+                            "AXSUSD",
+                            "LINKUSD",
+                            "AVAXUSD",
+                            "ADAUSDT",
+                            "ADAUSD",
+                            "MANAUSDT",
+                            "LUNAUSD",
+                            "XRPUSD",
+                            "ETHM22",
+                            "GMTUSD",
+                            "DOGEUSD",
+                            "NEARUSD",
+                            "EOSUSD",
+                            "APEUSD",
+                            "GALUSD",
+                            "ADAM22",
+                            "XRPM22"
+                          ],
+                          "selectedColumnPossibleValues": [
+                            "key",
+                            "XBT_USDT",
+                            "LINK_USDT",
+                            "ETH_USDT",
+                            "XBTUSDT",
+                            "XBTUSD",
+                            "MATIC_USDT",
+                            "ETHUSDT",
+                            "XBTM22",
+                            "METAMEXTUSDT",
+                            "XBTEUR",
+                            "XBTU22",
+                            "XBTN22",
+                            "LTCUSDT",
+                            "XBTZ22",
+                            "SOLUSDT",
+                            "ETHUSD",
+                            "AVAXUSDT",
+                            "LUNAUSDT",
+                            "BNBUSDT",
+                            "DOGEUSDT",
+                            "SOLUSD",
+                            "ETHUSDM22_ETH",
+                            "BNBUSD",
+                            "BCHUSD",
+                            "LTCUSD",
+                            "ALTMEXTUSDT",
+                            "APEUSDT",
+                            "ETHUSDM22",
+                            "MATICUSDT",
+                            "DOTUSD",
+                            "AXSUSD",
+                            "LINKUSD",
+                            "AVAXUSD",
+                            "ADAUSDT",
+                            "ADAUSD",
+                            "MANAUSDT",
+                            "LUNAUSD",
+                            "XRPUSD",
+                            "ETHM22",
+                            "GMTUSD",
+                            "DOGEUSD",
+                            "NEARUSD",
+                            "EOSUSD",
+                            "APEUSD",
+                            "GALUSD",
+                            "ADAM22",
+                            "XRPM22"
+                          ],
+                          "highlightTargetPossibleValues": [
+                            "key",
+                            "XBT_USDT",
+                            "LINK_USDT",
+                            "ETH_USDT",
+                            "XBTUSDT",
+                            "XBTUSD",
+                            "MATIC_USDT",
+                            "ETHUSDT",
+                            "XBTM22",
+                            "METAMEXTUSDT",
+                            "XBTEUR",
+                            "XBTU22",
+                            "XBTN22",
+                            "LTCUSDT",
+                            "XBTZ22",
+                            "SOLUSDT",
+                            "ETHUSD",
+                            "AVAXUSDT",
+                            "LUNAUSDT",
+                            "BNBUSDT",
+                            "DOGEUSDT",
+                            "SOLUSD",
+                            "ETHUSDM22_ETH",
+                            "BNBUSD",
+                            "BCHUSD",
+                            "LTCUSD",
+                            "ALTMEXTUSDT",
+                            "APEUSDT",
+                            "ETHUSDM22",
+                            "MATICUSDT",
+                            "DOTUSD",
+                            "AXSUSD",
+                            "LINKUSD",
+                            "AVAXUSD",
+                            "ADAUSDT",
+                            "ADAUSD",
+                            "MANAUSDT",
+                            "LUNAUSD",
+                            "XRPUSD",
+                            "ETHM22",
+                            "GMTUSD",
+                            "DOGEUSD",
+                            "NEARUSD",
+                            "EOSUSD",
+                            "APEUSD",
+                            "GALUSD",
+                            "ADAM22",
+                            "XRPM22",
+                            "*"
+                          ],
+                          "sortingPossibleValues": [
+                            "",
+                            "key",
+                            "XBT_USDT",
+                            "LINK_USDT",
+                            "ETH_USDT",
+                            "XBTUSDT",
+                            "XBTUSD",
+                            "MATIC_USDT",
+                            "ETHUSDT",
+                            "XBTM22",
+                            "METAMEXTUSDT",
+                            "XBTEUR",
+                            "XBTU22",
+                            "XBTN22",
+                            "LTCUSDT",
+                            "XBTZ22",
+                            "SOLUSDT",
+                            "ETHUSD",
+                            "AVAXUSDT",
+                            "LUNAUSDT",
+                            "BNBUSDT",
+                            "DOGEUSDT",
+                            "SOLUSD",
+                            "ETHUSDM22_ETH",
+                            "BNBUSD",
+                            "BCHUSD",
+                            "LTCUSD",
+                            "ALTMEXTUSDT",
+                            "APEUSDT",
+                            "ETHUSDM22",
+                            "MATICUSDT",
+                            "DOTUSD",
+                            "AXSUSD",
+                            "LINKUSD",
+                            "AVAXUSD",
+                            "ADAUSDT",
+                            "ADAUSD",
+                            "MANAUSDT",
+                            "LUNAUSD",
+                            "XRPUSD",
+                            "ETHM22",
+                            "GMTUSD",
+                            "DOGEUSD",
+                            "NEARUSD",
+                            "EOSUSD",
+                            "APEUSD",
+                            "GALUSD",
+                            "ADAM22",
+                            "XRPM22"
+                          ],
                           "Basics": {
-                            "ComponentName": "accordion",
-                            "Direction": "Horizontal",
-                            "ScaleOnResize": false,
-                            "Sections": [
-                              {
-                                "SectionId": "section_2690",
-                                "Title": "Candlestick",
-                                "TitleAlign": "Left",
-                                "Expanded": true,
-                                "Flex": false,
-                                "Weight": 1,
-                                "Resizeable": false,
-                                "HideTitle": false
-                              },
-                              {
-                                "SectionId": "section_2885",
-                                "Title": "Correlation Grid",
-                                "TitleAlign": "Left",
-                                "Expanded": true,
-                                "Flex": false,
-                                "Weight": 1,
-                                "Resizeable": false,
-                                "HideTitle": false
-                              }
-                            ]
+                            "Data": {
+                              "_dashboardsType": "data",
+                              "value": "correlation"
+                            }
                           },
-                          "Style": {
-                            "advanced": "",
-                            "cssClasses": "",
-                            "Theme": "Dark"
-                          },
+                          "ColumnsConfiguration": [
+                            {
+                              "Field": "key",
+                              "DisplayName": "key",
+                              "WidthWeight": 100,
+                              "MinWidthAbsolute": 100,
+                              "TextAlign": "left",
+                              "FooterWeights": "key"
+                            },
+                            {
+                              "Field": "*",
+                              "DisplayName": "*",
+                              "Format": "Number",
+                              "WidthWeight": 100,
+                              "FooterWeights": "key"
+                            }
+                          ],
                           "Alignment": {
                             "paddingLeft": 0,
                             "paddingRight": 0,
@@ -211,446 +455,58 @@
                             "innerPaddingTop": 0,
                             "innerPaddingBottom": 0,
                             "titlePaddingLeft": 0,
-                            "titlePaddingRight": 0,
-                            "titlePaddingTop": 7,
-                            "titlePaddingBottom": 7
+                            "titlePaddingRight": 0
                           },
                           "format": {
-                            "titleFontSize": 16,
-                            "titleHorizontal": "Center",
-                            "titleShadow": false,
                             "tileBorderWidth": 0,
                             "tileBorderRounding": 0,
                             "tileBorderColor": "#000000",
                             "tileBackgroundColor": "#000000",
                             "tileTransparentBackground": true,
                             "tileShadow": false
-                          }
+                          },
+                          "Selection": {
+                            "RowSelectionColumn": "key"
+                          },
+                          "HighlightRules": [
+                            {
+                              "Name": "",
+                              "Enabled": true,
+                              "Target": "*",
+                              "ConditionSource": "<this>",
+                              "ConditionOperator": "",
+                              "ConditionValue": "previous value",
+                              "Color": "",
+                              "BackgroundColor": "",
+                              "BorderColor": "",
+                              "Icon": "",
+                              "IconColor": "",
+                              "RuleType": "gradient",
+                              "RuleMin": -1,
+                              "RuleMax": 1,
+                              "RuleLimitEnabled": false,
+                              "TargetElement": "background",
+                              "Palette": [
+                                {
+                                  "color": "#ff0000"
+                                },
+                                {
+                                  "color": "#ff9f0f"
+                                },
+                                {
+                                  "color": "#00ff00"
+                                }
+                              ]
+                            }
+                          ]
                         },
                         "containerId": null,
                         "components": [],
-                        "widgets": [
-                          {
-                            "id": "323000b3-c518-6ba0-ae93-cd2a28695604",
-                            "layout": {
-                              "row": 16,
-                              "column": 0,
-                              "rowSpan": 8,
-                              "colSpan": 36
-                            },
-                            "component": {
-                              "id": "1f7316c8-8bb8-c2ea-d0e0-fb25720cdb95",
-                              "key": "ChartJS",
-                              "options": {
-                                "Layers": [
-                                  {
-                                    "_Hidden": {
-                                      "_Type": "Candlestick",
-                                      "_Index": 0,
-                                      "_LayerId": "layer_8977",
-                                      "_PossibleColumns": [
-                                        "date",
-                                        "sym",
-                                        "exchange",
-                                        "time",
-                                        "open",
-                                        "high",
-                                        "low",
-                                        "close",
-                                        "volume"
-                                      ],
-                                      "_PossibleColumnsWithItself": [
-                                        "<this>",
-                                        "date",
-                                        "sym",
-                                        "exchange",
-                                        "time",
-                                        "open",
-                                        "high",
-                                        "low",
-                                        "close",
-                                        "volume"
-                                      ],
-                                      "_PossibleColumnsWithXYKey": [
-                                        "<thisX>",
-                                        "<thisY>",
-                                        "<thisName>",
-                                        "date",
-                                        "sym",
-                                        "exchange",
-                                        "time",
-                                        "open",
-                                        "high",
-                                        "low",
-                                        "close",
-                                        "volume"
-                                      ],
-                                      "_PossibleRadius": [
-                                        "Fixed Size",
-                                        "date",
-                                        "sym",
-                                        "exchange",
-                                        "time",
-                                        "open",
-                                        "high",
-                                        "low",
-                                        "close",
-                                        "volume"
-                                      ],
-                                      "_PossibleXAxes": [
-                                        "XAxis 1"
-                                      ],
-                                      "_PossibleYAxes": [
-                                        "YAxis 1"
-                                      ]
-                                    },
-                                    "Basics": {
-                                      "LegendEnabled": false,
-                                      "LegendLabelColor": "",
-                                      "Name": "Layer 1",
-                                      "BorderWidth": 2,
-                                      "Data": {
-                                        "_dashboardsType": "data",
-                                        "value": "ohlcv"
-                                      }
-                                    },
-                                    "Axes": {
-                                      "XAxisData": "time",
-                                      "XAxisID": "XAxis 1",
-                                      "YAxisID": "YAxis 1",
-                                      "Close": "close",
-                                      "High": "high",
-                                      "Low": "low",
-                                      "Open": "open"
-                                    },
-                                    "Labels": {
-                                      "Font": {
-                                        "Bold": false,
-                                        "Size": 12
-                                      }
-                                    }
-                                  }
-                                ],
-                                "Legend": {
-                                  "LegendLayerThreshold": 5
-                                },
-                                "XAxes": [
-                                  {
-                                    "_Hidden": {
-                                      "_Type": "category",
-                                      "_AxisId": "axis_3147",
-                                      "_Index": 0,
-                                      "_Label": "XAxis 1"
-                                    },
-                                    "Labels": {
-                                      "DateFormat": "YYYY-MM-DD",
-                                      "MaxWidth": 0
-                                    }
-                                  }
-                                ],
-                                "YAxes": [
-                                  {
-                                    "_Hidden": {
-                                      "_Type": "linear",
-                                      "_AxisId": "axis_3151",
-                                      "_Index": 0,
-                                      "_Label": "YAxis 1"
-                                    },
-                                    "Labels": {
-                                      "BeginAtZero": false,
-                                      "MaxWidth": 0,
-                                      "_ReverseCache": false,
-                                      "DateFormat": "YYYY-MM-DD"
-                                    }
-                                  }
-                                ],
-                                "version": "4.7.0",
-                                "format": {
-                                  "widgetTitle": {
-                                    "_dashboardsType": "viewstate",
-                                    "value": "tradeVolChart/syms"
-                                  }
-                                }
-                              },
-                              "containerId": null,
-                              "components": [],
-                              "widgets": [],
-                              "definitionId": "1007",
-                              "hasOnSettingsChange": true
-                            },
-                            "sectionId": "section_2690"
-                          },
-                          {
-                            "id": "2af24ac8-8c31-bae6-9123-750b096c6fa8",
-                            "layout": {
-                              "row": null,
-                              "column": null,
-                              "rowSpan": 12,
-                              "colSpan": 6
-                            },
-                            "component": {
-                              "id": "1a10e313-8d83-8f4f-d082-f9be85c7a324",
-                              "key": "Datagrid",
-                              "options": {
-                                "version": "4.7.1",
-                                "datagridPossibleColumns": [
-                                  "key",
-                                  "XBT_USDT",
-                                  "XBTUSDT",
-                                  "ETH_USDT",
-                                  "XBTUSD",
-                                  "ETHUSDT",
-                                  "LINK_USDT",
-                                  "XBTM22",
-                                  "XBTU22",
-                                  "LTCUSDT",
-                                  "XBTEUR",
-                                  "ETHUSD",
-                                  "BNBUSDT",
-                                  "SOLUSDT",
-                                  "DOGEUSDT",
-                                  "BNBUSD",
-                                  "SOLUSD",
-                                  "BCHUSD",
-                                  "LTCUSD",
-                                  "XRPUSDT",
-                                  "AXSUSD",
-                                  "LINKUSD",
-                                  "DOTUSD",
-                                  "ADAUSD",
-                                  "XRPUSD",
-                                  "DOGEUSD",
-                                  "AVAXUSD",
-                                  "NEARUSD",
-                                  "LUNAUSD",
-                                  "EOSUSD",
-                                  "GMTUSD"
-                                ],
-                                "datagridPossibleColumnsWithItself": [
-                                  "<this>",
-                                  "key",
-                                  "XBT_USDT",
-                                  "XBTUSDT",
-                                  "ETH_USDT",
-                                  "XBTUSD",
-                                  "ETHUSDT",
-                                  "LINK_USDT",
-                                  "XBTM22",
-                                  "XBTU22",
-                                  "LTCUSDT",
-                                  "XBTEUR",
-                                  "ETHUSD",
-                                  "BNBUSDT",
-                                  "SOLUSDT",
-                                  "DOGEUSDT",
-                                  "BNBUSD",
-                                  "SOLUSD",
-                                  "BCHUSD",
-                                  "LTCUSD",
-                                  "XRPUSDT",
-                                  "AXSUSD",
-                                  "LINKUSD",
-                                  "DOTUSD",
-                                  "ADAUSD",
-                                  "XRPUSD",
-                                  "DOGEUSD",
-                                  "AVAXUSD",
-                                  "NEARUSD",
-                                  "LUNAUSD",
-                                  "EOSUSD",
-                                  "GMTUSD"
-                                ],
-                                "selectedColumnPossibleValues": [
-                                  "key",
-                                  "XBT_USDT",
-                                  "XBTUSDT",
-                                  "ETH_USDT",
-                                  "XBTUSD",
-                                  "ETHUSDT",
-                                  "LINK_USDT",
-                                  "XBTM22",
-                                  "XBTU22",
-                                  "LTCUSDT",
-                                  "XBTEUR",
-                                  "ETHUSD",
-                                  "BNBUSDT",
-                                  "SOLUSDT",
-                                  "DOGEUSDT",
-                                  "BNBUSD",
-                                  "SOLUSD",
-                                  "BCHUSD",
-                                  "LTCUSD",
-                                  "XRPUSDT",
-                                  "AXSUSD",
-                                  "LINKUSD",
-                                  "DOTUSD",
-                                  "ADAUSD",
-                                  "XRPUSD",
-                                  "DOGEUSD",
-                                  "AVAXUSD",
-                                  "NEARUSD",
-                                  "LUNAUSD",
-                                  "EOSUSD",
-                                  "GMTUSD"
-                                ],
-                                "highlightTargetPossibleValues": [
-                                  "key",
-                                  "XBT_USDT",
-                                  "XBTUSDT",
-                                  "ETH_USDT",
-                                  "XBTUSD",
-                                  "ETHUSDT",
-                                  "LINK_USDT",
-                                  "XBTM22",
-                                  "XBTU22",
-                                  "LTCUSDT",
-                                  "XBTEUR",
-                                  "ETHUSD",
-                                  "BNBUSDT",
-                                  "SOLUSDT",
-                                  "DOGEUSDT",
-                                  "BNBUSD",
-                                  "SOLUSD",
-                                  "BCHUSD",
-                                  "LTCUSD",
-                                  "XRPUSDT",
-                                  "AXSUSD",
-                                  "LINKUSD",
-                                  "DOTUSD",
-                                  "ADAUSD",
-                                  "XRPUSD",
-                                  "DOGEUSD",
-                                  "AVAXUSD",
-                                  "NEARUSD",
-                                  "LUNAUSD",
-                                  "EOSUSD",
-                                  "GMTUSD",
-                                  "*"
-                                ],
-                                "sortingPossibleValues": [
-                                  "",
-                                  "key",
-                                  "XBT_USDT",
-                                  "XBTUSDT",
-                                  "ETH_USDT",
-                                  "XBTUSD",
-                                  "ETHUSDT",
-                                  "LINK_USDT",
-                                  "XBTM22",
-                                  "XBTU22",
-                                  "LTCUSDT",
-                                  "XBTEUR",
-                                  "ETHUSD",
-                                  "BNBUSDT",
-                                  "SOLUSDT",
-                                  "DOGEUSDT",
-                                  "BNBUSD",
-                                  "SOLUSD",
-                                  "BCHUSD",
-                                  "LTCUSD",
-                                  "XRPUSDT",
-                                  "AXSUSD",
-                                  "LINKUSD",
-                                  "DOTUSD",
-                                  "ADAUSD",
-                                  "XRPUSD",
-                                  "DOGEUSD",
-                                  "AVAXUSD",
-                                  "NEARUSD",
-                                  "LUNAUSD",
-                                  "EOSUSD",
-                                  "GMTUSD"
-                                ],
-                                "Basics": {
-                                  "Data": {
-                                    "_dashboardsType": "data",
-                                    "value": "correlation"
-                                  }
-                                },
-                                "ColumnsConfiguration": [
-                                  {
-                                    "Field": "key",
-                                    "DisplayName": "key",
-                                    "WidthWeight": 100,
-                                    "MinWidthAbsolute": 100,
-                                    "TextAlign": "left",
-                                    "FooterWeights": "key"
-                                  },
-                                  {
-                                    "Field": "*",
-                                    "DisplayName": "*",
-                                    "Format": "Number",
-                                    "WidthWeight": 100,
-                                    "FooterWeights": "key"
-                                  }
-                                ],
-                                "Alignment": {
-                                  "paddingLeft": 0,
-                                  "paddingRight": 0,
-                                  "paddingTop": 0,
-                                  "paddingBottom": 0,
-                                  "innerPaddingLeft": 0,
-                                  "innerPaddingRight": 0,
-                                  "innerPaddingTop": 0,
-                                  "innerPaddingBottom": 0,
-                                  "titlePaddingLeft": 0,
-                                  "titlePaddingRight": 0
-                                },
-                                "format": {
-                                  "tileBorderWidth": 0,
-                                  "tileBorderRounding": 0,
-                                  "tileBorderColor": "#000000",
-                                  "tileBackgroundColor": "#000000",
-                                  "tileTransparentBackground": true,
-                                  "tileShadow": false
-                                },
-                                "Selection": {
-                                  "RowSelectionColumn": "key"
-                                },
-                                "HighlightRules": [
-                                  {
-                                    "Name": "",
-                                    "Enabled": true,
-                                    "Target": "*",
-                                    "ConditionSource": "<this>",
-                                    "ConditionOperator": "",
-                                    "ConditionValue": "previous value",
-                                    "Color": "",
-                                    "BackgroundColor": "",
-                                    "BorderColor": "",
-                                    "Icon": "",
-                                    "IconColor": "",
-                                    "RuleType": "gradient",
-                                    "RuleMin": -1,
-                                    "RuleMax": 1,
-                                    "RuleLimitEnabled": false,
-                                    "TargetElement": "background",
-                                    "Palette": [
-                                      {
-                                        "color": "#ff0000"
-                                      },
-                                      {
-                                        "color": "#ff9f0f"
-                                      },
-                                      {
-                                        "color": "#00ff00"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              "containerId": null,
-                              "components": [],
-                              "widgets": [],
-                              "definitionId": "21",
-                              "hasOnSettingsChange": true
-                            },
-                            "sectionId": "section_2885"
-                          }
-                        ],
-                        "definitionId": "56",
+                        "widgets": [],
+                        "definitionId": "21",
                         "hasOnSettingsChange": true
-                      }
+                      },
+                      "sectionId": "section_2885"
                     }
                   ],
                   "definitionId": "50",
@@ -714,259 +570,6 @@
                   "containerId": null,
                   "components": [],
                   "widgets": [
-                    {
-                      "id": "ca2fdb2c-695d-c2a4-f04d-9dd1c163822e",
-                      "layout": {
-                        "row": 0,
-                        "column": 4,
-                        "rowSpan": 24,
-                        "colSpan": 32
-                      },
-                      "component": {
-                        "id": "93ae3dff-4f68-a1f7-ae35-87bc64ceb040",
-                        "key": "ChartJS",
-                        "options": {
-                          "Layers": [
-                            {
-                              "_Hidden": {
-                                "_Type": "Bar",
-                                "_Index": 0,
-                                "_LayerId": "layer_8977",
-                                "_PossibleColumns": [
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleColumnsWithItself": [
-                                  "<this>",
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleColumnsWithXYKey": [
-                                  "<thisX>",
-                                  "<thisY>",
-                                  "<thisName>",
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleRadius": [
-                                  "Fixed Size",
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleXAxes": [
-                                  "XAxis 1"
-                                ],
-                                "_PossibleYAxes": [
-                                  "YAxis 1",
-                                  "YAxis 2"
-                                ]
-                              },
-                              "Basics": {
-                                "LegendLabelColor": "",
-                                "Name": "Size",
-                                "BorderWidth": 0,
-                                "Data": {
-                                  "_dashboardsType": "data",
-                                  "value": "trades_size_sum copy"
-                                }
-                              },
-                              "Axes": {
-                                "XAxisData": "time",
-                                "YAxisData": "size",
-                                "XAxisID": "XAxis 1",
-                                "YAxisID": "YAxis 2"
-                              },
-                              "Labels": {
-                                "Font": {
-                                  "Bold": false,
-                                  "Size": 12
-                                }
-                              }
-                            },
-                            {
-                              "_Hidden": {
-                                "_Type": "Line",
-                                "_Index": 1,
-                                "_LayerId": "layer_3299",
-                                "_PossibleColumns": [
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleColumnsWithItself": [
-                                  "<this>",
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleColumnsWithXYKey": [
-                                  "<thisX>",
-                                  "<thisY>",
-                                  "<thisName>",
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleRadius": [
-                                  "Fixed Size",
-                                  "time",
-                                  "size",
-                                  "price"
-                                ],
-                                "_PossibleXAxes": [
-                                  "XAxis 1"
-                                ],
-                                "_PossibleYAxes": [
-                                  "YAxis 1",
-                                  "YAxis 2"
-                                ],
-                                "_PossibleLayers": [
-                                  "Layer 1",
-                                  "nofill",
-                                  "origin",
-                                  "+1",
-                                  "+2"
-                                ]
-                              },
-                              "Basics": {
-                                "LegendLabelColor": "",
-                                "Name": "Price",
-                                "BackgroundColor": "#f23a65",
-                                "BorderColor": "#f23a65",
-                                "BorderWidth": 2,
-                                "Data": {
-                                  "_dashboardsType": "data",
-                                  "value": "trades_size_sum copy"
-                                }
-                              },
-                              "Axes": {
-                                "XAxisData": "time",
-                                "YAxisData": "price",
-                                "XAxisID": "XAxis 1",
-                                "YAxisID": "YAxis 1"
-                              },
-                              "Labels": {
-                                "Font": {
-                                  "Bold": false,
-                                  "Size": 12
-                                }
-                              },
-                              "Line": {
-                                "Fill": "Layer 1"
-                              }
-                            }
-                          ],
-                          "Legend": {
-                            "LegendLayerThreshold": 5
-                          },
-                          "XAxes": [
-                            {
-                              "_Hidden": {
-                                "_Type": "time",
-                                "_AxisId": "axis_67830",
-                                "_Index": 0,
-                                "_Label": "XAxis 1"
-                              },
-                              "Labels": {
-                                "MaxWidth": 0,
-                                "_ReverseCache": false,
-                                "Offset": false,
-                                "TimeFormats": {
-                                  "Break": 86400000,
-                                  "Day": "MMM D",
-                                  "Distribution": "linear",
-                                  "Hour": "hA",
-                                  "IsoWeekday": false,
-                                  "ShowMajor": false,
-                                  "Millisecond": "h:mm:ss.SSS a",
-                                  "Minute": "h:mm a",
-                                  "Month": "MMM YYYY",
-                                  "Quarter": "[Q]Q - YYYY",
-                                  "Round": false,
-                                  "Second": "h:mm:ss a",
-                                  "TooltipFormat": "MMM D h:mm:ss.SSS a",
-                                  "TriggerBreak": 86400000,
-                                  "Unit": "",
-                                  "Week": "ll",
-                                  "Year": "YYYY"
-                                }
-                              },
-                              "Range": {
-                                "Max": 0,
-                                "Min": 0,
-                                "SoftRange": false,
-                                "SuggestedMax": 0,
-                                "SuggestedMin": 0,
-                                "UseDataRange": false
-                              }
-                            }
-                          ],
-                          "YAxes": [
-                            {
-                              "_Hidden": {
-                                "_Type": "linear",
-                                "_AxisId": "axis_67834",
-                                "_Index": 0,
-                                "_Label": "YAxis 1"
-                              },
-                              "Labels": {
-                                "Format": "Smart Number",
-                                "Prefix": "$",
-                                "MaxWidth": 0,
-                                "_ReverseCache": false,
-                                "Offset": false,
-                                "DateFormat": "YYYY-MM-DD"
-                              },
-                              "Range": {
-                                "UseMinMax": true,
-                                "UseDataRange": true
-                              }
-                            },
-                            {
-                              "_Hidden": {
-                                "_Type": "linear",
-                                "_AxisId": "axis_5838",
-                                "_Index": 1,
-                                "_Label": "YAxis 2"
-                              },
-                              "Labels": {
-                                "FontColor": "#F8F8F8",
-                                "Format": "Smart Number",
-                                "MaxWidth": 0,
-                                "_ReverseCache": false,
-                                "Offset": false,
-                                "DateFormat": "YYYY-MM-DD"
-                              },
-                              "Range": {
-                                "Max": 0,
-                                "Min": 0,
-                                "SoftRange": false,
-                                "SuggestedMax": 0,
-                                "SuggestedMin": 0,
-                                "UseDataRange": false
-                              },
-                              "Position": "right"
-                            }
-                          ],
-                          "format": {
-                            "widgetTitle": {
-                              "_dashboardsType": "viewstate",
-                              "value": "tradeVolChart/syms"
-                            }
-                          },
-                          "version": "4.7.0"
-                        },
-                        "containerId": null,
-                        "components": [],
-                        "widgets": [],
-                        "definitionId": "1007",
-                        "hasOnSettingsChange": true
-                      }
-                    },
                     {
                       "id": "6766b473-25a5-08cb-1f4c-5bbe387479b8",
                       "layout": {
@@ -1081,6 +684,270 @@
                         "definitionId": "27",
                         "hasOnSettingsChange": true
                       }
+                    },
+                    {
+                      "id": "ddde0ff7-9669-24a8-62bb-6f0cf53ea974",
+                      "layout": {
+                        "row": 0,
+                        "column": 4,
+                        "rowSpan": 24,
+                        "colSpan": 32
+                      },
+                      "component": {
+                        "id": "fdafdee4-9e7d-98a2-e8e5-bb853d953ad0",
+                        "key": "ChartJS",
+                        "options": {
+                          "Layers": [
+                            {
+                              "_Hidden": {
+                                "_Type": "Candlestick",
+                                "_Index": 0,
+                                "_LayerId": "layer_8977",
+                                "_PossibleColumns": [
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleColumnsWithItself": [
+                                  "<this>",
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleColumnsWithXYKey": [
+                                  "<thisX>",
+                                  "<thisY>",
+                                  "<thisName>",
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleRadius": [
+                                  "Fixed Size",
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleXAxes": [
+                                  "XAxis 1"
+                                ],
+                                "_PossibleYAxes": [
+                                  "YAxis 1",
+                                  "YAxis 2"
+                                ]
+                              },
+                              "Basics": {
+                                "LegendEnabled": false,
+                                "LegendLabelColor": "",
+                                "Name": "Price",
+                                "BorderWidth": 2,
+                                "Data": {
+                                  "_dashboardsType": "data",
+                                  "value": "ohlcv"
+                                }
+                              },
+                              "Axes": {
+                                "XAxisData": "time",
+                                "XAxisID": "XAxis 1",
+                                "YAxisID": "YAxis 1",
+                                "Close": "close",
+                                "High": "high",
+                                "Low": "low",
+                                "Open": "open"
+                              },
+                              "Labels": {
+                                "Font": {
+                                  "Bold": false,
+                                  "Size": 12
+                                }
+                              }
+                            },
+                            {
+                              "_Hidden": {
+                                "_Type": "Bar",
+                                "_Index": 1,
+                                "_LayerId": "layer_3248",
+                                "_PossibleColumns": [
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleColumnsWithItself": [
+                                  "<this>",
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleColumnsWithXYKey": [
+                                  "<thisX>",
+                                  "<thisY>",
+                                  "<thisName>",
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleRadius": [
+                                  "Fixed Size",
+                                  "date",
+                                  "sym",
+                                  "exchange",
+                                  "time",
+                                  "open",
+                                  "high",
+                                  "low",
+                                  "close",
+                                  "volume"
+                                ],
+                                "_PossibleXAxes": [
+                                  "XAxis 1"
+                                ],
+                                "_PossibleYAxes": [
+                                  "YAxis 1",
+                                  "YAxis 2"
+                                ]
+                              },
+                              "Basics": {
+                                "LegendLabelColor": "",
+                                "Name": "Volume",
+                                "BackgroundColor": "#0062ff",
+                                "BackgroundOpacity": 40,
+                                "BorderColor": "#0062ff",
+                                "BorderOpacity": 40,
+                                "BorderWidth": 2,
+                                "Data": {
+                                  "_dashboardsType": "data",
+                                  "value": "trades_size_sum copy"
+                                }
+                              },
+                              "Axes": {
+                                "XAxisData": "time",
+                                "YAxisData": "volume",
+                                "XAxisID": "XAxis 1",
+                                "YAxisID": "YAxis 2"
+                              },
+                              "Labels": {
+                                "Font": {
+                                  "Bold": false,
+                                  "Size": 12
+                                }
+                              }
+                            }
+                          ],
+                          "Legend": {
+                            "LegendLayerThreshold": 5
+                          },
+                          "XAxes": [
+                            {
+                              "_Hidden": {
+                                "_Type": "category",
+                                "_AxisId": "axis_3147",
+                                "_Index": 0,
+                                "_Label": "XAxis 1"
+                              },
+                              "Labels": {
+                                "DateFormat": "YYYY-MM-DD",
+                                "MaxWidth": 0
+                              }
+                            }
+                          ],
+                          "YAxes": [
+                            {
+                              "_Hidden": {
+                                "_Type": "linear",
+                                "_AxisId": "axis_3151",
+                                "_Index": 0,
+                                "_Label": "YAxis 1"
+                              },
+                              "Labels": {
+                                "BeginAtZero": false,
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "DateFormat": "YYYY-MM-DD"
+                              }
+                            },
+                            {
+                              "_Hidden": {
+                                "_Type": "linear",
+                                "_AxisId": "axis_3255",
+                                "_Index": 1,
+                                "_Label": "YAxis 2"
+                              },
+                              "Labels": {
+                                "FontColor": "#F8F8F8",
+                                "Format": "Smart Number",
+                                "MaxWidth": 0,
+                                "_ReverseCache": false,
+                                "Offset": false,
+                                "DateFormat": "YYYY-MM-DD"
+                              },
+                              "Range": {
+                                "Max": 0,
+                                "Min": 0,
+                                "SoftRange": false,
+                                "SuggestedMax": 0,
+                                "SuggestedMin": 0,
+                                "UseDataRange": false
+                              },
+                              "Position": "right"
+                            }
+                          ],
+                          "version": "4.7.0",
+                          "format": {
+                            "widgetTitle": {
+                              "_dashboardsType": "viewstate",
+                              "value": "tradeVolChart/syms"
+                            }
+                          }
+                        },
+                        "containerId": null,
+                        "components": [],
+                        "widgets": [],
+                        "definitionId": "1007",
+                        "hasOnSettingsChange": true
+                      },
+                      "sectionId": "section_2690"
                     }
                   ],
                   "definitionId": "50",
@@ -2621,13 +2488,18 @@
       "_serverPaging": false
     },
     "trades_size_sum copy": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
+        "date",
+        "sym",
+        "exchange",
         "time",
-        "size",
-        "price"
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume"
       ],
       "_dataType": "query",
       "_dataSource": "kdb",
@@ -2663,7 +2535,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc select size:sum size, size wavg price by time:time.date+time.minute from getData[plot;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`ohlcv;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
       "_queryParams": [
         {
           "name": "plot",
@@ -2691,8 +2563,9 @@
       "_serverPaging": false
     },
     "correlation": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "key",
         "XBT_USDT",
