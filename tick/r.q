@@ -20,7 +20,7 @@ upd:insert;
 
 selectFunc:{[tbl;sd;ed;ids;exc]
     .debug.selectFunc:`tbl`sd`ed`ids`exc!(tbl;sd;ed;ids;exc);
-    .[selectFuncAPI;(tbl;sd;ed;ids;exc);{0N!x}]
+    .[selectFuncAPI;(tbl;sd;ed;ids;exc);{0N!x;:()}]
  };
 
 selectFuncAPI:{[tbl;sd;ed;ids;exc]

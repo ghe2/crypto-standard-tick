@@ -7,7 +7,8 @@ hdb:.z.x 0
 
 // Define a function to call the select function API in an error trap
 selectFunc:{[tbl;sd;ed;ids;exc]
-    .[selectFuncAPI;(tbl;sd;ed;ids;exc);{-2!"Error selecting data: ",x;()}]
+    .debug.selectFunc:`tbl`sd`ed`ids`exc!(tbl;sd;ed;ids;exc);
+    .[selectFuncAPI;(tbl;sd;ed;ids;exc);{0N!x;:()}]
  };
 // Define a function to select from RDB and HDB based upon filters passed through the GET call
 selectFuncAPI:{[tbl;sd;ed;ids;exc]
