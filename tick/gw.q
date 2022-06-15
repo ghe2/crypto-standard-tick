@@ -49,7 +49,7 @@ if[.gda.restEnabled;
   .db.getDataREST:{
     .debug.x:x;
     tbl:x[`arg;`tbl];
-    sd:$[(.z.p*0)~x[`arg;`sd];.z.p-00:00:10.000000000;x[`arg;`sd]];
+    sd:$[(.z.p*0)~x[`arg;`sd];.z.p-00:01:00.000000000;x[`arg;`sd]];
     ed:$[(.z.p*0)~x[`arg;`ed];.z.p;x[`arg;`sd]];
     ids:x[`arg;`ids];
     exc:x[`arg;`exc];
