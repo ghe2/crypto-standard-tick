@@ -50,7 +50,7 @@ if[.gda.restEnabled;
     .debug.x:x;
     tbl:x[`arg;`tbl];
     sd:$[(.z.p*0)~x[`arg;`sd];.z.p-00:01:00.000000000;x[`arg;`sd]];
-    ed:$[(.z.p*0)~x[`arg;`ed];.z.p;x[`arg;`sd]];
+    ed:$[(.z.p*0)~x[`arg;`ed];.z.p;x[`arg;`ed]];
     ids:x[`arg;`ids];
     exc:x[`arg;`exc];
     hdb:hdbHandle(`selectFunc;tbl;sd;ed;ids;exc);
