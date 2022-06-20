@@ -26,15 +26,14 @@ BuySellDict:("Buy";"Sell")!(`bid;`ask);
 hostsToConnect:([]hostQuery:();request:();exchange:`$();feed:`$();callbackFunc:`$());
 //add BITFINEX websocket
 `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"book";"tETHUSD";"R0");`bitfinex;`order;`.bitfinex.order.upd);
-`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"trade";"tETHUSD";"R0");`bitfinex;`trade;`.bitfinex.trade.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://api-pub.bitfinex.com/ws/2";`event`channel`pair`prec!("subscribe";"trades";"tETHUSD";"R0");`bitfinex;`trade;`.bitfinex.trade.upd);
 //add BitMEX websocket 
 `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:XBTUSD");`bitmex;`order;`.bitmex.upd);
 `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:ETHUSD");`bitmex;`order;`.bitmex.upd);
 
-
 // Uncommented for sub to all exchanges
-// `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:XBTUSD");`bitmex;`trade;`.bitmex.upd);
-`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade");`bitmex;`trade;`.bitmex.upd);
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:XBTUSD");`bitmex;`trade;`.bitmex.upd);
+/ `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade");`bitmex;`trade;`.bitmex.upd);
 
 //add record ID
 hostsToConnect:update ws:1+til count i from hostsToConnect;
