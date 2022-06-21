@@ -8,7 +8,7 @@ if[not system"p";system"p 5110"]
 \l ../websocket/ws-server_0.2.2.q
 \l ../websocket/ws-handler.q
 
-.u.sub_and_set:{toSub:neg[.z.w](`.u.sub;x;`);toSub[0] set toSub[1]};
+.u.sub_and_set:{toSub:(.z.w)(`.u.sub;x;`);toSub[0] set toSub[1]};
 
 if[system"t";
 	 .z.ts:{.wsu.pub'[.wsu.t;value each .wsu.t];@[`.;.wsu.t;@[;`sym;`g#]0#]}; 

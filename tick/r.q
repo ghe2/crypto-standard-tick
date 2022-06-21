@@ -4,13 +4,13 @@
 if[not "w"=first string .z.o;system "sleep 1"];
 
 upd:insert;
-.u.sub_and_set:{toSub:neg[.z.w](`.u.sub;x;`);toSub[0] set toSub[1]};
+.u.sub_and_set:{toSub:(.z.w)(`.u.sub;x;`);toSub[0] set toSub[1]};
 
 / get the ticker plant and history ports, defaults are 5010,5012
 .u.x:.z.x,(count .z.x)_(":5010";":5012");
 
 / end of day: save, clear, hdb reload
-.u.end:{0N!"Starting EOD at: ",string[.z.p];t:tables`.;t@:where `g=attr each t@\:`sym;.Q.hdpf[`$":",.u.x 1;`:.;x;`sym];@[;`sym;`g#] each t;0N!"Finishing EOD at: ",string[.z.p];};
+.u.end:{0N!"Starting EOD at: ",string[.z.p];t:tables`.;t@:where `g=attr each t@\:`sym;.Q.hdpf[`$":",.u.x 1;`:.;x;`sym];@[;`sym;`g#] each t;.Q.chk[`:.];0N!"Finishing EOD at: ",string[.z.p];};
 
 / init schema and sync up from log file;cd to hdb(so client save can run)
 .u.rep:{(.[;();:;].)each x;if[null first y;:()];-11!y;system "cd ",1_-10_string first reverse y};
