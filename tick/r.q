@@ -4,6 +4,7 @@
 if[not "w"=first string .z.o;system "sleep 1"];
 
 upd:insert;
+.u.sub_and_set:{toSub:neg[.z.w](`.u.sub;x;`);toSub[0] set toSub[1]};
 
 / get the ticker plant and history ports, defaults are 5010,5012
 .u.x:.z.x,(count .z.x)_(":5010";":5012");

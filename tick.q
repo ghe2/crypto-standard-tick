@@ -23,6 +23,14 @@
 system"l tick/",(src:first .z.x,enlist"sym"),".q"
 .u.schemas:tables[]!value each tables[];
 .u.reset_schemas:{@[`.;x;:;.u.schemas x]};
+.u.newSub:{[tab]
+    // Update tables, schemas, instantly reset schemas
+    .u.t:distinct asc .u.t,tab;.u.schemas:.u.t[]!value each .u.t;.u.reset_schemas each .u.t;
+    // Update .u.w
+    handleUpdate:first .u.t[]where not .u.t in key[.u.w];
+    if[not `~handleUpdate;.u.w[handleUpdate]:()];
+    subs:first each distinct raze value .u.w;
+    {(neg[x])(`.u.sub_and_set;y)}[;tab]each subs}
 
 if[not system"p";system"p 5010"]
 
@@ -65,6 +73,7 @@ if[not system"t";system"t 1000";
 
 \d .
 .u.tick[src;.z.x 1];
+
 
 \
  globals used

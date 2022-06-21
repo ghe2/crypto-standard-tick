@@ -18,6 +18,8 @@ upd_realtime:{
 
 upd_recovery:upd_realtime
 
+.u.sub_and_set:{toSub:neg[.z.w](`.u.sub;x;`);toSub[0] set toSub[1]};
+
 //////////////////////////////////////////////////// Order Book Logic /////////////////////////////////////////////////////////
 
 book: ([]`s#time:"p"$();`g#sym:`$();bids:();bidsizes:();asks:();asksizes:());
