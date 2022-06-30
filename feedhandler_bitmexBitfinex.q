@@ -32,6 +32,7 @@ hostsToConnect:([]hostQuery:();request:();exchange:`$();feed:`$();callbackFunc:`
 `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"orderBookL2_25:ETHUSD");`bitmex;`order;`.bitmex.upd);
 
 // Uncommented for sub to all exchanges
+`hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:ETHUSD");`bitmex;`trade;`.bitmex.upd);
 `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade:XBTUSD");`bitmex;`trade;`.bitmex.upd);
 / `hostsToConnect upsert `hostQuery`request`exchange`feed`callbackFunc!("wss://ws.bitmex.com/realtime";`op`args!("subscribe";"trade");`bitmex;`trade;`.bitmex.upd);
 
