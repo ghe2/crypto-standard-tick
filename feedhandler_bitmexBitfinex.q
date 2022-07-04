@@ -191,6 +191,9 @@ connectionCheck:{[]
         feedList: exec feed from reconnectList;
         exchangeList: exec exchange from reconnectList;
         hostToReconnect:select from hostsToConnect where feed in feedList,exchange in exchangeList;
+        callBacksToDisconnect:exec callbackFunc from hostToReconnect;
+        handlesToDisconnect:exec h from .ws.w where callback in callBacksToDisconnect;
+        .ws.close each handlesToDisconnect;
         {0N!x[0]," ",x[1]," WS Not connected!.. Reconnecting at ",string .z.z}each string (exec exchange from hostToReconnect),'(exec feed from hostToReconnect);
         establishWS each hostToReconnect
     ];
