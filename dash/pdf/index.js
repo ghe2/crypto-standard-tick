@@ -22,8 +22,10 @@ const { URL } = require("url");
         const documentWidth = parseInt(url.searchParams.get("documentWidth"), 10);
         const documentHeight = parseInt(url.searchParams.get("documentHeight"), 10) + 21;
         const standardWidth = url.searchParams.get("width");
+        const clientURL = url.searchParams.get("clientURL");
+        const useClientUrl = url.searchParams.get("useClientUrl") === "1" ? true : false;
         const divideinpages = false;
-        const printFilters = url.searchParams.get("printfilters") === "0" ? false : true;
+        const printFilters = url.searchParams.get("printfilters") === "1" ? true : false;
         const createScreenshot = false;
 
         const width = standardWidth === "standard" ? 1920 : documentWidth;
@@ -34,6 +36,15 @@ const { URL } = require("url");
             await page.setCookie({
                 name: "deltaToken",
                 value: token,
+                domain: url.hostname,
+            });
+        }
+
+        const timezone = url.searchParams.get("timezone");
+        if (timezone) {
+            await page.setCookie({
+                name: "dashboard-timezone",
+                value: timezone,
                 domain: url.hostname,
             });
         }
@@ -56,7 +67,9 @@ const { URL } = require("url");
         await page.emulateMediaType("screen");
 
         // go to page
-        const theUrl = url.origin + url.pathname + url.hash + url.search;
+        const theUrl = useClientUrl
+            ? clientURL + url.hash + url.search
+            : url.origin + url.pathname + url.hash + url.search;
 
         await page.goto(
             // viewstate has to be after hash in order for it to work in appRouter

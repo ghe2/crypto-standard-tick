@@ -1,0 +1,130 @@
+.ChartGL {
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  position: absolute;
+}
+.ChartGL .jstree-themeicon-custom {
+  background-image: none !important;
+}
+.ChartGL .legend-div {
+  position: absolute;
+  bottom: 0;
+  height: 16px;
+}
+.ChartGL .legend-div.standard-legend {
+  width: calc(100% - 100px);
+}
+.ChartGL .legend-div.grouped-legend {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: auto;
+  max-width: fit-content;
+  min-width: fit-content;
+  display: inline-block;
+}
+.ChartGL .export-div {
+  position: absolute;
+  bottom: 0;
+  height: 16px;
+  width: 100px;
+  right: 0;
+}
+.ChartGL .chartGLExportButtons .link-disabled {
+  display: none !important;
+}
+.ChartGL .chartGLExportButtons .lnksExport {
+  text-align: right;
+  display: block;
+  padding-right: 10px;
+}
+.ChartGL .chartGLExportButtons span.lnksExport a:not(.link-disabled) ~ a:not(.link-disabled):before {
+  display: inline-block;
+  content: " | ";
+  padding: 0 0.4em 0 0.2em;
+}
+.ChartGL .chartGLExportButtons .lnkExcelExport:hover,
+.ChartGL .chartGLExportButtons .lnkCsvExport:hover {
+  color: #48c2fa;
+  cursor: pointer;
+}
+.ChartGL .GL-highlight-rule {
+  position: absolute;
+}
+.ChartGL .top-bottom,
+.ChartGL .GL-highlight-rule {
+  display: flex;
+  text-align: center;
+}
+.ChartGL .top-bottom li,
+.ChartGL .GL-highlight-rule li {
+  display: inline-flex;
+}
+.ChartGL .legend-div.right,
+.ChartGL .export-div.right,
+.ChartGL .legend-div.right .chartgl-legend {
+  right: 0;
+}
+.ChartGL .legend-div,
+.ChartGL .GL-highlight-rule {
+  justify-content: center;
+  bottom: 0;
+  font-size: 12px;
+}
+.ChartGL .legend-div ul,
+.ChartGL .GL-highlight-rule ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.ChartGL .legend-div ul li,
+.ChartGL .GL-highlight-rule ul li {
+  cursor: pointer;
+}
+.ChartGL .chartgl-legend {
+  position: absolute;
+}
+.ChartGL > canvas,
+.ChartGL > .overlay {
+  position: absolute;
+}
+.ChartGL > .overlay > path {
+  fill: rgba(40, 40, 40, 0.4);
+  stroke-width: 1;
+}
+.ChartGL > .overlay line,
+.ChartGL > .overlay rect {
+  stroke-width: 1;
+  stroke: rgb(230, 230, 230);
+}
+.ChartGL > .overlay line.drag-line {
+  marker-start: url(#sArrow);
+  marker-end: url(#eArrow);
+}
+.ChartGL > .overlay marker {
+  fill: rgb(230, 230, 230);
+}
+.ChartGL.Light > .tooltip {
+  background: #d4d4d4;
+  color: black;
+}
+.ChartGL.Light .chartGLExportButtons {
+  color: black;
+}
+
+.kx-light .ChartGL > .overlay > path {
+  fill: rgba(255, 255, 255, 0.5);
+}
+.kx-light .ChartGL > .overlay line,
+.kx-light .ChartGL > .overlay rect {
+  stroke: rgb(0, 0, 0);
+}
+.kx-light .ChartGL > .overlay marker {
+  fill: rgb(0, 0, 0);
+}
+.kx-light .ChartGL > .tooltip {
+  background: #d4d4d4;
+  color: black;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDSTs7QUFHSjtFQUNJO0VBQ0E7RUFDQTs7QUFFQTtFQUNJOztBQUdKO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBSVI7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUlBO0VBQ0k7O0FBRUo7RUFDSTtFQUNBO0VBQ0E7O0FBRUo7RUFDSTtFQUNBO0VBQ0E7O0FBRUo7QUFBQTtFQUVJO0VBQ0E7O0FBSVI7RUFDSTs7QUFHSjtBQUFBO0VBRUk7RUFDQTs7QUFFQTtBQUFBO0VBQ0k7O0FBSVI7QUFBQTtBQUFBO0VBR0k7O0FBR0o7QUFBQTtFQUVJO0VBQ0E7RUFDQTs7QUFFQTtBQUFBO0VBQ0k7RUFDQTtFQUNBOztBQUNBO0FBQUE7RUFDSTs7QUFLWjtFQUNJOztBQUdKO0FBQUE7RUFFSTs7QUFJQTtFQUNJO0VBQ0E7O0FBR0o7QUFBQTtFQUVJO0VBQ0E7O0FBR0o7RUFDSTtFQUNBOztBQUdKO0VBQ0k7O0FBS0o7RUFDSTtFQUNBOztBQUdKO0VBQ0k7OztBQU9KO0VBQ0k7O0FBR0o7QUFBQTtFQUVJOztBQUdKO0VBQ0k7O0FBSVI7RUFDSTtFQUNBIiwiZmlsZSI6ImFwcC5jc3MifQ== */

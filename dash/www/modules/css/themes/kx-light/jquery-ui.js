@@ -1,7 +1,15 @@
-/*! jQuery UI - v1.11.4 - 2016-02-21
+/*! jQuery UI - v1.11.4 - 2015-05-10
 * http://jqueryui.com
 * Includes: core.js, widget.js, mouse.js, position.js, draggable.js, droppable.js, resizable.js, selectable.js, sortable.js, accordion.js, autocomplete.js, button.js, datepicker.js, dialog.js, menu.js, progressbar.js, selectmenu.js, slider.js, spinner.js, tabs.js, tooltip.js, effect.js, effect-blind.js, effect-bounce.js, effect-clip.js, effect-drop.js, effect-explode.js, effect-fade.js, effect-fold.js, effect-highlight.js, effect-puff.js, effect-pulsate.js, effect-scale.js, effect-shake.js, effect-size.js, effect-slide.js, effect-transfer.js
-* Copyright jQuery Foundation and other contributors; Licensed MIT */
+* Copyright 2015 jQuery Foundation and other contributors; Licensed MIT
+*
+* Patch jQuery UI
+* CVE-2021-41182 : https://github.com/jquery/jquery-ui/pull/1954/commits/6809ce843e5ac4128108ea4c15cbc100653c2b63
+* CVE-2021-41183 : https://github.com/jquery/jquery-ui/pull/1953
+* CVE-2021-41184 : https://github.com/jquery/jquery-ui/commit/effa323f1505f2ce7a324e4f429fa9032c72f280
+* CVE-2016-7103 : https://github.com/jquery/jquery-ui/commit/9644e7bae9116edaf8d37c5b38cb32b892f10ff6
+*
+*/
 
 (function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
@@ -1175,7 +1183,10 @@ $.fn.position = function( options ) {
 	options = $.extend( {}, options );
 
 	var atOffset, targetWidth, targetHeight, targetOffset, basePosition, dimensions,
-		target = $( options.of ),
+		// Make sure string options are treated as CSS selectors
+		target = typeof options.of === "string" ?
+			$( document ).find( options.of ) :
+			$( options.of ),
 		within = $.position.getWithinInfo( options.within ),
 		scrollInfo = $.position.getScrollInfo( within ),
 		collision = ( options.collision || "flip" ).split( " " ),
@@ -3325,7 +3336,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 					.removeData("resizable")
 					.removeData("ui-resizable")
 					.unbind(".resizable")
-					.find(".ui-resizable-handle")
+					.children(".ui-resizable-handle")
 						.remove();
 			};
 
@@ -8203,7 +8214,9 @@ $.extend(Datepicker.prototype, {
 			inst.append.remove();
 		}
 		if (appendText) {
-			inst.append = $("<span class='" + this._appendClass + "'>" + appendText + "</span>");
+			inst.append = $( "<span>" )
+				.addClass( this._appendClass )
+				.text( appendText );
 			input[isRTL ? "before" : "after"](inst.append);
 		}
 
@@ -8220,12 +8233,30 @@ $.extend(Datepicker.prototype, {
 		if (showOn === "button" || showOn === "both") { // pop-up date picker when button clicked
 			buttonText = this._get(inst, "buttonText");
 			buttonImage = this._get(inst, "buttonImage");
-			inst.trigger = $(this._get(inst, "buttonImageOnly") ?
-				$("<img/>").addClass(this._triggerClass).
-					attr({ src: buttonImage, alt: buttonText, title: buttonText }) :
-				$("<button type='button'></button>").addClass(this._triggerClass).
-					html(!buttonImage ? buttonText : $("<img/>").attr(
-					{ src:buttonImage, alt:buttonText, title:buttonText })));
+			if ( this._get( inst, "buttonImageOnly" ) ) {
+				inst.trigger = $( "<img>" )
+					.addClass( this._triggerClass )
+					.attr( {
+						src: buttonImage,
+						alt: buttonText,
+						title: buttonText
+					} );
+			} else {
+				inst.trigger = $( "<button type='button'>" )
+					.addClass( this._triggerClass );
+				if ( buttonImage ) {
+					inst.trigger.html(
+						$( "<img>" )
+							.attr( {
+								src: buttonImage,
+								alt: buttonText,
+								title: buttonText
+							} )
+					);
+				} else {
+					inst.trigger.text( buttonText );
+				}
+			}
 			input[isRTL ? "before" : "after"](inst.trigger);
 			inst.trigger.click(function() {
 				if ($.datepicker._datepickerShowing && $.datepicker._lastInput === input[0]) {
@@ -9042,7 +9073,7 @@ $.extend(Datepicker.prototype, {
 			altFormat = this._get(inst, "altFormat") || this._get(inst, "dateFormat");
 			date = this._getDate(inst);
 			dateStr = this.formatDate(altFormat, date, this._getFormatConfig(inst));
-			$(altField).each(function() { $(this).val(dateStr); });
+			$(document).find(altField).val(dateStr);
 		}
 	},
 
@@ -9647,32 +9678,104 @@ $.extend(Datepicker.prototype, {
 			this._daylightSavingAdjust(new Date(drawYear, drawMonth - stepMonths, 1)),
 			this._getFormatConfig(inst)));
 
-		prev = (this._canAdjustMonth(inst, -1, drawYear, drawMonth) ?
-			"<a class='ui-datepicker-prev ui-corner-all' data-handler='prev' data-event='click'" +
-			" title='" + prevText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "e" : "w") + "'>" + prevText + "</span></a>" :
-			(hideIfNoPrevNext ? "" : "<a class='ui-datepicker-prev ui-corner-all ui-state-disabled' title='"+ prevText +"'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "e" : "w") + "'>" + prevText + "</span></a>"));
+			if ( this._canAdjustMonth( inst, -1, drawYear, drawMonth ) ) {
+				prev = $( "<a>" )
+					.attr( {
+						"class": "ui-datepicker-prev ui-corner-all",
+						"data-handler": "prev",
+						"data-event": "click",
+						title: prevText
+					} )
+					.append(
+						$( "<span>" )
+							.addClass( "ui-icon ui-icon-circle-triangle-" +
+								( isRTL ? "e" : "w" ) )
+							.text( prevText )
+					)[ 0 ].outerHTML;
+			} else if ( hideIfNoPrevNext ) {
+				prev = "";
+			} else {
+				prev = $( "<a>" )
+					.attr( {
+						"class": "ui-datepicker-prev ui-corner-all ui-state-disabled",
+						title: prevText
+					} )
+					.append(
+						$( "<span>" )
+							.addClass( "ui-icon ui-icon-circle-triangle-" +
+								( isRTL ? "e" : "w" ) )
+							.text( prevText )
+					)[ 0 ].outerHTML;
+			}
 
 		nextText = this._get(inst, "nextText");
 		nextText = (!navigationAsDateFormat ? nextText : this.formatDate(nextText,
 			this._daylightSavingAdjust(new Date(drawYear, drawMonth + stepMonths, 1)),
 			this._getFormatConfig(inst)));
 
-		next = (this._canAdjustMonth(inst, +1, drawYear, drawMonth) ?
-			"<a class='ui-datepicker-next ui-corner-all' data-handler='next' data-event='click'" +
-			" title='" + nextText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "w" : "e") + "'>" + nextText + "</span></a>" :
-			(hideIfNoPrevNext ? "" : "<a class='ui-datepicker-next ui-corner-all ui-state-disabled' title='"+ nextText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "w" : "e") + "'>" + nextText + "</span></a>"));
+		if ( this._canAdjustMonth( inst, +1, drawYear, drawMonth ) ) {
+			next = $( "<a>" )
+				.attr( {
+					"class": "ui-datepicker-next ui-corner-all",
+					"data-handler": "next",
+					"data-event": "click",
+					title: nextText
+				} )
+				.append(
+					$( "<span>" )
+						.addClass( "ui-icon ui-icon-circle-triangle-" +
+							( isRTL ? "w" : "e" ) )
+						.text( nextText )
+				)[ 0 ].outerHTML;
+		} else if ( hideIfNoPrevNext ) {
+			next = "";
+		} else {
+			next = $( "<a>" )
+				.attr( {
+					"class": "ui-datepicker-next ui-corner-all ui-state-disabled",
+					title: nextText
+				} )
+				.append(
+					$( "<span>" )
+						.attr( "class", "ui-icon ui-icon-circle-triangle-" +
+							( isRTL ? "w" : "e" ) )
+						.text( nextText )
+				)[ 0 ].outerHTML;
+		}
 
 		currentText = this._get(inst, "currentText");
 		gotoDate = (this._get(inst, "gotoCurrent") && inst.currentDay ? currentDate : today);
 		currentText = (!navigationAsDateFormat ? currentText :
 			this.formatDate(currentText, gotoDate, this._getFormatConfig(inst)));
 
-		controls = (!inst.inline ? "<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>" +
-			this._get(inst, "closeText") + "</button>" : "");
+		controls = "";
+		if ( !inst.inline ) {
+			controls = $( "<button>" )
+				.attr( {
+					type: "button",
+					"class": "ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all",
+					"data-handler": "hide",
+					"data-event": "click"
+				} )
+				.text( this._get( inst, "closeText" ) )[ 0 ].outerHTML;
+		}
 
-		buttonPanel = (showButtonPanel) ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + (isRTL ? controls : "") +
-			(this._isInRange(inst, gotoDate) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'" +
-			">" + currentText + "</button>" : "") + (isRTL ? "" : controls) + "</div>" : "";
+		buttonPanel = "";
+		if ( showButtonPanel ) {
+			buttonPanel = $( "<div class='ui-datepicker-buttonpane ui-widget-content'>" )
+				.append( isRTL ? controls : "" )
+				.append( this._isInRange( inst, gotoDate ) ?
+					$( "<button>" )
+						.attr( {
+							type: "button",
+							"class": "ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all",
+							"data-handler": "today",
+							"data-event": "click"
+						} )
+						.text( currentText ) :
+					"" )
+				.append( isRTL ? "" : controls )[ 0 ].outerHTML;
+		}
 
 		firstDay = parseInt(this._get(inst, "firstDay"),10);
 		firstDay = (isNaN(firstDay) ? 0 : firstDay);
@@ -10449,7 +10552,7 @@ var dialog = $.widget( "ui.dialog", {
 		// dialog in IE (#9312)
 		this.uiDialogTitlebarClose = $( "<button type='button'></button>" )
 			.button({
-				label: this.options.closeText,
+				label: $("<a>").text(this.options.closeText).html(),
 				icons: {
 					primary: "ui-icon-closethick"
 				},
@@ -10733,7 +10836,7 @@ var dialog = $.widget( "ui.dialog", {
 		if ( key === "closeText" ) {
 			this.uiDialogTitlebarClose.button({
 				// Ensure that we always pass a string
-				label: "" + value
+				label: $("<a>").text("" + this.options.closeText).html()
 			});
 		}
 
@@ -12895,24 +12998,26 @@ var tabs = $.widget( "ui.tabs", {
 		var rhash = /#.*$/;
 
 		return function( anchor ) {
-			var anchorUrl, locationUrl;
+			// gk: always local, no ajax tabs
+			return true;
+			// var anchorUrl, locationUrl;
 
-			// support: IE7
-			// IE7 doesn't normalize the href property when set via script (#9317)
-			anchor = anchor.cloneNode( false );
+			// // support: IE7
+			// // IE7 doesn't normalize the href property when set via script (#9317)
+			// anchor = anchor.cloneNode( false );
 
-			anchorUrl = anchor.href.replace( rhash, "" );
-			locationUrl = location.href.replace( rhash, "" );
+			// anchorUrl = anchor.href.replace( rhash, "" );
+			// locationUrl = location.href.replace( rhash, "" );
 
-			// decoding may throw an error if the URL isn't UTF-8 (#9518)
-			try {
-				anchorUrl = decodeURIComponent( anchorUrl );
-			} catch ( error ) {}
-			try {
-				locationUrl = decodeURIComponent( locationUrl );
-			} catch ( error ) {}
+			// // decoding may throw an error if the URL isn't UTF-8 (#9518)
+			// try {
+			// 	anchorUrl = decodeURIComponent( anchorUrl );
+			// } catch ( error ) {}
+			// try {
+			// 	locationUrl = decodeURIComponent( locationUrl );
+			// } catch ( error ) {}
 
-			return anchor.hash.length > 1 && anchorUrl === locationUrl;
+			// return anchor.hash.length > 1 && anchorUrl === locationUrl;
 		};
 	})(),
 

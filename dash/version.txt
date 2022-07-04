@@ -1,0 +1,7 @@
+#Tue, 28 Jun 2022 15:58:14 +0000
+
+product.name=KxDashboards
+build.guid=9b8e54f9-422a-d9eb-cb67-a6580bfd2141
+build.time=220628155813
+
+svn.revision=${svn.revision}
