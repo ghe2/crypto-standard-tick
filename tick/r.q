@@ -34,3 +34,20 @@ selectFuncAPI:{[tbl;sd;ed;ids;exc]
       ?[tbl;wClause;0b;()]];
   [res:$[.z.d within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl];
     `date xcols update date:.z.d from res]] };
+
+selectFuncWithCols:{[tbl;sd;ed;ids;exc;columns]
+    .debug.selectFuncWithCols:`tbl`sd`ed`ids`exc`columns!(tbl;sd;ed;ids;exc;columns);
+    .[selectFuncWithColsAPI;(tbl;sd;ed;ids;exc;columns);{0N!x;:()}]
+ };
+
+selectFuncWithColsAPI:{[tbl;sd;ed;ids;exc;columns]
+  wClause:();
+  $[not count columns; colClause:();colClause:(columns except `date)!columns except `date]; // If no filters selected return all columns
+  if[not all null ids;wClause,:enlist(in;`sym;enlist (),ids)];
+  if[not all null (sd;ed); wClause,:enlist(within;`time;(enlist;sd;ed))];
+  if[not all null exc; wClause,:enlist(in;`exchange;enlist (),exc)];
+  $[`date in cols tbl;
+  [wClause:(enlist(within;`date;(enlist;`date$sd;`date$ed))),wClause;
+      ?[tbl;wClause;0b;colClause]];
+  [res:$[.z.d within (`date$sd;`date$ed); ?[tbl;wClause;0b;colClause];0#value tbl];
+    :$[`date in columns;`date xcols update date:.z.d from res;res]]] };

@@ -47,7 +47,7 @@ getCorrelation:{[exchange;startTime;endTime]
 if[.gda.restEnabled;
   // Defining the function to be called from the REST endpoint
   .db.getDataREST:{
-    .debug.x:x;
+    .debug.getDataREST:x;
     tbl:x[`arg;`tbl];
     sd:$[(.z.p*0)~x[`arg;`sd];.z.p-00:01:00.000000000;x[`arg;`sd]];
     ed:$[(.z.p*0)~x[`arg;`ed];.z.p;x[`arg;`ed]];
@@ -55,6 +55,18 @@ if[.gda.restEnabled;
     exc:x[`arg;`exc];
     hdb:hdbHandle(`selectFunc;tbl;sd;ed;ids;exc);
     rdb:rdbHandle(`selectFunc;tbl;sd;ed;ids;exc);
+    hdb,rdb };
+
+  .db.getDataWithColsREST:{
+    .debug.getDataWithColsREST:x;
+    tbl:x[`arg;`tbl];
+    sd:$[(.z.p*0)~x[`arg;`sd];.z.p-00:01:00.000000000;x[`arg;`sd]];
+    ed:$[(.z.p*0)~x[`arg;`ed];.z.p;x[`arg;`ed]];
+    ids:x[`arg;`ids];
+    exc:x[`arg;`exc];
+    columns:x[`arg;`columns];
+    hdb:hdbHandle(`selectFuncWithCols;tbl;sd;ed;ids;exc;columns);
+    rdb:rdbHandle(`selectFuncWithCols;tbl;sd;ed;ids;exc;columns);
     hdb,rdb };
 
   / Alias namespace for convenience, typically once at beginning of file
@@ -72,4 +84,15 @@ if[.gda.restEnabled;
               .rest.reg.data[`ids;11h;0b;0#`;"Instruments to subscribe to"],
                   .rest.reg.data[`exc;11h;0b;0#`;"Exchange to subscribe to"]];
 
+  // Adding Column Based Register
+  .rest.register[`get;
+    "/getDataWithCols";
+    "API with format of getDataWithCols";
+    .db.getDataWithColsREST;
+    .rest.reg.data[`tbl;-11h;0b;`trade;"Table to Query"],
+      .rest.reg.data[`sd;-12h;0b;.z.p*0;"Start Date"],
+          .rest.reg.data[`ed;-12h;0b;.z.p*0;"End Date"],
+              .rest.reg.data[`ids;11h;0b;0#`;"Instruments to subscribe to"],
+                  .rest.reg.data[`exc;11h;0b;0#`;"Exchange to subscribe to"],
+                    .rest.reg.data[`columns;11h;0b;0#`;"Columns to filter on Q side"]];
   ];
