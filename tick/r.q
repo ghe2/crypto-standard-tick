@@ -32,7 +32,7 @@ selectFuncAPI:{[tbl;sd;ed;ids;exc]
   $[`date in cols tbl;
   [wClause:(enlist(within;`date;(enlist;`date$sd;`date$ed))),wClause;
       ?[tbl;wClause;0b;()]];
-  [res:$[.z.d within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl];
+  [res:$[.z.D within (`date$sd;`date$ed); ?[tbl;wClause;0b;()];0#value tbl];
     `date xcols update date:.z.d from res]] };
 
 selectFuncWithCols:{[tbl;sd;ed;ids;exc;columns]
@@ -49,5 +49,5 @@ selectFuncWithColsAPI:{[tbl;sd;ed;ids;exc;columns]
   $[`date in cols tbl;
   [wClause:(enlist(within;`date;(enlist;`date$sd;`date$ed))),wClause;
       ?[tbl;wClause;0b;colClause]];
-  [res:$[.z.d within (`date$sd;`date$ed); ?[tbl;wClause;0b;colClause];0#value tbl];
+  [res:$[.z.D within (`date$sd;`date$ed); ?[tbl;wClause;0b;colClause];0#value tbl];
     :$[`date in columns;`date xcols update date:.z.d from res;res]]] };
