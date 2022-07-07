@@ -1,2 +1,4 @@
 *.log
 sym[0-9][0-9][0-9][0-9].[0-9][0-9].[0-9][0-9]
+graphQL/node_modules
+graphQL/package-lock.json
