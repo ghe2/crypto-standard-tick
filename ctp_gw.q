@@ -24,9 +24,12 @@ calc_last_book:{.u.pub[`last_book;] .debug.last_book:
 	}
 
 .stream.functions:``book!(::;`calc_vwap`calc_last_book)
-.stream.snap:`book`trade!(
-        getData[`book;.z.p-00:01;.z.p;`;`];
-        getData[`trade;.z.p-00:01;.z.p;`;`]
+.stream.snap:`book`trade`order`vwap`ohlcv!(
+        getData[`book;.z.p-00:05;.z.p;`;`];
+        getData[`trade;.z.p-00:05;.z.p;`;`];
+		getData[`order;.z.p-00:05;.z.p;`;`];
+        getData[`vwap;.z.p-00:05;.z.p;`;`];
+        getData[`ohlcv;.z.p-00:05;.z.p;`;`]
 	)
 
 
