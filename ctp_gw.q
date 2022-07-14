@@ -6,7 +6,6 @@ system"l tick/sym.q"
 // load in and define other tables to publish
 last_book:([]time:"p"$();sym:`$();side:`$();price:"f"$();size:"f"$());
 vwap_at_size:([]time:"p"$();sym:`$();vwap_bid_1:"f"$(); vwap_bid_5000000:"f"$(); vwap_bid_10000000:"f"$();vwap_ask_1:"f"$(); vwap_ask_5000000:"f"$(); vwap_ask_10000000:"f"$());
-book_nonulls:book;
 
 vwap_depth:{$[any z<=s:sums x;(deltas z & s) wavg y;0nf]};
 
