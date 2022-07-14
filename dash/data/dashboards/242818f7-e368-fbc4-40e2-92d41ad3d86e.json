@@ -2,7 +2,7 @@
   "id": "242818f7-e368-fbc4-40e2-92d41ad3d86e",
   "name": "Crypto Dashboard",
   "creationDate": "Wed, 04 May 2022 00:21:56 GMT",
-  "lastUpdateDate": "Wed, 22 Jun 2022 00:02:42 GMT",
+  "lastUpdateDate": "Tue, 12 Jul 2022 03:41:13 GMT",
   "thumb": null,
   "screenDetails": [
     {
@@ -38,9 +38,9 @@
                     "SectionId": "section_4733",
                     "Title": "Heatmap",
                     "TitleAlign": "Left",
-                    "Expanded": false,
+                    "Expanded": true,
                     "Flex": false,
-                    "Weight": 7.437500000000001,
+                    "Weight": 1,
                     "Resizeable": true,
                     "HideTitle": false
                   },
@@ -48,9 +48,9 @@
                     "SectionId": "section_3059",
                     "Title": "Price and Size",
                     "TitleAlign": "Left",
-                    "Expanded": false,
+                    "Expanded": true,
                     "Flex": false,
-                    "Weight": 1.4385245901639345,
+                    "Weight": 2,
                     "Resizeable": true,
                     "HideTitle": false
                   },
@@ -58,9 +58,9 @@
                     "SectionId": "section_2622",
                     "Title": "Candle and Correlation",
                     "TitleAlign": "Left",
-                    "Expanded": true,
+                    "Expanded": false,
                     "Flex": false,
-                    "Weight": 1.221311475409836,
+                    "Weight": 1,
                     "Resizeable": true,
                     "HideTitle": false
                   }
@@ -161,14 +161,14 @@
                       "layout": {
                         "row": 0,
                         "column": 0,
-                        "rowSpan": 11,
+                        "rowSpan": 4,
                         "colSpan": 36
                       },
                       "component": {
                         "id": "6b168458-5077-5d16-0435-c42bb244a37a",
                         "key": "Datagrid",
                         "options": {
-                          "version": "4.7.1",
+                          "version": "4.7.3",
                           "datagridPossibleColumns": [
                             "key",
                             "XBTUSD",
@@ -299,7 +299,10 @@
                           "FileExport": {
                             "ShowExportCsvButton": false,
                             "ShowExportExcelButton": false
-                          }
+                          },
+                          "datagridPossibleHeaderColumns": [
+                            "none"
+                          ]
                         },
                         "containerId": null,
                         "components": [],
@@ -312,9 +315,9 @@
                     {
                       "id": "b9c729ea-1c41-10f8-ec36-69b066d049de",
                       "layout": {
-                        "row": 11,
+                        "row": 4,
                         "column": 0,
-                        "rowSpan": 13,
+                        "rowSpan": 20,
                         "colSpan": 36
                       },
                       "component": {
@@ -434,8 +437,8 @@
                                 "_LayerId": "layer_3251",
                                 "_PossibleColumns": [
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -446,8 +449,8 @@
                                 "_PossibleColumnsWithItself": [
                                   "<this>",
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -460,8 +463,8 @@
                                   "<thisY>",
                                   "<thisName>",
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -472,8 +475,8 @@
                                 "_PossibleRadius": [
                                   "Fixed Size",
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -607,7 +610,10 @@
                               "Basics": {
                                 "LegendEnabled": false,
                                 "LegendLabelColor": "",
-                                "Name": "XBTM22 1",
+                                "Name": {
+                                  "_dashboardsType": "viewstate",
+                                  "value": "price_compare/sym_a"
+                                },
                                 "BackgroundColor": "#0062ff",
                                 "BackgroundOpacity": 30,
                                 "BorderColor": "#0062ff",
@@ -638,8 +644,8 @@
                                 "_LayerId": "layer_87437",
                                 "_PossibleColumns": [
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -650,8 +656,8 @@
                                 "_PossibleColumnsWithItself": [
                                   "<this>",
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -664,8 +670,8 @@
                                   "<thisY>",
                                   "<thisName>",
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -676,8 +682,8 @@
                                 "_PossibleRadius": [
                                   "Fixed Size",
                                   "date",
-                                  "time",
                                   "sym",
+                                  "time",
                                   "orderID",
                                   "price",
                                   "tradeID",
@@ -699,7 +705,10 @@
                               "Basics": {
                                 "LegendEnabled": false,
                                 "LegendLabelColor": "",
-                                "Name": "XBTM22 2",
+                                "Name": {
+                                  "_dashboardsType": "viewstate",
+                                  "value": "price_compare/sym_b"
+                                },
                                 "BackgroundColor": "#f23a65",
                                 "BackgroundOpacity": 30,
                                 "BorderColor": "#f23a65",
@@ -967,7 +976,7 @@
                   "components": [],
                   "widgets": [
                     {
-                      "id": "ddde0ff7-9669-24a8-62bb-6f0cf53ea974",
+                      "id": "0e3e8ac5-cca7-f675-85df-80b4c1586c06",
                       "layout": {
                         "row": 0,
                         "column": 0,
@@ -975,7 +984,7 @@
                         "colSpan": 36
                       },
                       "component": {
-                        "id": "fdafdee4-9e7d-98a2-e8e5-bb853d953ad0",
+                        "id": "f73075c0-5dbd-32ca-6bea-34539befc95f",
                         "key": "ChartJS",
                         "options": {
                           "Layers": [
@@ -983,55 +992,39 @@
                               "_Hidden": {
                                 "_Type": "Bar",
                                 "_Index": 0,
-                                "_LayerId": "layer_3248",
+                                "_LayerId": "layer_8977",
                                 "_PossibleColumns": [
-                                  "date",
                                   "sym",
-                                  "exchange",
-                                  "time",
-                                  "open",
-                                  "high",
-                                  "low",
-                                  "close",
-                                  "volume"
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
                                 ],
                                 "_PossibleColumnsWithItself": [
                                   "<this>",
-                                  "date",
                                   "sym",
-                                  "exchange",
-                                  "time",
-                                  "open",
-                                  "high",
-                                  "low",
-                                  "close",
-                                  "volume"
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
                                 ],
                                 "_PossibleColumnsWithXYKey": [
                                   "<thisX>",
                                   "<thisY>",
                                   "<thisName>",
-                                  "date",
                                   "sym",
-                                  "exchange",
-                                  "time",
-                                  "open",
-                                  "high",
-                                  "low",
-                                  "close",
-                                  "volume"
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
                                 ],
                                 "_PossibleRadius": [
                                   "Fixed Size",
-                                  "date",
                                   "sym",
-                                  "exchange",
-                                  "time",
-                                  "open",
-                                  "high",
-                                  "low",
-                                  "close",
-                                  "volume"
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
                                 ],
                                 "_PossibleXAxes": [
                                   "XAxis 1"
@@ -1042,22 +1035,18 @@
                                 ]
                               },
                               "Basics": {
-                                "LegendEnabled": false,
                                 "LegendLabelColor": "",
-                                "Name": "Volume",
-                                "BackgroundColor": "#0062ff",
-                                "BackgroundOpacity": 20,
-                                "BorderColor": "#0062ff",
-                                "BorderOpacity": 20,
-                                "BorderWidth": 2,
+                                "Name": "Hourly Volume",
+                                "BackgroundOpacity": 40,
+                                "BorderWidth": 1,
                                 "Data": {
                                   "_dashboardsType": "data",
-                                  "value": "trades_size_sum copy"
+                                  "value": "vwap_rolling"
                                 }
                               },
                               "Axes": {
-                                "XAxisData": "time",
-                                "YAxisData": "volume",
+                                "XAxisData": "date",
+                                "YAxisData": "accVol",
                                 "XAxisID": "XAxis 1",
                                 "YAxisID": "YAxis 2"
                               },
@@ -1070,14 +1059,94 @@
                             },
                             {
                               "_Hidden": {
-                                "_Type": "Candlestick",
+                                "_Type": "Line",
                                 "_Index": 1,
-                                "_LayerId": "layer_8977",
+                                "_LayerId": "layer_81811",
+                                "_PossibleColumns": [
+                                  "sym",
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
+                                ],
+                                "_PossibleColumnsWithItself": [
+                                  "<this>",
+                                  "sym",
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
+                                ],
+                                "_PossibleColumnsWithXYKey": [
+                                  "<thisX>",
+                                  "<thisY>",
+                                  "<thisName>",
+                                  "sym",
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
+                                ],
+                                "_PossibleRadius": [
+                                  "Fixed Size",
+                                  "sym",
+                                  "date",
+                                  "vwap",
+                                  "accVol",
+                                  "vwap_rolling_15_hour"
+                                ],
+                                "_PossibleXAxes": [
+                                  "XAxis 1"
+                                ],
+                                "_PossibleYAxes": [
+                                  "YAxis 1",
+                                  "YAxis 2"
+                                ],
+                                "_PossibleLayers": [
+                                  "Layer 1",
+                                  "nofill",
+                                  "Layer 3",
+                                  "origin",
+                                  "+1",
+                                  "+2",
+                                  "+3"
+                                ]
+                              },
+                              "Basics": {
+                                "LegendLabelColor": "",
+                                "Name": "15 hour rolling VWAP",
+                                "BackgroundColor": "#F23A66",
+                                "BorderColor": "#F23A66",
+                                "BorderWidth": 3,
+                                "Data": {
+                                  "_dashboardsType": "data",
+                                  "value": "vwap_rolling"
+                                }
+                              },
+                              "Axes": {
+                                "XAxisData": "date",
+                                "YAxisData": "vwap_rolling_15_hour",
+                                "XAxisID": "XAxis 1",
+                                "YAxisID": "YAxis 1"
+                              },
+                              "Labels": {
+                                "Font": {
+                                  "Bold": false,
+                                  "Size": 12
+                                }
+                              }
+                            },
+                            {
+                              "_Hidden": {
+                                "_Type": "Candlestick",
+                                "_Index": 2,
+                                "_LayerId": "layer_81914",
                                 "_PossibleColumns": [
                                   "date",
                                   "sym",
                                   "exchange",
                                   "time",
+                                  "bucket",
                                   "open",
                                   "high",
                                   "low",
@@ -1090,6 +1159,7 @@
                                   "sym",
                                   "exchange",
                                   "time",
+                                  "bucket",
                                   "open",
                                   "high",
                                   "low",
@@ -1104,6 +1174,7 @@
                                   "sym",
                                   "exchange",
                                   "time",
+                                  "bucket",
                                   "open",
                                   "high",
                                   "low",
@@ -1116,6 +1187,7 @@
                                   "sym",
                                   "exchange",
                                   "time",
+                                  "bucket",
                                   "open",
                                   "high",
                                   "low",
@@ -1133,8 +1205,10 @@
                               "Basics": {
                                 "LegendEnabled": false,
                                 "LegendLabelColor": "",
-                                "Name": "Price",
-                                "BorderWidth": 2,
+                                "Name": "Candle",
+                                "BackgroundColor": "#009BAB",
+                                "BorderColor": "#009BAB",
+                                "BorderWidth": 3,
                                 "Data": {
                                   "_dashboardsType": "data",
                                   "value": "ohlcv"
@@ -1166,14 +1240,12 @@
                           "XAxes": [
                             {
                               "_Hidden": {
-                                "_Type": "time",
-                                "_AxisId": "axis_3147",
+                                "_AxisId": "axis_81139",
                                 "_Index": 0,
-                                "_Label": "XAxis 1"
+                                "_Label": "XAxis 1",
+                                "_Type": "time"
                               },
                               "Labels": {
-                                "MaxRotation": 0,
-                                "StepSize": 10,
                                 "MaxWidth": 0,
                                 "_ReverseCache": false,
                                 "Offset": false,
@@ -1190,7 +1262,7 @@
                                   "Quarter": "[Q]Q - YYYY",
                                   "Round": false,
                                   "Second": "h:mm:ss a",
-                                  "TooltipFormat": "",
+                                  "TooltipFormat": "MMM D h:mm:ss.SSS a",
                                   "TriggerBreak": 86400000,
                                   "Unit": "",
                                   "Week": "ll",
@@ -1198,84 +1270,76 @@
                                 }
                               },
                               "Range": {
-                                "Max": 0,
-                                "Min": 0,
-                                "SoftRange": false,
-                                "SuggestedMax": 0,
-                                "SuggestedMin": 0,
-                                "UseDataRange": false
+                                "UseDataRange": true,
+                                "UseMinMax": true,
+                                "UseMinMaxReset": false
                               }
                             }
                           ],
                           "YAxes": [
                             {
                               "_Hidden": {
-                                "_Type": "linear",
-                                "_AxisId": "axis_3151",
+                                "_AxisId": "axis_81143",
                                 "_Index": 0,
-                                "_Label": "YAxis 1"
+                                "_Label": "YAxis 1",
+                                "_Type": "linear"
                               },
                               "Labels": {
-                                "BeginAtZero": false,
                                 "MaxWidth": 0,
                                 "_ReverseCache": false,
-                                "DateFormat": "YYYY-MM-DD"
+                                "DateFormat": "YYYY-MM-DD",
+                                "Format": "Formatted Number",
+                                "Precision": 0,
+                                "Prefix": "$"
+                              },
+                              "Range": {
+                                "UseDataRange": true,
+                                "UseMinMax": true,
+                                "UseMinMaxReset": false
                               }
                             },
                             {
                               "_Hidden": {
-                                "_Type": "linear",
-                                "_AxisId": "axis_3255",
+                                "_AxisId": "axis_81859",
                                 "_Index": 1,
-                                "_Label": "YAxis 2"
+                                "_Label": "YAxis 2",
+                                "_Type": "linear"
                               },
+                              "Position": "right",
                               "Labels": {
-                                "FontColor": "#F8F8F8",
-                                "Format": "Smart Number",
                                 "MaxWidth": 0,
                                 "_ReverseCache": false,
+                                "FontColor": "#F8F8F8",
                                 "Offset": false,
-                                "DateFormat": "YYYY-MM-DD"
+                                "DateFormat": "YYYY-MM-DD",
+                                "Format": "Smart Number"
                               },
                               "Range": {
-                                "Max": 0,
-                                "Min": 0,
-                                "SoftRange": false,
-                                "SuggestedMax": 0,
-                                "SuggestedMin": 0,
-                                "UseDataRange": false
-                              },
-                              "Position": "right"
+                                "UseDataRange": true,
+                                "UseMinMax": true,
+                                "UseMinMaxReset": false
+                              }
                             }
                           ],
-                          "version": "4.7.0",
+                          "Zoom": {
+                            "DragPan": false,
+                            "DragZoom": false,
+                            "YAdjust": "nice"
+                          },
                           "format": {
                             "widgetTitle": {
                               "_dashboardsType": "viewstate",
                               "value": "tradeVolChart/syms"
                             }
                           },
-                          "Zoom": {
-                            "DragPan": false,
-                            "ScrollZoom": false,
-                            "YAdjust": "none",
-                            "ZoomToIndex": false
-                          },
-                          "Animations": {
-                            "HoverEvents": false,
-                            "InteractionMode": ""
-                          },
-                          "Overlay": {
-                            "useCustomTooltip": true
-                          }
+                          "version": "4.7.0"
                         },
                         "containerId": null,
                         "components": [],
                         "widgets": [],
                         "definitionId": "1007",
                         "hasOnSettingsChange": true
-                      },
-                      "sectionId": "section_2690"
+                      }
                     }
                   ],
                   "definitionId": "50",
@@ -1448,7 +1512,7 @@
                             "ShowAbsolute": false,
                             "ShowLegend": true,
                             "Suffix": "",
-                            "customLabel": "{{sym}} Trades: {{x}} Volume: {{size}}",
+                            "customLabel": "{{sym}} \nTrades: {{x}} \nVolume: {{size}}\n",
                             "gapWidth": 2,
                             "labelColor": "#ffffff",
                             "upperFontSize": "12",
@@ -2648,9 +2712,8 @@
       "_serverPaging": false
     },
     "trade_summary": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "sym",
         "x",
@@ -2690,7 +2753,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\n// 20 sublist `volume xdesc select sum trades, sum volume by sym from tab\r\n20 sublist `size xdesc select count i, sum size by sym from getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`]",
+      "_queryString": "// tab:last gw(`trade_summary;`startTS`endTS!(\"p\"$.z.d-1;\"p\"$.z.d+2);`callback;(0#`)!());\r\n// 20 sublist `volume xdesc select sum trades, sum volume by sym from tab\r\n20 sublist `size xdesc select count i, floor sum size by sym from getData[`trade;\"p\"$.z.d-1;\"p\"$.z.d+2;`;`]",
       "_queryParams": [],
       "_subscriptionKey": "",
       "_hasUpdateQuery": false,
@@ -2752,14 +2815,14 @@
       "_serverPaging": false
     },
     "ohlcv": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "date",
         "sym",
         "exchange",
         "time",
+        "bucket",
         "open",
         "high",
         "low",
@@ -2770,9 +2833,9 @@
       "_dataSource": "kdb",
       "_connection": "GW",
       "_mappings": {
-        "key": "time",
+        "key": "date",
         "mappings": {},
-        "value": "time"
+        "value": "sym"
       },
       "_maxRows": 2000,
       "_forceReset": true,
@@ -2800,7 +2863,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  `time xasc getData[`ohlcv;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  res:`time xasc getData[`ohlcv;.z.p-2D00:00:00;.z.p;syms;`];\r\n  bucket:ceiling {(max[x]-min x)%2000*60*60*10000000}res`time;\r\n  select bucket,first open,max high,min low, last close, sum volume by date,sym, exchange,time:time.date+bucket xbar time.minute from res\r\n\r\n  }",
       "_queryParams": [
         {
           "name": "plot",
@@ -2904,8 +2967,9 @@
       "_serverPaging": false
     },
     "correlation": {
-      "_autoExec": true,
+      "_pagingType": "NONE",
       "_autoExecute": true,
+      "_autoExec": true,
       "_columns": [
         "key",
         "XBTUSD",
@@ -2955,13 +3019,12 @@
       "_serverPaging": false
     },
     "price_compare_1": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "date",
-        "time",
         "sym",
+        "time",
         "orderID",
         "price",
         "tradeID",
@@ -2977,7 +3040,7 @@
         "mappings": {},
         "value": "sym"
       },
-      "_maxRows": "20000",
+      "_maxRows": "2000",
       "_forceReset": true,
       "_subscriptionType": "static",
       "_subscriptionInterval": 3,
@@ -3003,7 +3066,7 @@
           "weight": 2
         }
       ],
-      "_queryString": "{[x]\r\n  `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;x;`]\r\n }",
+      "_queryString": "{[x]\r\n  -2000 sublist `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;x;`]\r\n }",
       "_queryParams": [
         {
           "name": "x",
@@ -3023,13 +3086,12 @@
       "_serverPaging": false
     },
     "price_compare_2": {
-      "_pagingType": "NONE",
-      "_autoExecute": true,
       "_autoExec": true,
+      "_autoExecute": true,
       "_columns": [
         "date",
-        "time",
         "sym",
+        "time",
         "orderID",
         "price",
         "tradeID",
@@ -3045,7 +3107,7 @@
         "mappings": {},
         "value": "sym"
       },
-      "_maxRows": "20000",
+      "_maxRows": "2000",
       "_forceReset": true,
       "_subscriptionType": "static",
       "_subscriptionInterval": 3,
@@ -3071,13 +3133,85 @@
           "weight": 2
         }
       ],
-      "_queryString": "{[x]\r\n  `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;x;`]\r\n }",
+      "_queryString": "{[x]\r\n  -2000 sublist `time xasc getData[`trade;.z.p-2D00:00:00;.z.p;x;`]\r\n }",
       "_queryParams": [
         {
           "name": "x",
           "index": 0,
           "type": "symbol",
           "value": "<%price_compare/sym_b%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        }
+      ],
+      "_subscriptionKey": "",
+      "_hasUpdateQuery": false,
+      "_updateQueryParams": [],
+      "_updateQueryString": "",
+      "_updateType": "query",
+      "_pageSize": 2000,
+      "_serverPaging": false
+    },
+    "vwap_rolling": {
+      "_pagingType": "NONE",
+      "_autoExecute": true,
+      "_autoExec": true,
+      "_columns": [
+        "sym",
+        "date",
+        "vwap",
+        "accVol",
+        "vwap_rolling_15_hour"
+      ],
+      "_dataType": "query",
+      "_dataSource": "kdb",
+      "_connection": "GW",
+      "_mappings": {
+        "key": "sym",
+        "mappings": {},
+        "value": "date"
+      },
+      "_maxRows": 2000,
+      "_forceReset": true,
+      "_subscriptionType": "polling",
+      "_subscriptionInterval": 30,
+      "_layout": [
+        {
+          "isExpanded": true,
+          "weight": 2
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": false,
+          "weight": 1
+        },
+        {
+          "isExpanded": true,
+          "weight": 0
+        },
+        {
+          "isExpanded": true,
+          "weight": 2
+        }
+      ],
+      "_queryString": "{[plot;syms]\r\n// tab:last gw(`trade_summary;`startTS`endTS!(.z.p-2D00:00:00;.z.p);`callback;(0#`)!());\r\n// `time xasc select from tab where sym = syms\r\n\r\n  update vwap_rolling_15_hour:15 mavg vwap from \r\n    select vwap:accVol wavg vwap,accVol:sum accVol by sym, time.date + 60 xbar time.minute from \r\n      `time xasc getData[`vwap;.z.p-2D00:00:00;.z.p;syms;`]\r\n\r\n  }",
+      "_queryParams": [
+        {
+          "name": "plot",
+          "index": 0,
+          "type": "symbol",
+          "value": "<%tradeVolChart/plot%>",
+          "IsKdbParam": true,
+          "isViewState": true
+        },
+        {
+          "name": "syms",
+          "index": 1,
+          "type": "symbol",
+          "value": "<%tradeVolChart/syms%>",
           "IsKdbParam": true,
           "isViewState": true
         }
@@ -3101,6 +3235,7 @@
   "borderSpacing": 0,
   "borderShadow": false,
   "saveViewerState": "enabled",
+  "hostnameAccess": "",
   "enableShareDashboard": false,
   "notifications": {
     "Notifications": {
@@ -3122,7 +3257,7 @@
   "unsavedViewerPrompt": false,
   "advancedCss": "",
   "cssClasses": "",
-  "version": "4.6.0P1",
+  "version": "4.7.3",
   "wasChanged": true,
   "shortcuts": []
 }
