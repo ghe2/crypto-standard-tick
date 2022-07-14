@@ -1,15 +1,12 @@
-/q tick.q SRC [DST] [-p 5010] [-o h]
-// SSC
-system"l tick/",(src:first .z.x,enlist"sym"),".q"
-/ system"l tick/sym.q"
-
-// open handle to gw
-gw:hopen "J"$last ":" vs first system"docker port crypto_sggw_1"
+// q ctp_gw.q localhost:5002 localhost:5008 localhost:5000 &
+// HDB, RDB, TP
+\l tick/gw.q
+system"l tick/sym.q"
 
 // load in and define other tables to publish
 last_book:([]time:"p"$();sym:`$();side:`$();price:"f"$();size:"f"$());
-vwaps:([]time:"p"$();sym:`$();vwap_bid_1:"f"$(); vwap_bid_5000000:"f"$(); vwap_bid_10000000:"f"$();vwap_ask_1:"f"$(); vwap_ask_5000000:"f"$(); vwap_ask_10000000:"f"$());
-orderbook_nonulls:orderbook;
+vwap_at_size:([]time:"p"$();sym:`$();vwap_bid_1:"f"$(); vwap_bid_5000000:"f"$(); vwap_bid_10000000:"f"$();vwap_ask_1:"f"$(); vwap_ask_5000000:"f"$(); vwap_ask_10000000:"f"$());
+book_nonulls:book;
 
 vwap_depth:{$[any z<=s:sums x;(deltas z & s) wavg y;0nf]};
 
@@ -18,8 +15,8 @@ calc_vwap:{[x]
 	       vwap_bid_1:vwap_depth'[bidsizes;bids;1], vwap_bid_5000000:vwap_depth'[bidsizes;bids;5000000], vwap_bid_10000000:vwap_depth'[bidsizes;bids;10000000] 
   	      ,vwap_ask_1:vwap_depth'[asksizes;asks;1], vwap_ask_5000000:vwap_depth'[asksizes;asks;5000000], vwap_ask_10000000:vwap_depth'[asksizes;asks;10000000]
 		from x;
-	.debug.vwaps:res;
-	.u.pub[`vwaps;res];
+	.debug.vwap_at_size:res;
+	.u.pub[`vwap_at_size;res];
 	}
 
 calc_last_book:{.u.pub[`last_book;] .debug.last_book:
@@ -27,13 +24,10 @@ calc_last_book:{.u.pub[`last_book;] .debug.last_book:
 			(ungroup select time,sym,side:`offer,price:asks,size:asksizes from x)} x;
 	}
 
-delete_null_price:{.u.pub[`orderbook_nonulls;] delete from x where null price}
-
-.stream.functions:``bitmexbook`orderbook!(::;`calc_vwap`calc_last_book;raze `delete_null_price)
-.stream.snap:`bitmexbook`orderbook`trade!(
-	{last gw(`.kxi.getData;(`table`startTS`endTS)!(`bitmexbook;.z.p-0D00:01:00;.z.p);`f;(0#`)!())};
-        {last gw(`.kxi.getData;(`table`startTS`endTS)!(`orderbook;.z.p-0D00:01:00;.z.p);`f;(0#`)!())};
-        {last gw(`.kxi.getData;(`table`startTS`endTS)!(`trade;.z.p-0D00:01:00;.z.p);`f;(0#`)!())}
+.stream.functions:``book!(::;`calc_vwap`calc_last_book)
+.stream.snap:`book`trade!(
+        getData[`book;.z.p-00:01;.z.p;`;`];
+        getData[`trade;.z.p-00:01;.z.p;`;`]
 	)
 
 
@@ -51,7 +45,8 @@ upd:{[t;x]
  .debug.tx:(t;x);
  ts"d"$a:.z.P;
  //if[not -16=type first first x;a:"n"$a;x:$[0>type first x;a,x;(enlist(count first x)#a),x]];
- f:key flip value t;pub[t;data:$[0>type first x;enlist f!x;flip f!x]];
+ f:key flip value t;
+ pub[t;data:$[0>type first x;enlist f!x;flip f!x]];
  .stream.functions[t] @\: data;
 	}
 
@@ -66,12 +61,12 @@ upd:{.u.upd[x;value flip y]}
 /.u.tick[src;.z.x 1];
 .u.init[]
 // subscribe to the actual TP
-/ get the ticker plant and history ports, defaults are 5010,5012
-.u.x:.z.x,(count .z.x)_(":5010";":5012");
+/ get the gw and tp ports, defaults are 5005,5000
+.u.x:.z.x,(count .z.x)_(":5002";":5008";":5000");
 
 / init schema and sync up from log file;cd to hdb(so client save can run)
 .u.rep:{[x;y]} //(.[;();:;].)each x;if[null first y;:()];-11!y;system "cd ",1_-10_string first reverse y};
 
 / connect to ticker plant for (schema;(logcount;log))
-.u.rep .(hopen `$":",.u.x 1)"(.u.sub[`;`];`.u `i`L)";
+.u.rep .(hopen `$":",.u.x 2)"(.u.sub[`;`];`.u `i`L)";
 

@@ -8,3 +8,4 @@ ps aux | grep ' wschaintick_0.2.2.q' | grep '5110'| grep -v grep | awk '{print $
 ps aux | grep ' gw.q' | grep '5005'| grep -v grep | awk '{print $2}' | xargs -I {} kill -9 {}
 ps aux | grep ' sample/demo.q'| grep -v grep | awk '{print $2}' | xargs -I {} kill -9 {}
 ps aux | grep ' dash.q' | grep '10001'| grep -v grep | awk '{print $2}' | xargs -I {} kill -9 {}
+ps aux | grep ' ctp_gw.q' | grep '5555'| grep -v grep | awk '{print $2}' | xargs -I {} kill -9 {}
