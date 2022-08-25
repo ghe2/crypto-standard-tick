@@ -18,9 +18,17 @@ calc_vwap:{[x]
 	.u.pub[`vwap_at_size;res];
 	}
 
-calc_last_book:{.u.pub[`last_book;] .debug.last_book:
-		       {(ungroup select time,sym,side:`bid,price:bids,size: bidsizes from x), 
-			(ungroup select time,sym,side:`offer,price:asks,size:asksizes from x)} x;
+/ calc_last_book:{.u.pub[`last_book;] .debug.last_book:
+/ 		       {(ungroup select time,sym,side:`bid,price:bids,size: bidsizes from x), 
+/ 			(ungroup select time,sym,side:`offer,price:asks,size:asksizes from x)} x;
+/ 	}
+
+calc_last_book:{
+    book_levels:update level:{` sv (x;y;z)}'[sym;side;`$string ind] from
+    `ind xasc 
+ {(update ind:i from `price xdesc ungroup select time,sym,side:`bid,price:bids,size: bidsizes from x), 
+  (update ind:i from `price xasc ungroup select time,sym,side:`offer,price:asks,size:asksizes from x)} .debug.last_book_x:x;
+    .u.pub[`last_book;] .debug.last_book:select from book_levels where ind <= 25
 	}
 
 .stream.functions:``book!(::;`calc_vwap`calc_last_book)
